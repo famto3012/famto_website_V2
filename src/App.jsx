@@ -3,6 +3,7 @@ import "./App.css";
 import FAQ from "./Pages/FAQ";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
   <Route path="/faq" element={<FAQ />}/>
   <Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
   <Route path="/cancellation-and-refund-policy" element ={<CancellationAndRefundPolicy/>}/>
+  <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
   </Routes>
 </BrowserRouter>
   )
