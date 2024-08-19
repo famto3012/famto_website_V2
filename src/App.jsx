@@ -6,6 +6,7 @@ import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import MarchBlog from "./Pages/MarchBlog";
+import Blog_June from "./pages/Blog_June";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/march-blog" element={<MarchBlog/>} />
+        <Route path="/blog-june" element={<Blog_June />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
           path="/cancellation-and-refund-policy"
