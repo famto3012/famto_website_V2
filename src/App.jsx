@@ -5,6 +5,7 @@ import Blogs from "./pages/Blogs";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import MarchBlog from "./Pages/MarchBlog";
 
 function App() {
   return (
@@ -12,18 +13,17 @@ function App() {
       <Routes>
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/march-blog" element={<MarchBlog/>} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route
+          path="/cancellation-and-refund-policy"
+          element={<CancellationAndRefundPolicy />}
+        />
+        
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );
-<BrowserRouter>
-<Routes>
-  <Route path="/faq" element={<FAQ />}/>
-  <Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
-  <Route path="/cancellation-and-refund-policy" element ={<CancellationAndRefundPolicy/>}/>
-  <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
-  </Routes>
-</BrowserRouter>
-  )
 }
 
 export default App;
