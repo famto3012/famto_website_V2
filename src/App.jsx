@@ -12,18 +12,15 @@ function App() {
       <Routes>
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route
+          path="/cancellation-and-refund-policy"
+          element={<CancellationAndRefundPolicy />}
+        />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   );
-<BrowserRouter>
-<Routes>
-  <Route path="/faq" element={<FAQ />}/>
-  <Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
-  <Route path="/cancellation-and-refund-policy" element ={<CancellationAndRefundPolicy/>}/>
-  <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
-  </Routes>
-</BrowserRouter>
-  )
 }
 
 export default App;
