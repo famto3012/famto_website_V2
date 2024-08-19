@@ -8,6 +8,7 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import MarchBlog from "./Pages/MarchBlog";
 import Blog_June from "./pages/Blog_June";
 import ITService from "./pages/ITService";
+import Delivery from "./pages/Delivery";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/faq" element={<FAQ />} />
         <Route path="/it-service" element={<ITService />} />
+        <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/march-blog" element={<MarchBlog />} />
         <Route path="/blog-june" element={<Blog_June />} />
