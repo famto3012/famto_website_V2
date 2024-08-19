@@ -19,7 +19,6 @@ function App() {
           path="/cancellation-and-refund-policy"
           element={<CancellationAndRefundPolicy />}
         />
-        
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
