@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
           alt="Terms & Condition"
         />
       </figure>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent ">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
         <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
           <img
             className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
