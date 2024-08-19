@@ -75,12 +75,6 @@ const ITService = () => {
               >
                 IT Services
               </Link>
-              <Link
-                to="/#partner"
-                className="border rounded-md border-white p-2 lg:p-3 hover:bg-white hover:text-black"
-              >
-                Partner with us
-              </Link>
             </div>
 
             <button
@@ -106,13 +100,6 @@ const ITService = () => {
                 </Link>
                 <Link to="/it-service" onClick={toggleMenu}>
                   IT Services
-                </Link>
-                <Link
-                  to="/#partner"
-                  className="border rounded-md border-white p-2 sm:p-3 hover:bg-white hover:text-black"
-                  onClick={toggleMenu}
-                >
-                  Partner with us
                 </Link>
               </div>
             )}
