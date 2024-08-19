@@ -1,12 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import FAQ from "./Pages/FAQ";
+import Blogs from "./pages/Blogs";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
 
 function App() {
-
   return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/blogs" element={<Blogs />} />
+      </Routes>
+    </BrowserRouter>
+  );
 <BrowserRouter>
 <Routes>
   <Route path="/faq" element={<FAQ />}/>
@@ -17,4 +24,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
