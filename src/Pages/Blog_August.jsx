@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-const Blog_August = () => {
+const Blog_August = () => { 
+
+    useEffect(() => {
+        const scrollToTop = () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        };
+    
+        scrollToTop();
+      }, []);
+      
   return (
     <main className="relative">
       <div className="relative w-full bg-[#00ced1] ">
-        <div className="inset-0 bg-gradient-to-tl from-[#014546] via-black/35 to transparent h-[19rem] md:h-[70vh] flex items-center justify-center md:space-x-4 space-x-3">
+        <div className="inset-0 bg-gradient-to-bl from-[#014546] via-black/35 to transparent h-[19rem] md:h-[70vh] flex items-center justify-center md:space-x-4 space-x-3">
           <figure className="md:h-[4rem] h-[2rem]">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fbluelogonew.svg?alt=media&token=a4d700e2-82d5-45c9-91b1-cae9cd4ef1f1"
@@ -19,7 +31,7 @@ const Blog_August = () => {
           </h1>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+        <div className="absolute inset-0">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
               className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
