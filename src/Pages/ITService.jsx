@@ -104,11 +104,14 @@ const ITService = () => {
               </div>
             )}
           </nav>
-
-          <div className="absolute top-[40%] left-[20%] sm:left-[20%] md:left-[30%] lg:left-[35%] text-center">
-            <p className="text-white text-[14px] sm:text-[20px] md:text-[25px] backdrop-blur-sm p-2 sm:p-3 mx-4 md:mx-12 border border-white w-fit">
-              Advance Innovative
-            </p>
+          <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center">
+            <div class="relative inline-block p-4 border border-white text-white bg-opacity-50 backdrop-blur-sm">
+              <div class="absolute top-0 left-0 w-2 h-2 bg-white transform -translate-x-1/2 -translate-y-1/2"></div>
+              <div class="absolute top-0 right-0 w-2 h-2 bg-white transform translate-x-1/2 -translate-y-1/2"></div>
+              <div class="absolute bottom-0 left-0 w-2 h-2 bg-white transform -translate-x-1/2 translate-y-1/2"></div>
+              <div class="absolute bottom-0 right-0 w-2 h-2 bg-white transform translate-x-1/2 translate-y-1/2"></div>
+              <span>Advance Innovative</span>
+            </div>
             <h1 className="text-white text-[1.5rem] font-light sm:text-[2rem] md:text-[3rem] lg:text-[4rem] mt-2 lg:mt-[-10px]">
               IT SOLUTION
             </h1>
