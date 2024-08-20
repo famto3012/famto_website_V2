@@ -10,6 +10,7 @@ import Blog_May from "./Pages/Blog_May";
 import Blog_June from "./pages/Blog_June";
 import ITService from "./pages/ITService";
 import Delivery from "./pages/Delivery";
+import Blog_April from "./Pages/Blog_April";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-march" element={<Blog_March/>}/>
+        <Route path="/blog-april" element={<Blog_April/>}/>
         <Route path="/blog-may" element={<Blog_May/>} />
         <Route path="/blog-june" element={<Blog_June />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
