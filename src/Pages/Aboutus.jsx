@@ -6,16 +6,16 @@ import { aboutTableData } from "../data";
 import { SiTicktick } from "react-icons/si";
 
 const Aboutus = () => {
-  //   useEffect(() => {
-  //     const scrollToTop = () => {
-  //       window.scrollTo({
-  //         top: 0,
-  //         behavior: "smooth",
-  //       });
-  //     };
+    useEffect(() => {
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
 
-  //     scrollToTop();
-  //   }, []);
+      scrollToTop();
+    }, []);
 
   const chunkArray = (array, chunkSize) => {
     const chunks = [];
