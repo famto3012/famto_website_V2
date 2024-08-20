@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const FAQ = () => {
    
@@ -196,7 +197,7 @@ const FAQ = () => {
         </p>
       </div>
     </section>
-
+  <Footer/>
   </main>
   )
 }
