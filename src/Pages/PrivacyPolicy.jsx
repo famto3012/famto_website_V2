@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const PrivacyPolicy = () => {
     useEffect(() => {
@@ -450,7 +451,7 @@ const PrivacyPolicy = () => {
         services to any client/prospective client without restriction.
       </p>
     </section>
-
+  <Footer/>   
   </main>
   )
 }

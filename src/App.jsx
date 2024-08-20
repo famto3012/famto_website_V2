@@ -13,6 +13,7 @@ import Delivery from "./pages/Delivery";
 import Blog_April from "./Pages/Blog_April";
 import Aboutus from "./pages/AboutUs";
 import Team from "./pages/Team";
+import Blog_August from "./Pages/Blog_August";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/blog-april" element={<Blog_April/>}/>
         <Route path="/blog-may" element={<Blog_May/>} />
         <Route path="/blog-june" element={<Blog_June />} />
+        <Route path="/blog-august" element={<Blog_August />}/>
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
           path="/cancellation-and-refund-policy"

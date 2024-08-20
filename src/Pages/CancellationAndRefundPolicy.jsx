@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const CancellationAndRefundPolicy = () => {
         useEffect(() => {
@@ -203,8 +204,8 @@ const CancellationAndRefundPolicy = () => {
             <a href="mailto:contact@famto.in">contact@famto.in</a>
           </strong>
         </p>
-      </section>
-
+       </section>
+    <Footer/>
     </main>
   )
 }
