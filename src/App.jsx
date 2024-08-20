@@ -5,7 +5,9 @@ import Blogs from "./pages/Blogs";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
-import MarchBlog from "./Pages/MarchBlog";
+import Blog_March from "./Pages/Blog_March";
+import Blog_May from "./Pages/Blog_May";
+
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
       <Routes>
         <Route path="/faq" element={<FAQ />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/march-blog" element={<MarchBlog/>} />
+        <Route path="/blog-march" element={<Blog_March/>}/>
+        <Route path="/blog-may" element={<Blog_May/>} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
           path="/cancellation-and-refund-policy"
