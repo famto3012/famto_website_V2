@@ -1,0 +1,345 @@
+import React, { useState } from "react";
+import { IoMenu } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { SiTicktick } from "react-icons/si";
+import Footer from "../components/Footer";
+
+const ITService = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuClosing, setMenuClosing] = useState(false);
+
+  const toggleMenu = () => {
+    if (menuOpen) {
+      setMenuClosing(true);
+      setTimeout(() => {
+        setMenuOpen(false);
+        setMenuClosing(false);
+      }, 100);
+    } else {
+      setMenuOpen(true);
+    }
+  };
+
+  const services = [
+    "UI/UX Design",
+    "Android Apps",
+    "iOS Apps",
+    "web Development",
+    "Frontend Developent",
+    "Backend Development",
+    "App updates",
+    "Testing",
+    "Bug Fixing",
+    "Annual Maintenance",
+  ];
+
+  return (
+    <main className="relative">
+      <div className="relative w-full">
+        <div className="relative">
+          <figure className="h-[20rem] md:h-[30rem]">
+            <img
+              className="w-full h-full object-cover"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FIT-service%20Banner.svg?alt=media&token=3d312e53-9c70-4141-96e8-b6442f758184"
+              alt="IT-service Banner"
+            />
+          </figure>
+          <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20"></div>
+        </div>
+        <div className="absolute top-0 inset-0">
+          <nav className="flex items-center justify-between h-[10vh] p-4">
+            <Link to="/" className="mt-2 md:mt-8 md:ml-[40px]">
+              <img
+                className="w-[6rem] h-[3rem] md:w-[10rem] md:h-[4rem] pl-[1rem] md:pl-[2rem] transition-all"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Flogo.svg?alt=media&token=08e766da-ec03-4d84-b665-212f06c23ff3"
+                alt="Logo"
+              />
+            </Link>
+
+            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] mt-4 lg:mt-[35px] text-white">
+              <Link
+                to="/"
+                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+              >
+                Home
+              </Link>
+              <Link
+                to="/delivery"
+                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+              >
+                Delivery
+              </Link>
+              <Link
+                to="/it-service"
+                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+              >
+                IT Services
+              </Link>
+            </div>
+
+            <button
+              className="block md:hidden focus:outline-none"
+              onClick={toggleMenu}
+            >
+              <IoMenu className="text-white text-[24px] sm:text-[28px]" />
+            </button>
+
+            {(menuOpen || menuClosing) && (
+              <div
+                className={`absolute top-[10vh] right-[5vh] w-[150px] sm:w-[200px] z-30 backdrop-blur-lg text-white flex flex-col items-center gap-[10px] sm:gap-[20px] p-4 rounded-md md:hidden ${
+                  menuOpen
+                    ? "animate-slideInFromTopRight"
+                    : "animate-slideOutToBottomLeft"
+                }`}
+              >
+                <Link to="/" onClick={toggleMenu}>
+                  Home
+                </Link>
+                <Link to="/delivery" onClick={toggleMenu}>
+                  Delivery
+                </Link>
+                <Link to="/it-service" onClick={toggleMenu}>
+                  IT Services
+                </Link>
+              </div>
+            )}
+          </nav>
+
+          <div className="absolute top-[40%] left-[20%] sm:left-[20%] md:left-[30%] lg:left-[35%] text-center">
+            <p className="text-white text-[14px] sm:text-[20px] md:text-[25px] backdrop-blur-sm p-2 sm:p-3 mx-4 md:mx-12 border border-white w-fit">
+              Advance Innovative
+            </p>
+            <h1 className="text-white text-[1.5rem] font-light sm:text-[2rem] md:text-[3rem] lg:text-[4rem] mt-2 lg:mt-[-10px]">
+              IT SOLUTION
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="grid justify-center md:mt-14 mt-8">
+          <p className="flex justify-center">Our Services include</p>
+          <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+            Design & Development
+          </h1>
+        </div>
+        <div className="md:flex grid gap-5 justify-center mx-5 py-10">
+          <div className="relative flex items-end justify-end md:justify-start">
+            <figure className="md:h-[15rem] h-[10rem]">
+              <img
+                className="w-full h-full object-cover rounded-xl"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmobile_application.svg?alt=media&token=b93e7ff7-8282-4f93-a8af-808f6c5be7d5"
+                alt="mobile-application"
+              />
+            </figure>
+            <p className="absolute p-2 px-5 m-5 rounded-3xl bg-gray-50">
+              Mobile Applications
+            </p>
+          </div>
+          <div className="relative flex items-end justify-end md:justify-start">
+            <figure className="md:h-[15rem] h-[10rem]">
+              <img
+                className="w-full h-full object-cover rounded-xl"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fweb-application.svg?alt=media&token=1a512533-6f6d-42ee-b068-dae1e00245be"
+                alt="websites"
+              />
+            </figure>
+            <p className="absolute p-2 px-5 m-5 rounded-3xl bg-gray-50">
+              Websites
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3 justify-center mx-5 py-10 md:py-0">
+          {services.map((service) => (
+            <div
+              key={service}
+              className="flex items-center gap-2 w-fit px-4 py-2 bg-gray-100 rounded-3xl text-[12px] sm:text-[14px] md:text-[16px]"
+            >
+              <SiTicktick className="text-green-600 text-[20px]" />
+              <p>{service}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center md:my-10  md:mb-0">
+          <Link to="/contact-us">
+            {" "}
+            <button className="px-6 py-2 border border-black rounded-md">
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="bg-gray-100 mt-14 md:flex grid md:px-20 pb-5 justify-between">
+        <div className="flex flex-col justify-center items-end md:order-3 order-1 px-5 py-5 md:px-0 md:py-0">
+          <p className="font-semibold">Why Famto</p>
+          <p className="text-cyan-500 text-[32px]">IT Services?</p>
+        </div>
+
+        <p className="md:w-1/2 px-5 md:py-10 text-[14px] md:order-1 order-2">
+          Welcome to Famto IT Services, your go-to solution for innovative
+          website and mobile application development. We specialize in crafting
+          bespoke digital experiences that elevate brands and drive success. Our
+          expert team of designers, developers, and strategists work
+          collaboratively to bring your vision to life with cutting-edge
+          technology and creativity.
+        </p>
+
+        <img
+          className="hidden md:block md:order-2"
+          src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FVector.svg?alt=media&token=e8ad9498-ea74-471f-bd94-a646d258a60e"
+          alt="vector"
+        />
+      </div>
+      <div className="grid items-center text-center justify-center md:mt-20 mt-10">
+        <p className="font-[500]">Our </p>
+        <p className="text-cyan-500 text-[28px] font-[500]">Process</p>
+      </div>
+      <div className=" mt-10 md:gap-5 md:flex">
+        <div className="md:w-1/2 w-full h-full relative">
+          <figure className="w-full">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fit%20service.svg?alt=media&token=6da1923d-2519-448a-8a2c-88abb68f6c24"
+              alt="process"
+            />
+          </figure>
+        </div>
+
+        <div class="flex flex-col mx-auto px-5">
+          <div class="flex items-center md:mt-0 mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">01</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Consultation</span>
+                Understanding your business needs and objectives.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">02</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Planning</span>
+                Crafting a strategic plan to achieve your goals.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">03</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Design</span>
+                Creating visually appealing and user-friendly designs.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">04</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Development</span>
+                Building robust and scalable websites and apps.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">05</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Testing</span>
+                Conducting thorough testing to ensure flawless performance.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">06</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Launch</span>
+                Deploying your project and ensuring a smooth launch.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-5">
+            <div class="relative">
+              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                <span class="text-cyan-500 font-semibold">07</span>
+              </div>
+            </div>
+            <div class="pl-6 flex gap-2">
+              <p>
+                <span class="font-semibold mr-1">Support</span>
+                Providing ongoing maintenance and updates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:my-20 my-10">
+        <div className="grid justify-center md:mt-14 m-8">
+          <p className="flex justify-center font-semibold">FAMTO</p>
+          <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+            Our Advantages
+          </h1>
+        </div>
+        <div className="md:flex grid gap-5 md:mx-20 mx-5">
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+            <h1 className="font-semibold mb-3">Expertise and Experience</h1>
+            <p>
+              Whether it's through advanced technology, skilled professionals,
+              or innovative solutions, emphasize how your services deliver
+              superior results.
+            </p>
+          </div>
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+            <h1 className="font-semibold mb-3">Client-Centric Approach</h1>
+            <p>
+              We prioritize understanding your needs and delivering solutions
+              that exceed your expectations.
+            </p>
+          </div>
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+            <h1 className="font-semibold mb-3">Innovative Solutions</h1>
+            <p>
+              We stay ahead of the curve by adopting the latest technologies and
+              trends in web and mobile app development.
+            </p>
+          </div>
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+            <h1 className="font-semibold mb-3">Reliable Support</h1>
+            <p>
+              Our commitment doesn't end with project delivery; we provide
+              continuous support to keep your digital assets running smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  );
+};
+
+export default ITService;
