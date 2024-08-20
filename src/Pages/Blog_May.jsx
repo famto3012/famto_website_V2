@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Blog_May = () => {
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
+
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -26,7 +38,7 @@ const Blog_May = () => {
           </figure>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+        <div className="absolute inset-0">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
               className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
@@ -38,15 +50,14 @@ const Blog_May = () => {
       </div>
 
       <section className="w-full text-[13px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem]">
-        <div className="md:text-center py-10">
-          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight order-1">
-            Between the red and orange bubbles,
+      <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-1/2 lg:w-1/2 mx-auto">
+          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
+          Between the red and orange bubbles, Is the Merchants unhappy?
           </h1>
-          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight order-2">
-            Is the Merchants unhappy ?
+          <h1 className="text-black/25 md:mt-4 order-4 md:order-3">
+            May 01,2024
           </h1>
-          <h1 className="text-black/25 my-2 order-4 md:order-3">May 01,2024</h1>
-          <h1 className="text-cyan-400 italic font-semibold order-3 md:order-4">
+          <h1 className="text-cyan-400 italic md:mt-4 my-4 font-semibold order-3 md:order-4">
             By Famto content team
           </h1>
         </div>
