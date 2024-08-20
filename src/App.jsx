@@ -5,10 +5,12 @@ import Blogs from "./pages/Blogs";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import CancellationAndRefundPolicy from "./Pages/CancellationAndRefundPolicy";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
-import MarchBlog from "./Pages/MarchBlog";
+import Blog_March from "./Pages/Blog_March";
+import Blog_May from "./Pages/Blog_May";
 import Blog_June from "./pages/Blog_June";
 import ITService from "./pages/ITService";
 import Delivery from "./pages/Delivery";
+
 
 function App() {
   return (
@@ -18,7 +20,8 @@ function App() {
         <Route path="/it-service" element={<ITService />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/march-blog" element={<MarchBlog />} />
+        <Route path="/blog-march" element={<Blog_March/>}/>
+        <Route path="/blog-may" element={<Blog_May/>} />
         <Route path="/blog-june" element={<Blog_June />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route

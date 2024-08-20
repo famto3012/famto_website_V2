@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-const MarchBlog = () => {
+const Blog_March = () => {
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -114,4 +114,4 @@ const MarchBlog = () => {
   );
 };
 
-export default MarchBlog;
+export default Blog_March;
