@@ -11,6 +11,8 @@ import Blog_June from "./pages/Blog_June";
 import ITService from "./pages/ITService";
 import Delivery from "./pages/Delivery";
 import Blog_April from "./Pages/Blog_April";
+import Aboutus from "./pages/AboutUs";
+import Team from "./pages/Team";
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/about-us" element={<Aboutus />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/it-service" element={<ITService />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
