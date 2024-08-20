@@ -3,7 +3,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
-import { MdOutlineVerifiedUser, MdSpeed, MdVerifiedUser } from "react-icons/md";
+import { MdOutlineVerifiedUser, MdSpeed} from "react-icons/md";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
