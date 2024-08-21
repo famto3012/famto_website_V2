@@ -15,12 +15,14 @@ import Aboutus from "./pages/AboutUs";
 import Team from "./pages/Team";
 import Merchant from "./Pages/Merchant";
 import Blog_August from "./Pages/Blog_August";
+import HomePage from "./Pages/HomePage";
 import ContactUs from "./Pages/ContactUs";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/team" element={<Team />} />
