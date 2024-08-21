@@ -8,7 +8,7 @@ const Apps = () => {
     <>
       <div>
         <form className="flex flex-col gap-[20px] items-center lg:items-start">
-          <p className="max-w-[100%] text-[13px] text-center lg:text-start sm:text-[16px] lg:text-[16px] md:max-w-[500px] mt-5">
+          <p className="max-w-[100%] text-[13px] text-center mx-4 lg:text-start sm:text-[16px] lg:text-[14px] md:max-w-[500px] mt-5">
             We will send you a link, open it on your phone to download the app.
           </p>
           <div className="flex gap-[20px] mx-auto justify-center lg:justify-start w-full">
@@ -47,7 +47,7 @@ const Apps = () => {
                className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             )}
-            <div className="bg-[#00ced1] flex md:px-10 p-2 text-white gap-3 items-center rounded-lg md:w-fit ">
+            <div className="bg-[#00ced1] flex md:px-10 p-2 text-white gap-3 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all">
             Share Link <FaArrowRight />
             </div>
           </div>

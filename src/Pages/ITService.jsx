@@ -3,6 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { SiTicktick } from "react-icons/si";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 const ITService = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -165,9 +166,8 @@ const ITService = () => {
         <div className="flex justify-center md:my-10  md:mb-0">
           <Link to="/contact-us">
             {" "}
-            <button className="px-6 py-2 border border-black rounded-md">
-              Contact Us
-            </button>
+            <Button 
+            value="Contact Us"/>
           </Link>
         </div>
       </div>
