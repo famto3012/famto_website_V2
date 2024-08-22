@@ -16,6 +16,7 @@ import Team from "./pages/Team";
 import Merchant from "./Pages/Merchant";
 import Blog_August from "./Pages/Blog_August";
 import ContactUs from "./Pages/ContactUs";
+import DeliveryAgent from "./Pages/DeliveryAgent";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/team" element={<Team />} />
         <Route path="/merchant" element={<Merchant />} />
+        <Route path="/delivery-agent" element={<DeliveryAgent/>}/>
         <Route path="/it-service" element={<ITService />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
