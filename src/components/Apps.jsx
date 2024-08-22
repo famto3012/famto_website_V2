@@ -7,6 +7,7 @@ const Apps = () => {
   return (
     <>
       <div>
+
         <form className="flex flex-col gap-[20px] items-center lg:items-start mx-8 ">
           <p className="max-w-[100%] text-[13px] text-center  lg:text-start sm:text-[16px] lg:text-[14px] md:max-w-[500px] mt-5">
             We will send you a link, open it on your phone to download the app.
@@ -47,11 +48,11 @@ const Apps = () => {
                className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             )}
+
             <div className="bg-[#00ced1] flex  lg:px-10 md:px-[7px] px-3 text-white gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
             Share Link <FaArrowRight />
             </div>
           </div>
-
           <div className="mt-5 gap-2 ">
             <p>Download from</p>
 
@@ -75,5 +76,4 @@ const Apps = () => {
     </>
   );
 };
-
 export default Apps;
