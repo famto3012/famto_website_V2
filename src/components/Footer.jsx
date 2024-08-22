@@ -36,7 +36,7 @@ const Footer = () => {
               Team
             </Link>
             <Link
-              to={"/blog"}
+              to={"/blogs"}
               className="text-white/75 mb-[10px] text-[14px] hover:text-white"
             >
               Blog
@@ -47,7 +47,7 @@ const Footer = () => {
               Partner with us
             </h4>
             <Link
-              to={"/merchants"}
+              to={"/merchant"}
               className="text-white/75 mb-[10px] text-[14px] hover:text-white "
             >
               Merchants
@@ -64,7 +64,7 @@ const Footer = () => {
               Help & Legal
             </h4>
             <Link
-              to={"/faqs"}
+              to={"/faq"}
               className="text-white/75 mb-[10px] text-[14px] hover:text-white "
             >
               FAQs

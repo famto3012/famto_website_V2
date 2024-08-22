@@ -57,7 +57,7 @@ const ITService = () => {
               />
             </Link>
 
-            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] mt-4 lg:mt-[35px] text-white">
+            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] mx-5 lg:mt-[35px] text-white">
               <Link
                 to="/"
                 className="text-white/75 hover:text-white hover:underline underline-offset-4"
@@ -308,8 +308,8 @@ const ITService = () => {
             Our Advantages
           </h1>
         </div>
-        <div className="md:flex grid gap-5 md:mx-20 mx-5">
-          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+        <div className="lg:flex grid sm:grid-cols-2 gap-5 md:mx-20 mx-5">
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Expertise and Experience</h1>
             <p>
               Whether it's through advanced technology, skilled professionals,
@@ -317,21 +317,21 @@ const ITService = () => {
               superior results.
             </p>
           </div>
-          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Client-Centric Approach</h1>
             <p>
               We prioritize understanding your needs and delivering solutions
               that exceed your expectations.
             </p>
           </div>
-          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Innovative Solutions</h1>
             <p>
               We stay ahead of the curve by adopting the latest technologies and
               trends in web and mobile app development.
             </p>
           </div>
-          <div className="border border-gray-300 rounded-lg md:p-7 p-4 md:w-1/4">
+          <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Reliable Support</h1>
             <p>
               Our commitment doesn't end with project delivery; we provide

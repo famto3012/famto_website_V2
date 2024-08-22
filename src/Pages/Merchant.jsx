@@ -49,7 +49,7 @@ const Merchant = () => {
             />
           </Link>
           <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:ps-10 ps-3 order-1">
-            <p className="grid md:ps-8 ps-4">
+            <p className="grid md:ps-8 ps-4 mb-3">
               {" "}
               <span>Come,</span> Work with us
             </p>
@@ -58,7 +58,7 @@ const Merchant = () => {
               <FaArrowLeft className="md:text-[22px] text-[15px]" />
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
-                <p className="relative text-[18px] mt-3 border-l-4 border-[#00ced1] ps-2 z-10">
+                <p className="relative text-[18px] border-l-4 border-[#00ced1] ps-2 z-10">
                   Famto Merchant
                 </p>
               </div>

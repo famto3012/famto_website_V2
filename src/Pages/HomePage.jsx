@@ -240,9 +240,9 @@ const HomePage = () => {
           <h1 className="text-[32px] text-cyan-500">Our Services</h1>
         </div>
 
-        <div className="flex gap-5 mx-10">
+        <div className="md:flex grid gap-5 mx-10">
           {homeServicesData.map((service) => (
-            <div className="w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-black/90 group">
+            <div className="w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-black/90 group">
               <h1 className="text-[#00CED1] relative  after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out group-hover:after:w-full group-hover:text-white">
                 {service.service}
               </h1>
@@ -252,15 +252,15 @@ const HomePage = () => {
               <p className="text-[14px] pb-8 group-hover:text-white">
                 {service.content}
               </p>
-              <div  
+              <div
                 className="flex justify-center right-2 rounded-full hover:ease-in-out opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 onMouseEnter={() => setIsHovered(false)}
                 onMouseLeave={() => setIsHovered(true)}
               >
                 {isHovered ? (
-                  <MdArrowForward className="text-white text-[46px] p-2 ease-in-out rounded-full border-4" />
+                  <MdArrowForward className="text-white text-[46px] ease-in-out rounded-full border-4" />
                 ) : (
-                  <MdArrowOutward className="text-white text-[46px] p-2 ease-in-out rounded-full border-4" />
+                  <MdArrowOutward className="text-white text-[46px] ease-in-out rounded-full border-4" />
                 )}
               </div>
             </div>
