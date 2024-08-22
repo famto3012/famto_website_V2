@@ -4,13 +4,13 @@ import Button from "./button";
 const AgentForm = () => {
   return (
     <>
-    <main className="bg-white/90 p-4 rounded-lg mx-auto lg:mx-0 sm:w-[25rem] w-fit h-fit">
-      <div className="py-2 font-bold">
+    <main className="bg-white/90 p-4 rounded-lg lg:mx-0  w-[25rem] h-fit">
+      <div className="py-2 font-medium text-[20px]">
         <h1>Become a Delivery Agent</h1>
       </div>
       <div className="grid gap-5">
         <div className="grid gap-1">
-          <label className="font-[600]">Name</label>
+          <label className="font-[400]">Name</label>
           <input
             type="text"
             placeholder="Enter your Name"
@@ -18,7 +18,7 @@ const AgentForm = () => {
           ></input>
         </div>
         <div className="grid gap-1">
-          <label className="font-[600]">Location</label>
+          <label className="font-[400]">Location</label>
           <input
             type="text"
             placeholder="Enter your Location"
@@ -27,7 +27,7 @@ const AgentForm = () => {
         </div>
 
         <div className="grid gap-1">
-          <label className="font-[600]">Phone</label>
+          <label className="font-[400]">Phone</label>
           <input
             type="tel"
             placeholder="Enter your Phone Number"
@@ -35,7 +35,7 @@ const AgentForm = () => {
           ></input>
         </div>
         <div className="grid gap-1">
-          <label className="font-[600]">Mail</label>
+          <label className="font-[400]">Mail</label>
           <input
             type="text"
             placeholder="Enter your mail address"
