@@ -12,7 +12,7 @@ const Apps = () => {
           <p className="max-w-[100%] text-[13px] text-center  lg:text-start sm:text-[16px] lg:text-[14px] md:max-w-[500px] mt-5">
             We will send you a link, open it on your phone to download the app.
           </p>
-          <div className="flex gap-[20px] justify-center lg:justify-start w-full ">
+          <div className="flex  gap-[20px] justify-center lg:justify-start w-full ">
             <label className="">
               <input
                 type="radio"
@@ -49,7 +49,7 @@ const Apps = () => {
               />
             )}
 
-            <div className="bg-[#00ced1] flex  lg:px-10 md:px-[7px] px-3 text-white gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
+            <div className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-3 text-white gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
             Share Link <FaArrowRight />
             </div>
           </div>

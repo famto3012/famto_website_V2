@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Blog_May = () => {
-
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -49,10 +48,10 @@ const Blog_May = () => {
         </div>
       </div>
 
-      <section className="w-full text-[13px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem]">
-      <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-1/2 lg:w-1/2 mx-auto">
+      <section className="w-full text-[13px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem] mb-[2rem]">
+        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-1/2 lg:w-1/2 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
-          Between the red and orange bubbles, Is the Merchants unhappy?
+            Between the red and orange bubbles, Is the Merchants unhappy?
           </h1>
           <h1 className="text-black/25 md:mt-4 order-4 md:order-3">
             May 01,2024

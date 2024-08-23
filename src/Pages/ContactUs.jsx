@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineCall } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
@@ -7,8 +7,17 @@ import Footer from "../components/Footer";
 import { BiLinkExternal } from "react-icons/bi";
 import Button from "../components/Button";
 
-
 const ContactUs = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -106,14 +115,13 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-
-            <form className="grid grid-cols-1  md:grid-cols-2 gap-6 px-[3rem] md:text-[14px]">
+            <form className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-[3rem] md:text-[14px]">
               <div>
                 <label className="block text-gray-700">Name</label>
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="mt-1 p-3 w-full rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
                 />
               </div>
 
@@ -122,7 +130,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Enter your phone number"
-                  className="mt-1 p-3 w-full  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
                 />
               </div>
 
@@ -131,7 +139,7 @@ const ContactUs = () => {
                 <input
                   type="email"
                   placeholder="Enter your mail address"
-                  className="mt-1 p-3 w-full  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
                 />
               </div>
 
@@ -140,7 +148,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="Give us a brief description on the matter"
-                  className="mt-1 p-3 w-full  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
                 />
               </div>
 
@@ -148,13 +156,11 @@ const ContactUs = () => {
                 <label className="block text-gray-700">Description</label>
                 <textarea
                   placeholder="Describe the matter"
-                  className="mt-1 p-3 w-full  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
                   rows="4"
                 ></textarea>
               </div>
-              <Button
-              value="Send Us"/>
-              <div className="sm:col-span-1 md:col-span-2 flex justify-start"></div>
+              <Button value="Send Us" />
             </form>
           </div>
         </div>

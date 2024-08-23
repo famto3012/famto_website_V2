@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowLeft, FaRegHeart, FaRupeeSign } from "react-icons/fa";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -8,6 +8,16 @@ import Footer from "../components/Footer";
 import Apps from "../components/Apps";
 
 const DeliveryAgent = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <>
       <div className="relative w-full">
@@ -26,7 +36,7 @@ const DeliveryAgent = () => {
               alt="Logo"
             />
           </Link>
-          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:ps-10 ps-8 order-1">
+          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:ps-10 ps-8 order-1md:mt-0 mt-8">
             <p className="grid md:ps-8 mb-3 text-[20px]">
               <span className="text-[14px] font-extralight">Come,</span> Work
               with us
@@ -43,7 +53,7 @@ const DeliveryAgent = () => {
             </div>
           </div>
 
-          <div className="absolute inset-0 flex justify-center md:justify-end items-end md:items-center sm:m-10 p-5">
+          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-28 md:mt-0 p-5">
             <AgentForm />
           </div>
         </div>
@@ -51,7 +61,7 @@ const DeliveryAgent = () => {
 
       <div className="flex flex-col justify-center items-center p-10">
         <p className="md:font-semibold">Why be a</p>
-        <p className="text-cyan-500 md:text-[32px] text-[20px]">
+        <p className="text-[#00ced1] md:text-[32px] text-[20px]">
           Famto Delivery Agent?
         </p>
       </div>
@@ -103,9 +113,9 @@ const DeliveryAgent = () => {
       </div>
 
       <div className="bg-gray-100 mb-[3rem] py-10">
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center mb-[2rem] ">
           <p className="md:font-semibold">That’s all we ask for</p>
-          <p className="text-cyan-500 md:text-[32px] text-[20px]">
+          <p className="text-[#00ced1] md:text-[32px] text-[20px]">
             Working with us
           </p>
         </div>

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 
 const Subscriptions = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -31,15 +41,15 @@ const Subscriptions = () => {
       </div>
       <section className="lg:mx-14 m-8">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-3  mb-[1rem] ">
-          <div className="flex flex-col  p-6 border border-gray-100 shadow-md rounded-3xl bg-white ">
+          <div className="flex flex-col  p-6 border border-gray-200 shadow-md rounded-3xl bg-white ">
             <div className="grid ">
               <div className="flex flex-col justify-center items-center">
-                <div className="px-3 py-1 bg-cyan-100 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
+                <div className="px-3 py-1  bg-[#00ced1]/10 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
                   Best Value
                 </div>
                 <div className="text-[#00ced1] text-3xl font-bold mb-2">
                   ₹ 16,419
-                  <span className="text-black text-sm font-normal">/Year</span>
+                  <span className="text-black text-sm font-medium">/Year</span>
                 </div>
                 <div className="text-gray-500 mb-[2rem] ">
                   <span className="text-gray-400 line-through"> ₹ 18249</span>{" "}
@@ -88,15 +98,17 @@ const Subscriptions = () => {
             </div>
           </div>
 
-          <div className="flex flex-col p-6 border border-gray-100 shadow-md rounded-3xl  bg-white">
+          <div className="flex flex-col p-6 border border-gray-200 shadow-md rounded-3xl  bg-white">
             <div className="grid">
               <div className="flex flex-col justify-center items-center">
-                <div className="px-3 py-1 bg-cyan-100 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
+                <div className="px-3 py-1 bg-[#00ced1]/10 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
                   Most Popular
                 </div>
                 <div className="text-[#00ced1] text-3xl font-bold mb-2">
                   ₹ 8,549
-                  <span className="text-black text-sm font-normal">/six</span>
+                  <span className="text-black text-sm font-medium">
+                    /Six Months
+                  </span>
                 </div>
                 <div className="text-gray-500 mb-[2rem] ">
                   <span className="text-gray-400 line-through">₹ 8999</span> (5%
@@ -145,17 +157,15 @@ const Subscriptions = () => {
             </div>
           </div>
 
-          <div className="flex flex-col p-6 border border-gray-100  shadow-md bg-white rounded-3xl">
+          <div className="flex flex-col p-6 border border-gray-200  shadow-md bg-white rounded-3xl">
             <div className="grid">
               <div className="flex flex-col justify-center items-center ">
-                <div className="px-3 py-1 bg-cyan-100 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
+                <div className="px-3 py-1 bg-[#00ced1]/10 text-[#00ced1] rounded-full border border-[#00ced1] mb-[1rem]">
                   Basic
                 </div>
                 <div className="text-[#00ced1] text-3xl font-bold mb-[4rem]">
                   ₹ 1,499
-                  <span className="text-black text-sm font-normal">
-                    / Month
-                  </span>
+                  <span className="text-black text-sm font-medium">/Month</span>
                 </div>
               </div>
               <ul className="list-disc ps-[1rem] md:ps-[20px] font-medium text-[14px] space-y-2">
