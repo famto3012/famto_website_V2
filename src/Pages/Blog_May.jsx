@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { IoMdArrowBack } from "react-icons/io";
 
 const Blog_May = () => {
   useEffect(() => {
@@ -48,7 +49,12 @@ const Blog_May = () => {
         </div>
       </div>
 
-      <section className="w-full text-[13px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem] mb-[2rem]">
+      <section className="w-full text-[13px] md:text-[16px] mx-auto px-[2rem] md:px-[3rem] py-[1rem] mb-[2rem]">
+        <Link to="/blogs">
+          <div className="text-black flex items-center justify-start my-2 underline">
+            <IoMdArrowBack /> Back
+          </div>
+        </Link>
         <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-1/2 lg:w-1/2 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
             Between the red and orange bubbles, Is the Merchants unhappy?

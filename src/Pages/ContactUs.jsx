@@ -56,7 +56,7 @@ const ContactUs = () => {
                 <h1 className="text-black/50">Give us on call</h1>
                 <a
                   href="tel:+919778180794"
-                  className="md:text-[18px] font-[500]"
+                  className="md:text-[18px] font-[600]"
                 >
                   +91 97781 80794
                 </a>
@@ -68,7 +68,7 @@ const ContactUs = () => {
                 <h1 className="text-black/50">Drop us a mail on</h1>
                 <a
                   href="mailto:contact@famto.in"
-                  className="md:text-[18px] text-slate-600 font-[500]"
+                  className="md:text-[18px] font-[600]"
                 >
                   contact@famto.in
                 </a>
@@ -81,7 +81,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <h1 className="text-black/50">You can visit us at</h1>
-                <p className="sm:w-1/3 text-slate-600 mb-4">
+                <p className="sm:w-1/3 font-[600] mb-4">
                   A-18, Lekshmi Nagar, Kesavadasapuram, Thiruvananthapuram,
                   Kerala 695004
                 </p>
@@ -96,7 +96,7 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="w-full md:w-[70%]">
-          <div className="bg-white/25 max-w-4xl">
+          <div className="max-w-4xl">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 ps-8 gap-8">
               <div className="flex items-center">
                 <figure className="h-20 w-20">
