@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Blog_April = () => {
-
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -14,7 +13,7 @@ const Blog_April = () => {
 
     scrollToTop();
   }, []);
-  
+
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -35,7 +34,7 @@ const Blog_April = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] md:w-[90%] mx-auto px-[2rem]  py-[1rem]">
+      <section className="w-full text-[13px] md:text-[15px] md:w-[90%] mx-auto px-[2rem]  py-[1rem] mb-[2rem]">
         <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-2/3 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
             The Digital Wave: FMCG Embraces Delivery for Tomorrow's Consumer

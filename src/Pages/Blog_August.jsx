@@ -2,19 +2,18 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-const Blog_August = () => { 
+const Blog_August = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
 
-    useEffect(() => {
-        const scrollToTop = () => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        };
-    
-        scrollToTop();
-      }, []);
-      
+    scrollToTop();
+  }, []);
+
   return (
     <main className="relative">
       <div className="relative w-full bg-[#00ced1] ">
@@ -41,7 +40,7 @@ const Blog_August = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] md:w-[90%] mx-auto px-[2rem]  py-[1rem]">
+      <section className="w-full text-[13px] md:text-[15px] md:w-[90%] mx-auto px-[2rem] py-[1rem]">
         <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-2/3 lg:w-1/2 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
             "An Award that Fuels Our Drive for Continuous Excellence"
@@ -80,7 +79,7 @@ const Blog_August = () => {
             </figure>
           </div>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 mb-[2rem]">
           <p>
             <span className="font-[600]">The Ceremony: </span>The award
             ceremony, held during the 12th anniversary of the SreeVidya

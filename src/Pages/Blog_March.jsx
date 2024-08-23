@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-const Blog_March = () => { 
-
+const Blog_March = () => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -35,7 +34,7 @@ const Blog_March = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem]">
+      <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem] py-[1rem] mb-[2rem]">
         <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-2/3 lg:w-1/2 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
             Building a Delivery Ecosystem for the Elderly: Personalized Care at
