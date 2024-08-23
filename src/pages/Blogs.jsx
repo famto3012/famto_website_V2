@@ -24,6 +24,14 @@ const Blogs = () => {
     `"An Award that Fuels Our Drive for Continuous Excellence"`,
   ];
 
+  const paths = [
+    "/blog-april",
+    "/blog-may",
+    "/blog-june",
+    "/blog-march",
+    "/blog-august",
+  ];
+
   const images = [
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblogsimg.svg?alt=media&token=eeb36501-e2e2-4060-8849-ab79a8b23895",
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_may.svg?alt=media&token=fd5df35b-8b34-4507-9356-430897de579f",
@@ -35,7 +43,7 @@ const Blogs = () => {
   return (
     <main className="relative">
       <div className="relative w-full">
-        <figure className="h-[10rem] md:h-[70vh]">
+        <figure className="h-[14rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog.svg?alt=media&token=db5c8d77-a5e4-4294-a32f-84585c418857"
@@ -43,9 +51,9 @@ const Blogs = () => {
           />
         </figure>
         <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
-          <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
+          <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Flogo.svg?alt=media&token=08e766da-ec03-4d84-b665-212f06c23ff3"
               alt="Logo"
             />
@@ -56,7 +64,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[3rem] grid md:grid-cols-2 gap-20">
+      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[5rem] grid md:grid-cols-2 gap-20">
         {blogs.map((blog, index) => (
           <div
             key={index}
@@ -71,9 +79,11 @@ const Blogs = () => {
             </figure>
             <div className="p-5">
               <p className="text-lg font-medium">{blog}</p>
-              <button className="text-teal-400 border border-teal-400 rounded-3xl p-2 gap-1 px-4 flex items-center mt-7 hover:bg-teal-400 hover:text-white transition-all duration-300">
-                Read More <FiArrowUpRight />
-              </button>
+              <Link to={paths[index]}>
+                <button className="text-teal-400 border border-teal-400 rounded-3xl p-2 gap-1 px-4 flex items-center mt-7 hover:bg-teal-400 hover:text-white transition-all duration-300">
+                  Read More <FiArrowUpRight />
+                </button>
+              </Link>
             </div>
           </div>
         ))}

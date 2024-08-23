@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Blog_June = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
+
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -23,7 +34,7 @@ const Blog_June = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[0rem] py-[1rem]">
+      <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[0rem] py-[2rem]">
         <div className="md:text-center py-10">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight order-1">
             A Comprehensive Guide to Price Comparison for Customers and
@@ -57,7 +68,7 @@ const Blog_June = () => {
             Download Multiple Apps: Install many delivery apps on your
             smartphone to make price comparisons simple..
           </li>
-          <li className="mt-2">           
+          <li className="mt-2">
             {" "}
             Look for Sales and Savings: Apps frequently provide special
             discounts and offers. One might offer a discount on a restaurant,
@@ -136,10 +147,10 @@ const Blog_June = () => {
             awareness and draw in new clients.
           </li>
           <p className="mt-5">
-            <span className="font-[600]">Exclusive Deals with Apps:</span> Sometimes, working with just
-            one delivery app might lead to better terms and increased support
-            for promotions. But doing so can restrict your reach to the users of
-            that particular app.
+            <span className="font-[600]">Exclusive Deals with Apps:</span>{" "}
+            Sometimes, working with just one delivery app might lead to better
+            terms and increased support for promotions. But doing so can
+            restrict your reach to the users of that particular app.
           </p>
           <h1 className="font-[600] my-3">Optimizing Delivery Charges: </h1>
           <li>

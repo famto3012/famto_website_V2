@@ -4,7 +4,7 @@ import Button from "./button";
 const MerchantForm = () => {
   return (
     <>
-      <main className="bg-white/90 p-4 rounded-lg mx-auto lg:mx-0 sm:w-[25rem] w-fit h-fit">
+      <main className="bg-white/90 p-4 rounded-lg lg:mx-0 w-[25rem] h-fit">
         <div className="py-2 font-bold">
           <h1>Become a Merchant</h1>
         </div>
@@ -20,10 +20,10 @@ const MerchantForm = () => {
 
           <div className="grid gap-1">
             <label className="font-[600]">Business Type</label>
-            <select
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg"
-            >
-                <option defaultValue="Business Type" hidden >Enter your Business Type</option>
+            <select className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg">
+              <option defaultValue="Business Type" hidden>
+                Enter your Business Type
+              </option>
             </select>
           </div>
           <div className="grid gap-1">
@@ -52,8 +52,7 @@ const MerchantForm = () => {
             ></input>
           </div>
           <div className="flex justify-end p-3">
-            <Button 
-            value="Get Started"/>
+            <Button value="Get Started" />
           </div>
         </div>
       </main>

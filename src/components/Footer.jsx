@@ -12,7 +12,7 @@ const Footer = () => {
             className="w-[200px] h-[30px]"
           />
         </Link>
-        <div className="flex flex-col sm:flex-row ps-[2rem] lg:gap-[50px] gap-[30px] text-left">
+        <div className="grid sm:grid-cols-2 lg:flex sm:flex-row ps-[2rem] lg:gap-[50px] gap-[30px] text-left">
           <div className="flex flex-col">
             <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
               Company
