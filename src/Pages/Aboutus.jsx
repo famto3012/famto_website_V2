@@ -6,16 +6,16 @@ import { aboutTableData } from "../data";
 import { SiTicktick } from "react-icons/si";
 
 const Aboutus = () => {
-    useEffect(() => {
-      const scrollToTop = () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      };
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
 
-      scrollToTop();
-    }, []);
+    scrollToTop();
+  }, []);
 
   const chunkArray = (array, chunkSize) => {
     const chunks = [];
@@ -97,9 +97,7 @@ const Aboutus = () => {
                   </figure>
                 </div>
                 <div className="md:w-1/2 md:p-[30px] py-8 text-center md:text-start ">
-                  <h4 className="font-bold text-[18px]  md:mt-0">
-                    Mission
-                  </h4>
+                  <h4 className="font-bold text-[18px]  md:mt-0">Mission</h4>
                   <p>
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
@@ -112,13 +110,13 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
-        <div className="bg-gray-100  md:flex grid px-10 py-8 w-full mb-20 justify-between">
-          <div className="flex flex-col justify-center items-end md:order-3 order-1 px-5 md:px-0 md:py-0">
+        <div className="bg-gray-100  md:flex grid px-10 w-full mb-20 justify-between">
+          <div className="flex flex-col justify-center sm:ml-44 md:ml-10 items-center lg:items-end md:order-3 order-1 px-5 md:px-0 py-8">
             <p className="font-semibold">What we values at</p>
             <p className="text-[#00ced1] text-[32px]">Famto</p>
           </div>
 
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 md:py-10 py-5 order-2 md:order-1">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 md:py-10 py-8 order-2 md:order-1">
             {aboutTableChunks.map((chunk, index) => (
               <ul key={index} className="flex flex-col space-y-2">
                 {chunk.map((data, subIndex) => (
@@ -136,7 +134,7 @@ const Aboutus = () => {
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FVector.svg?alt=media&token=e8ad9498-ea74-471f-bd94-a646d258a60e"
               alt="vector"
             />
-            </figure>
+          </figure>
         </div>
 
         <Whatsapp />

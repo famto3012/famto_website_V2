@@ -20,6 +20,17 @@ const HomePage = () => {
   const [menuClosing, setMenuClosing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
+
   const toggleMenu = () => {
     if (menuOpen) {
       setMenuClosing(true);
@@ -149,21 +160,29 @@ const HomePage = () => {
 
             {(menuOpen || menuClosing) && (
               <div
-                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 backdrop-blur-lg text-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
+                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
                   menuOpen
                     ? "animate-slideInFromTopRight"
                     : "animate-slideOutToBottomLeft"
                 }`}
               >
-                <Link to="/" onClick={toggleMenu}>
+                <Link
+                  to="/"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center p-3"
+                >
                   Home
                 </Link>
-                <Link to="/delivery" onClick={toggleMenu}>
+                <Link
+                  to="/delivery"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center pb-3"
+                >
                   Delivery
                 </Link>
                 <Link
                   to="/it-service"
-                  className="border rounded-md border-white p-3 hover:bg-white hover:text-black"
+                  className="rounded-md pb-3 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
                 >
                   IT Services
@@ -240,9 +259,9 @@ const HomePage = () => {
           <h1 className="text-[32px] text-cyan-500">Our Services</h1>
         </div>
 
-        <div className="md:flex grid gap-5 mx-10">
+        <div className="lg:flex grid md:grid-cols-2 gap-5 mx-10">
           {homeServicesData.map((service) => (
-            <div className="w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-black/90 group">
+            <div className="lg:w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-black/90 group">
               <h1 className="text-[#00CED1] relative  after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out group-hover:after:w-full group-hover:text-white">
                 {service.service}
               </h1>
