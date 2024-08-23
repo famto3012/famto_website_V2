@@ -14,7 +14,7 @@ const DeliveryAgent = () => {
         <figure className="h-[50rem] md:h-[80vh]">
           <img
             className="w-full h-full object-cover"
-            src="delivery.svg"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-agent.svg?alt=media&token=247f8151-2725-4808-a421-8cdcd7853236"
             alt="Be A Merchant logo"
           />
         </figure>
