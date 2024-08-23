@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { FaIndianRupeeSign } from "react-icons/fa6";
@@ -9,6 +9,17 @@ import Footer from "../components/Footer";
 import DeliverySlides from "../components/DeliverySlides";
 
 const Delivery = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
 
@@ -76,19 +87,31 @@ const Delivery = () => {
 
             {(menuOpen || menuClosing) && (
               <div
-                className={`absolute top-[10vh] right-[5vh] w-[150px] sm:w-[200px] z-30 backdrop-blur-lg text-white flex flex-col items-center gap-[10px] sm:gap-[20px] p-4 rounded-md md:hidden ${
+                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
                   menuOpen
                     ? "animate-slideInFromTopRight"
                     : "animate-slideOutToBottomLeft"
                 }`}
               >
-                <Link to="/" onClick={toggleMenu}>
+                <Link
+                  to="/"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center p-3"
+                >
                   Home
                 </Link>
-                <Link to="/delivery" onClick={toggleMenu}>
+                <Link
+                  to="/delivery"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center pb-3"
+                >
                   Delivery
                 </Link>
-                <Link to="/it-service" onClick={toggleMenu}>
+                <Link
+                  to="/it-service"
+                  className="rounded-md pb-3 hover:bg-white hover:text-black"
+                  onClick={toggleMenu}
+                >
                   IT Services
                 </Link>
               </div>

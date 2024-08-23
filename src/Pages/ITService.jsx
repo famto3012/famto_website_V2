@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { SiTicktick } from "react-icons/si";
 import Footer from "../components/Footer";
-import Button from "../components/Button";
+import Button from "../components/button";
 
 const ITService = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
 
   const toggleMenu = () => {
     if (menuOpen) {
@@ -87,19 +98,31 @@ const ITService = () => {
 
             {(menuOpen || menuClosing) && (
               <div
-                className={`absolute top-[10vh] right-[5vh] w-[150px] sm:w-[200px] z-30 backdrop-blur-lg text-white flex flex-col items-center gap-[10px] sm:gap-[20px] p-4 rounded-md md:hidden ${
+                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
                   menuOpen
                     ? "animate-slideInFromTopRight"
                     : "animate-slideOutToBottomLeft"
                 }`}
               >
-                <Link to="/" onClick={toggleMenu}>
+                <Link
+                  to="/"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center p-3"
+                >
                   Home
                 </Link>
-                <Link to="/delivery" onClick={toggleMenu}>
+                <Link
+                  to="/delivery"
+                  onClick={toggleMenu}
+                  className="border-b-2 border-gray-200 w-full flex justify-center pb-3"
+                >
                   Delivery
                 </Link>
-                <Link to="/it-service" onClick={toggleMenu}>
+                <Link
+                  to="/it-service"
+                  className="rounded-md pb-3 hover:bg-white hover:text-black"
+                  onClick={toggleMenu}
+                >
                   IT Services
                 </Link>
               </div>
@@ -126,7 +149,7 @@ const ITService = () => {
             Design & Development
           </h1>
         </div>
-        <div className="md:flex grid gap-5 justify-center mx-5 py-10">
+        <div className="md:flex grid gap-10 md:mx-5 xl:mx-0 justify-center py-10">
           <div className="relative flex items-end justify-end md:justify-start">
             <figure className="md:h-[15rem] h-[10rem]">
               <img
@@ -166,19 +189,18 @@ const ITService = () => {
         <div className="flex justify-center md:my-10  md:mb-0">
           <Link to="/contact-us">
             {" "}
-            <Button 
-            value="Contact Us"/>
+            <Button value="Contact Us" />
           </Link>
         </div>
       </div>
 
-      <div className="bg-gray-100 mt-14 md:flex grid md:px-20 pb-5 justify-between">
+      <div className="bg-gray-100 mt-14 md:flex grid md:px-20  justify-between">
         <div className="flex flex-col justify-center items-end md:order-3 order-1 px-5 py-5 md:px-0 md:py-0">
           <p className="font-semibold">Why Famto</p>
           <p className="text-cyan-500 text-[32px]">IT Services?</p>
         </div>
 
-        <p className="md:w-1/2 px-5 md:py-10 text-[14px] md:order-1 order-2">
+        <p className="md:w-1/2 px-5 md:py-10 py-5 text-[14px] md:order-1 order-2">
           Welcome to Famto IT Services, your go-to solution for innovative
           website and mobile application development. We specialize in crafting
           bespoke digital experiences that elevate brands and drive success. Our
