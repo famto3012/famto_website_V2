@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  animate,
+} from "framer-motion";
 import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
-import Button from "../components/Button";
 import Apps from "../components/Apps";
+import useMeasure from "react-use-measure";
 import Footer from "../components/Footer";
 import { homeServicesData } from "../data";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md";
+import Button from "../components/button";
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider1.svg?alt=media&token=8eb852f2-3ef8-4548-a553-4a5e89bf7eb7",
@@ -19,6 +25,7 @@ const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  let [ref, { width }] = useMeasure();
 
   useEffect(() => {
     const scrollToTop = () => {
@@ -30,6 +37,32 @@ const HomePage = () => {
 
     scrollToTop();
   }, []);
+
+  const XTranslation = useMotionValue(0);
+
+  useEffect(() => {
+    let controls;
+    const smallDeviceWidthThreshold = 400; // Example threshold for small devices
+    const screenWidth = window.innerWidth;
+
+    // Calculate finalPosition based on screenWidth
+    let finalPosition;
+    if (screenWidth <= smallDeviceWidthThreshold) {
+      finalPosition = -screenWidth - 1300; // Adjust as needed for small devices
+    } else {
+      finalPosition = -width - 500; // Default value for larger devices
+    }
+
+    controls = animate(XTranslation, [0, finalPosition], {
+      ease: "linear",
+      duration: 15,
+      repeat: Infinity,
+      repeatType: "loop",
+      repeatDelay: 0,
+    });
+
+    return controls.stop;
+  }, [XTranslation, width]);
 
   const toggleMenu = () => {
     if (menuOpen) {
@@ -74,35 +107,6 @@ const HomePage = () => {
     visible: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 5 },
   };
-
-  const sliderVariants = {
-    initial: {
-      transform: "translateX(0%)",
-    },
-    animate: {
-      transform: "translateX(-100%)",
-      transition: {
-        from: "translateX(100%)",
-        to: "translateX(-100%)",
-        repeat: Infinity,
-        duration: 20,
-        ease: "linear",
-      },
-    },
-  };
-
-  const clients = [
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim1.svg?alt=media&token=b34faaea-fccc-4496-b5c7-1dd9cfce4504",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim2.svg?alt=media&token=088908c3-b1af-417e-98d2-0308ea37b470",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim3.svg?alt=media&token=6eee20d8-d90d-46c0-91a1-8ca119df1308",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim4.svg?alt=media&token=70cf4a1b-7ed4-4dd7-9dc7-c2199d9df4ad",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim5.svg?alt=media&token=b48c309a-83aa-4415-ac88-ecdad1c785c7",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim6.svg?alt=media&token=c42a43c9-caac-4ae1-8735-58999b06b5ac",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim7.svg?alt=media&token=0b59c447-047e-47a8-aabd-d5d0dab68e61",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim8.svg?alt=media&token=a99342fb-d99d-469e-81f2-e1132f50b9bc",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim9.svg?alt=media&token=0da2774c-71d7-4619-8a0a-8e7d13098261",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fanim10.svg?alt=media&token=378ddb23-2288-420f-809e-ea9c287cac53",
-  ];
 
   return (
     <>
@@ -214,7 +218,8 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[800] text-[#00ced1] myd:text-[26px]">
+
+                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
                       The Complete App
                     </h1>
                   </motion.div>
@@ -227,7 +232,7 @@ const HomePage = () => {
                     variants={text2Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[800] text-[#00ced1] md:text-[26px] text-[14px]">
+                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] text-[14px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
                       One-Stop Solution for Everything you need
                     </h1>
                   </motion.div>
@@ -255,7 +260,7 @@ const HomePage = () => {
       </div>
       <div className="pb-10 md:mt-8 md:8">
         <div className="p-10">
-          <p>overview of</p>
+          <p>Overview of</p>
           <h1 className="text-[32px] text-cyan-500">Our Services</h1>
         </div>
 
@@ -348,21 +353,24 @@ const HomePage = () => {
           </form>
         </div>
       </div>
-      <div className="md:flex grid pt-10 lg:gap-5 lg:mb-0 mb-10 mt-14 bg-[#F6F6F6] h-[500px]">
-        <div className="md:w-1/2 flex md:items-end justify-center">
-          <figure className="w-full h-fit md:ps-24">
-            <img src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fhome-app.svg?alt=media&token=8bc2e6e4-f52d-461e-9103-5f50f215366c" />
+      <div className="md:flex grid justify-between pt-10 lg:gap-5 lg:mb-0 mt-14 bg-[#F6F6F6] h-[30rem]">
+        <div className="md:w-1/2 flex md:items-end xl:items-start mx-auto justify-center">
+          <figure className="w-full">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fhome-app.png?alt=media&token=dd07156a-19a0-4f36-98ab-53bbcf59531b"
+              className="md:h-[28rem] h-[26rem] w-fit"
+            />
           </figure>
         </div>
-        <div className="md:mt-[8%] pb-10 bg-gray-100">
-          <h2 className="font-[600] md:text-[28px] text-center md:text-start">
+        <div className="md:mt-[3%] pb-10 bg-gray-100">
+          <h2 className="font-[600] md:text-[28px] text-center md:text-start mt-4 md:mt-0 md:ps-8">
             Download the Famto app!
           </h2>
           <Apps />
         </div>
       </div>
 
-      <div className="overflow-hidden p-10">
+      <div className="max-w-[90%] mx-auto overflow-hidden mt-[400px] md:mt-8">
         <div className="grid md:justify-center md:text-center">
           <p className="font-[500] text-[14px] md:text-[18px]">
             These are some of our
@@ -371,23 +379,92 @@ const HomePage = () => {
             Esteemed Clients
           </h1>
         </div>
+
         <motion.div
-          variants={sliderVariants}
-          initial="initial"
-          animate="animate"
-          style={{
-            display: "flex",
-            width: "200%",
-            overflow: "hidden",
-          }}
+          className="flex mb-[50px]"
+          ref={ref}
+          style={{ x: XTranslation }}
         >
-          {[...clients, ...clients].map((client, index) => (
-            <li key={index} className="inline-block">
-              <figure className="w-[100px] h-[100px] my-5">
-                <img src={client} className="w-full h-full object-contain" />
-              </figure>
-            </li>
-          ))}
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim1.svg?alt=media&token=3481a4b4-1800-499c-a020-f8c0e22ab12d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewclientanim.svg?alt=media&token=11521e91-307c-4171-856b-f4ce8371467c"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim3.svg?alt=media&token=c1dedae9-9e6c-477c-97ab-165230b73457"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim4.svg?alt=media&token=4953922b-9935-4e2c-8a2a-e970d6c1f7a6"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim5.svg?alt=media&token=708f08a2-c504-479b-a152-70311fdc9c7d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewerlogo.svg?alt=media&token=3f77029c-efe9-4249-90bf-faf43755db6f"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim7.svg?alt=media&token=d9e255e8-26bf-479f-884f-987ff6a17b61"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim8.svg?alt=media&token=15f0655d-4328-40f5-95c1-dedb13ae6232"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim9.svg?alt=media&token=07942576-1496-4120-a761-a01958cabb2d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim10.svg?alt=media&token=9173dd0b-aec9-4ae7-af36-0bfb172d9f51"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim1.svg?alt=media&token=3481a4b4-1800-499c-a020-f8c0e22ab12d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewclientanim.svg?alt=media&token=11521e91-307c-4171-856b-f4ce8371467c"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim3.svg?alt=media&token=c1dedae9-9e6c-477c-97ab-165230b73457"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim4.svg?alt=media&token=4953922b-9935-4e2c-8a2a-e970d6c1f7a6"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim5.svg?alt=media&token=708f08a2-c504-479b-a152-70311fdc9c7d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewerlogo.svg?alt=media&token=3f77029c-efe9-4249-90bf-faf43755db6f"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim7.svg?alt=media&token=d9e255e8-26bf-479f-884f-987ff6a17b61"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim8.svg?alt=media&token=15f0655d-4328-40f5-95c1-dedb13ae6232"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim9.svg?alt=media&token=07942576-1496-4120-a761-a01958cabb2d"
+            alt=""
+          />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim10.svg?alt=media&token=9173dd0b-aec9-4ae7-af36-0bfb172d9f51"
+            alt=""
+          />
         </motion.div>
       </div>
 
