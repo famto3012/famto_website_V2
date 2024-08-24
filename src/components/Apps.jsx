@@ -46,7 +46,8 @@ const Apps = () => {
                 className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             )}
-            <div className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-2 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
+
+            <div className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-2 p-1 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
               Share Link <FaArrowRight />
             </div>
           </div>

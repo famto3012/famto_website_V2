@@ -218,6 +218,7 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
+
                     <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
                       The Complete App
                     </h1>

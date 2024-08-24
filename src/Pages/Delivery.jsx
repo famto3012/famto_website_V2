@@ -195,9 +195,92 @@ const Delivery = () => {
           Work with us
         </h1>
       </div>
+
       <div className="w-full mb-10">
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
-          <figure className="md:w-[50rem] h-[15rem] relative">
+          <figure className="w-full md:w-1/2 h-[15rem] 2xl:h-[20rem] relative">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmerchant.svg?alt=media&token=c12c453c-0bf0-45c4-8e22-a40753a11c8f"
+              className="h-full w-full rounded-r-lg object-cover object-top"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center md:hidden p-4 text-white bg-black bg-opacity-50">
+              <p>
+                Become a <span className="font-bold text-[20px]">Merchant</span>
+              </p>
+              <p>
+                Start Selling Online with us. Register or signup on FAMTO with
+                your store details. Be Your Own Boss.
+              </p>
+              <Link to="/merchant">
+                <button className="mt-4 underline flex items-center ps-36">
+                  Know More <BiLinkExternal className="ml-2" />
+                </button>
+              </Link>
+            </div>
+          </figure>
+          <div className="hidden md:flex w-full md:w-1/2 h-20 items-center gap-24 ps-10 py-20 border-l-4 mt-10 border-gray-200">
+            <div className="w-1/2 grid gap-3">
+              <p>
+                Become a <span className="font-bold text-[20px]">Merchant</span>
+              </p>
+              <p>
+                Start Selling Online with us. Register or signup on FAMTO with
+                your store details. Be Your Own Boss.
+              </p>
+            </div>
+            <Link to="/merchant">
+              <button className="md:text-[#00CED1] text-white underline flex items-center justify-end ml-14">
+                Know More <BiLinkExternal className="ml-2" />
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
+          <figure className="w-full md:w-1/2 h-[15rem] relative">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-partner.svg?alt=media&token=f1124faa-30b8-4529-b97a-11379f1e126a"
+              className="h-full w-full rounded-r-lg object-cover object-top"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center md:hidden p-4 text-white bg-black bg-opacity-50">
+              <p>
+                Become a{" "}
+                <span className="font-bold text-[20px]">Delivery Partner</span>
+              </p>
+              <p>
+                As a delivery driver, you'll make reliable money working
+                anytime, anywhere.
+              </p>
+              <Link to="/delivery-agent">
+                <button className="mt-4 underline flex items-center ps-36">
+                  Know More <BiLinkExternal className="ml-2" />
+                </button>
+              </Link>
+            </div>
+          </figure>
+          <div className="hidden md:flex w-full md:w-1/2 h-20 items-center gap-24 ps-10 py-20 border-l-4 mt-10 border-gray-200">
+            <div className="w-1/2 grid gap-3">
+              <p>
+                Become a{" "}
+                <span className="font-bold text-[20px]">Delivery Partner</span>
+              </p>
+              <p>
+                As a delivery driver, you'll make reliable money working
+                anytime, anywhere.
+              </p>
+            </div>
+            <Link to="/delivery-agent">
+              <button className="md:text-[#00CED1] text-white underline flex items-center justify-end ml-14">
+                Know More <BiLinkExternal className="ml-2" />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="w-full mb-10">
+        <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
+          <figure className="md:w-[60rem] h-[15rem] relative">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmerchant.svg?alt=media&token=c12c453c-0bf0-45c4-8e22-a40753a11c8f"
               className="h-full w-full rounded-r-lg object-cover"
@@ -236,7 +319,7 @@ const Delivery = () => {
         </div>
 
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
-          <figure className="md:w-[41rem] h-[15rem] relative">
+          <figure className="md:w-[41rem] xl:w-[50rem] h-[15rem] relative">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-partner.svg?alt=media&token=f1124faa-30b8-4529-b97a-11379f1e126a"
               className="h-full w-full rounded-r-lg object-cover"
@@ -275,7 +358,7 @@ const Delivery = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </>
   );

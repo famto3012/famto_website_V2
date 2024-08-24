@@ -53,7 +53,7 @@ const Aboutus = () => {
         </div>
 
         <section className="w-full md:w-[90%] mx-auto  py-[3rem]">
-          <p className="mb-[40px] text-center md:text-start px-5">
+          <p className="mb-[40px] text-center md:text-start">
             The Company got its corporate character in July 2021 under the name
             “MY FAMTO Private Limited” and began its journey in Kerala on July
             2021 for covering services like Delivery(Food, Grocery, Fruits &
