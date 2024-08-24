@@ -85,6 +85,7 @@ const Aboutus = () => {
               </div>
             </div>
 
+            {/* <div className="hidden lg:block mt-[35px] inset-y-0 right-0 w-1 h-[110px] bg-[#b8e6fc]"></div> */}
             <div className="text-center md:text-start">
               <div className="md:flex grid w-full">
                 <div className="md:w-1/2">
@@ -96,7 +97,7 @@ const Aboutus = () => {
                   </figure>
                 </div>
                 <div className="md:w-1/2 md:p-[30px] py-8 text-center md:text-start ">
-                  <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">Mission</h4>
+                  <h4 className="font-bold text-[18px]  md:mt-0">Mission</h4>
                   <p>
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
@@ -119,8 +120,8 @@ const Aboutus = () => {
             {aboutTableChunks.map((chunk, index) => (
               <ul key={index} className="flex flex-col space-y-2">
                 {chunk.map((data, subIndex) => (
-                  <div className="text-[14px] p-1 gap-2 flex items-center">
-                    <SiTicktick className="text-[#00CED1] text-[20px]" />
+                  <div className="text-[14px] p-1 flex gap-1">
+                    <SiTicktick className="text-[#00CED1]" />
                     <li key={subIndex}>{data}</li>
                   </div>
                 ))}

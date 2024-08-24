@@ -18,7 +18,6 @@ import Blog_August from "./Pages/Blog_August";
 import HomePage from "./Pages/HomePage";
 import ContactUs from "./Pages/ContactUs";
 import DeliveryAgent from "./Pages/DeliveryAgent";
-import Subscriptions from "./Pages/Subscriptions";
 
 function App() {
   return (
@@ -39,7 +38,6 @@ function App() {
         <Route path="/blog-june" element={<Blog_June />} />
         <Route path="/blog-august" element={<Blog_August />}/>
         <Route path="/contact-us" element={<ContactUs/>}/>
-        <Route path="/subscriptions" element={<Subscriptions/>}/>
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
           path="/cancellation-and-refund-policy"

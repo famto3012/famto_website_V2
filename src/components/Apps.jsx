@@ -46,7 +46,8 @@ const Apps = () => {
                 className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             )}
-            <div className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-2 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
+
+            <div className="bg-[#00ced1] flex  lg:px-10 md:px-[7px] px-1 text-white gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
               Share Link <FaArrowRight />
             </div>
           </div>
@@ -56,14 +57,14 @@ const Apps = () => {
             <div className="flex gap-3 mt-5 ">
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.png?alt=media&token=c94ca732-53fa-4343-87c8-39f138fdf36f"
-                  className=" md:border-gray-800 rounded-lg border-white h-12"
+                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.svg?alt=media&token=cd936c30-0133-432e-af3f-b0817cdd03bc"
+                  className=" md:border-gray-800 rounded-lg border-white h-10"
                 />
               </a>
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.png?alt=media&token=0c68fe33-2a2e-42b7-9859-ee921a9e9cae"
-                  className=" md:border-gray-800 rounded-lg border-white h-12"
+                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.svg?alt=media&token=a6ae83f9-23a9-4a69-829d-a69801982838"
+                  className=" md:border-gray-800 rounded-lg border-white h-10"
                 />
               </a>
             </div>

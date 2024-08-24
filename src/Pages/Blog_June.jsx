@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { IoMdArrowBack } from "react-icons/io";
 
 const Blog_June = () => {
   useEffect(() => {
@@ -37,12 +36,7 @@ const Blog_June = () => {
       </div>
       <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[0rem] py-[2rem]">
         <div className="md:text-center py-10">
-          <Link to="/blogs">
-            <div className="text-black flex items-center my-2 underline">
-              <IoMdArrowBack /> Back
-            </div>
-          </Link>
-          <h1 className="text-[18px] items-center font-semibold md:text-[26px] leading-tight order-1">
+          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight order-1">
             A Comprehensive Guide to Price Comparison for Customers and
             Merchants on Indian Delivery Apps
           </h1>

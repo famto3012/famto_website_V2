@@ -8,7 +8,6 @@ import { SiTicktick } from "react-icons/si";
 import Button from "../components/button";
 import Apps from "../components/Apps";
 import Footer from "../components/Footer";
-import { LuIndianRupee } from "react-icons/lu";
 
 const Merchant = () => {
   useEffect(() => {
@@ -85,7 +84,7 @@ const Merchant = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center p-10">
-        <p className="md:font-semibold">Our offerings</p>
+        <p className="md:font-semibold">Our Offerings</p>
         <p className="text-[#00ced1] md:text-[32px] text-[20px]">
           To Famto Merchants
         </p>
@@ -115,7 +114,7 @@ const Merchant = () => {
 
         <div className="flex  p-2 border border-gray-200 lg:w-1/4  rounded-lg">
           <div className="grid">
-            <LuIndianRupee className="text-[46px] m-2 rounded p-2 bg-[#F6F6F6] text-[#00ced1]" />
+            <FaRupeeSign className="text-[46px] m-2 rounded p-2 bg-[#F6F6F6] text-[#00ced1]" />
             <h1 className="text-[20px] p-2 font-semibold">
               Competitve Pricing
             </h1>
@@ -168,7 +167,7 @@ const Merchant = () => {
                 {chunk.map((data, subIndex) => (
                   <div
                     key={subIndex}
-                    className="text-[14px] flex gap-2 items-center"
+                    className="text-[14px] flex gap-1 items-center"
                   >
                     <SiTicktick className="text-[#00CED1] text-[18px]" />
                     <li>{data}</li>

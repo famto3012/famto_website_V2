@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { IoMdArrowBack } from "react-icons/io";
 
-const Blog_August = () => {
-  useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
+const Blog_August = () => { 
 
-    scrollToTop();
-  }, []);
-
+    useEffect(() => {
+        const scrollToTop = () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        };
+    
+        scrollToTop();
+      }, []);
+      
   return (
     <main className="relative">
       <div className="relative w-full bg-[#00ced1] ">
@@ -41,12 +41,7 @@ const Blog_August = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] mx-auto px-[3rem] py-[1rem]">
-        <Link to="/blogs">
-          <div className="text-black flex items-center my-2 underline">
-            <IoMdArrowBack /> Back
-          </div>
-        </Link>
+      <section className="w-full text-[13px] md:text-[15px] md:w-[90%] mx-auto px-[2rem]  py-[1rem]">
         <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-2/3 lg:w-1/2 mx-auto">
           <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
             "An Award that Fuels Our Drive for Continuous Excellence"
@@ -58,17 +53,8 @@ const Blog_August = () => {
             By Famto content team
           </h1>
         </div>
-        <div className="flex items-center justify-center rounded-lg mx-auto order-1 lg:order-2">
-          <figure className="h-[11rem] sm:h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-[20rem] max-w-full">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FKarma%20awards.svg?alt=media&token=7940152e-67e9-41fb-90a9-eddb2ba2a2df"
-              alt=""
-              className=" object-cover rounded-lg h-full w-full"
-            />
-          </figure>
-        </div>
-        {/* <div className="grid grid-cols-1 md:space-y-4 lg:grid-cols-3 lg: items-center md:mb-[3rem] mb-[1rem] w-full gap-8"> */}
-          <div className=" md:space-y-5 py-10 order-2 lg:order-1">
+        <div className="grid grid-cols-1 md:space-y-4 lg:grid-cols-3 lg: items-center md:mb-[3rem] mb-[1rem] w-full gap-8">
+          <div className="lg:col-span-2 md:space-y-5 order-2 lg:order-1">
             <p>
               At a prestigious event hosted by the Sree Vidya Kalanikethan
               Cultural Society, the Director of a unique delivery service was
@@ -83,8 +69,18 @@ const Blog_August = () => {
               have limited mobility or access to technology.
             </p>
           </div>
-        {/* </div> */}
-        <div className="space-y-6 mb-[2rem]">
+
+          <div className="flex items-center justify-center md:justify-end mx-auto order-1 lg:order-2">
+            <figure className="h-[11rem] sm:h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-[20rem] max-w-full">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FKarma%20awards.svg?alt=media&token=7940152e-67e9-41fb-90a9-eddb2ba2a2df"
+                alt=""
+                className=" object-cover h-full w-full"
+              />
+            </figure>
+          </div>
+        </div>
+        <div className="space-y-6">
           <p>
             <span className="font-[600]">The Ceremony: </span>The award
             ceremony, held during the 12th anniversary of the SreeVidya

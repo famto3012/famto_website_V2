@@ -1,23 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineCall } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import Footer from "../components/Footer";
-import { BiLinkExternal } from "react-icons/bi";
-import Button from "../components/Button";
 
 const ContactUs = () => {
-  useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
-
-    scrollToTop();
-  }, []);
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -56,7 +44,7 @@ const ContactUs = () => {
                 <h1 className="text-black/50">Give us on call</h1>
                 <a
                   href="tel:+919778180794"
-                  className="md:text-[18px] font-[600]"
+                  className="md:text-[18px] font-[500]"
                 >
                   +91 97781 80794
                 </a>
@@ -68,7 +56,7 @@ const ContactUs = () => {
                 <h1 className="text-black/50">Drop us a mail on</h1>
                 <a
                   href="mailto:contact@famto.in"
-                  className="md:text-[18px] font-[600]"
+                  className="md:text-[18px] text-slate-600 font-[500]"
                 >
                   contact@famto.in
                 </a>
@@ -81,89 +69,85 @@ const ContactUs = () => {
               </div>
               <div>
                 <h1 className="text-black/50">You can visit us at</h1>
-                <p className="sm:w-1/3 font-[600] mb-4">
+                <p className="sm:w-1/3 text-slate-600">
                   A-18, Lekshmi Nagar, Kesavadasapuram, Thiruvananthapuram,
                   Kerala 695004
                 </p>
-                <a
-                  href="https://maps.app.goo.gl/4YowwEyn3SUxdTSK9"
-                  className="md:text-[18px] text-[#00Ced1] underline underline-offset-2 flex items-center gap-2"
-                >
-                  View on Map <BiLinkExternal className="text-[24px]" />
-                </a>
               </div>
             </div>
           </div>
         </div>
         <div className="w-full md:w-[70%]">
-          <div className="max-w-4xl">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 ps-8 gap-8">
-              <div className="flex items-center">
-                <figure className="h-20 w-20">
-                  <img
-                    className="w-full h-full object-cover"
-                    src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwaving-hand.svg?alt=media&token=a7133b52-0416-41b9-a9f2-d5c69b998a27"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <div className="text-black/50 text-lg flex items-center justify-end space-x-4">
-                <p>Great, We are excited to hear from you.</p>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FArrow.svg?alt=media&token=d5b40fa8-cdfb-43a4-a660-ef061564e46c"
-                  alt="arrow"
-                />
-              </div>
-            </div>
-            <form className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-[3rem] md:text-[14px]">
-              <div>
-                <label className="block text-gray-700">Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
-                />
-              </div>
+    <div className="bg-white/25 max-w-4xl">
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 ps-8 gap-8">
+      <div className="flex items-center">
+        <figure className="h-20 w-20">
+          <img
+            className="w-full h-full object-cover"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwaving-hand.svg?alt=media&token=a7133b52-0416-41b9-a9f2-d5c69b998a27"
+            alt=""
+          />
+        </figure>
+      </div>
+      <div className="text-black/50 text-lg flex items-center justify-end space-x-4">
+        <p>Great, We are excited to hear from you.</p>
+        <img src="arrow.svg" alt="arrow" />
+      </div>
+    </div>
 
-              <div>
-                <label className="block text-gray-700">Phone Number</label>
-                <input
-                  type="text"
-                  placeholder="Enter your phone number"
-                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
-                />
-              </div>
+    <form className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-[3rem] md:text-[14px]">
+      <div>
+        <label className="block text-gray-700">Name</label>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px]"
+        />
+      </div>
 
-              <div>
-                <label className="block text-gray-700">Mail</label>
-                <input
-                  type="email"
-                  placeholder="Enter your mail address"
-                  className="mt-1 p-3 w-full border  rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
-                />
-              </div>
+      <div>
+        <label className="block text-gray-700">Phone Number</label>
+        <input
+          type="text"
+          placeholder="Enter your phone number"
+          className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px]"
+        />
+      </div>
 
-              <div>
-                <label className="block text-gray-700">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Give us a brief description on the matter"
-                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
-                />
-              </div>
+      <div>
+        <label className="block text-gray-700">Mail</label>
+        <input
+          type="email"
+          placeholder="Enter your mail address"
+          className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px]"
+        />
+      </div>
 
-              <div className="sm:col-span-1 md:col-span-2">
-                <label className="block text-gray-700">Description</label>
-                <textarea
-                  placeholder="Describe the matter"
-                  className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px] outline-none focus:outline-none"
-                  rows="4"
-                ></textarea>
-              </div>
-              <Button value="Send Us" />
-            </form>
-          </div>
-        </div>
+      <div>
+        <label className="block text-gray-700">Subject</label>
+        <input
+          type="text"
+          placeholder="Give us a brief description on the matter"
+          className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px]"
+        />
+      </div>
+
+      <div className="sm:col-span-1 md:col-span-2">
+        <label className="block text-gray-700">Description</label>
+        <textarea
+          placeholder="Describe the matter"
+          className="mt-1 p-3 w-full border rounded-md shadow-sm placeholder:text-[13px]"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <div className="sm:col-span-1 md:col-span-2 flex justify-start">
+        
+      </div>
+    </form>
+  </div>
+</div>
+
       </section>
       <Footer />
     </main>
