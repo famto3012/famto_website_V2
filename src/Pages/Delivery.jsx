@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
-import { FaIndianRupeeSign } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineVerifiedUser, MdSpeed } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import DeliverySlides from "../components/DeliverySlides";
+import { LuIndianRupee } from "react-icons/lu";
 
 const Delivery = () => {
   useEffect(() => {
@@ -129,8 +129,8 @@ const Delivery = () => {
         </div>
       </main>
       <div className="grid justify-center md:mt-14 mt-8">
-        <p className="flex justify-center">we Offer</p>
-        <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+        <p className="flex justify-center font-[500]">We offer</p>
+        <h1 className="text-[#00CED1]  md:text-[34px] text-[20px]">
           Various Delivery Services
         </h1>
       </div>
@@ -139,59 +139,59 @@ const Delivery = () => {
 
       <div className="bg-gray-100 pb-10 mt-14">
         <div className="p-10">
-          <p>why Famto</p>
-          <h1 className="text-[32px] text-cyan-500">Delivery Services</h1>
+          <p className="font-[600]">Why Famto</p>
+          <h1 className="text-[32px] text-[#00CED1]">Delivery Services</h1>
         </div>
         <div className="lg:flex grid sm:grid-cols-2 gap-5 md:mx-10 mx-5">
           <div className="bg-white grid justify-between rounded-lg p-5">
-            <h1 className="font-[500] my-3">Exceptional Quality</h1>
+            <h1 className="font-[600] my-3">Exceptional Quality</h1>
             <p>
               Our products are sourced from top-tier suppliers, ensuring premium
               quality and freshness with every delivery. We prioritize
               maintaining the highest standards in all our offerings.
             </p>
-            <div className="flex justify-end">
-              <MdOutlineVerifiedUser className="text-[42px] items-end text-cyan-500 " />
+            <div className="flex justify-end mt-6">
+              <MdOutlineVerifiedUser className="text-[42px] bg-gray-100 p-2 rounded-lg items-end text-[#00CED1] " />
             </div>
           </div>
           <div className="bg-white grid rounded-lg p-5 justify-between">
-            <h1 className="font-[500] my-3">Fast and Reliable Delivery</h1>
+            <h1 className="font-[600] my-3">Fast and Reliable Delivery</h1>
             <p>
               We guarantee swift and reliable delivery services, ensuring your
               products arrive on time, every time. Our efficient logistics
               minimize waiting time, providing a seamless experience.
             </p>
             <div className="flex justify-end ">
-              <MdSpeed className="text-[42px] items-end text-cyan-500 " />
+              <MdSpeed className="text-[42px] items-end bg-gray-100 p-2 rounded-lg text-[#00CED1] " />
             </div>
           </div>
           <div className="bg-white grid justify-between rounded-lg p-5">
-            <h1 className="font-[500] my-3">Competitve Pricing</h1>
+            <h1 className="font-[600] my-3">Competitve Pricing</h1>
             <p>
               We offer competitive prices without compromising on quality,
               making our products an excellent value for money. Our customers
               get the best deals, ensuring satisfaction and repeat business.
             </p>
             <div className="flex justify-end">
-              <FaIndianRupeeSign className="text-[42px] items-end text-cyan-500 " />
+              <LuIndianRupee className="text-[42px] items-end bg-gray-100 p-2 rounded-lg text-[#00CED1]" />
             </div>
           </div>
           <div className="bg-white grid justify-between rounded-lg p-5">
-            <h1 className="font-[500] my-3">Customer Satisfication</h1>
+            <h1 className="font-[600] my-3">Customer Satisfication</h1>
             <p>
               We are committed to customer satisfaction, offering responsive
               customer service and hassle-free returns. Our focus is on building
               long-term relationships with our customers.
             </p>
             <div className="flex justify-end">
-              <BsEmojiGrin className="text-[42px] items-end text-cyan-500 " />
+              <BsEmojiGrin className="text-[42px] items-end bg-gray-100 p-2 rounded-lg text-[#00CED1] " />
             </div>
           </div>
         </div>
       </div>
       <div className="grid justify-center md:mt-14 mt-8">
-        <p className="flex justify-center">Come</p>
-        <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+        <p className="flex justify-center font-[600]">Come</p>
+        <h1 className="text-[#00CED1]  md:text-[34px] text-[20px]">
           Work with us
         </h1>
       </div>
@@ -228,7 +228,7 @@ const Delivery = () => {
               </p>
             </div>
             <Link to="/merchant">
-              <button className="md:text-cyan-500 text-white underline flex items-center justify-end ml-14">
+              <button className="md:text-[#00CED1] text-white underline flex items-center justify-end ml-14">
                 Know More <BiLinkExternal className="ml-2" />
               </button>
             </Link>
@@ -269,7 +269,7 @@ const Delivery = () => {
               </p>
             </div>
             <Link to="/delivery-agent">
-              <button className="md:text-cyan-500 text-white underline flex items-center justify-end ml-14">
+              <button className="md:text-[#00CED1] text-white underline flex items-center justify-end ml-14">
                 Know More <BiLinkExternal className="ml-2" />
               </button>
             </Link>

@@ -121,14 +121,14 @@ const Footer = () => {
             <div className="mt-5 flex gap-2">
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.svg?alt=media&token=cd936c30-0133-432e-af3f-b0817cdd03bc"
-                  className="p-2 border md:border-gray-800 rounded-lg border-white"
+                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.png?alt=media&token=c94ca732-53fa-4343-87c8-39f138fdf36f"
+                  className="p-1 h-12 border md:border-gray-800 rounded-lg border-white"
                 />
               </a>
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.svg?alt=media&token=a6ae83f9-23a9-4a69-829d-a69801982838"
-                  className="p-2 border md:border-gray-800 rounded-lg border-white"
+                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.png?alt=media&token=0c68fe33-2a2e-42b7-9859-ee921a9e9cae"
+                  className="p-1 h-12 border md:border-gray-800 rounded-lg border-white"
                 />
               </a>
             </div>
@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex md:justify-start justify-end px-3">
-        <p className="text-gray-500 ml-10 mt-5 flex gap-1 items-center">
+        <p className="text-gray-500 ml-6 mt-5 flex gap-1 items-center opacity-50 text-[14px]">
           <FaRegCopyright /> My Famto Pvt. Ltd. 2024
         </p>
       </div>

@@ -33,3 +33,19 @@
   }
 }
 
+input[type="radio"] {
+  accent-color: #00ced1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #00ced1;
+  border-radius: 50%;
+  -webkit-appearance: none; /* Remove default styling in WebKit-based browsers */
+  appearance: none; /* Remove default styling */
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: #00ced1;
+  box-shadow: 0 0 0 2px white inset;
+}

@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const CancellationAndRefundPolicy = () => {
-        useEffect(() => {
-          const scrollToTop = () => {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          };
-      
-          scrollToTop();
-        }, []);
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -204,10 +204,10 @@ const CancellationAndRefundPolicy = () => {
             <a href="mailto:contact@famto.in">contact@famto.in</a>
           </strong>
         </p>
-       </section>
-    <Footer/>
+      </section>
+      <Footer />
     </main>
-  )
-}
+  );
+};
 
-export default CancellationAndRefundPolicy
+export default CancellationAndRefundPolicy;
