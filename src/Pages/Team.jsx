@@ -38,7 +38,7 @@ const Team = () => {
         </div>
       </div>
       <div className="my-[50px]">
-        <p className="max-w-[90%] mx-auto text-balance">
+        <p className="max-w-[90%] mx-auto text-center">
           Welcome to our "Team Famto" page, where you'll discover the vibrant
           personalities behind our organization. Delve into the diverse
           backgrounds, expertise, and passions of each member who contributes to

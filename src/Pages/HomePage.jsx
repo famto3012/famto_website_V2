@@ -214,7 +214,7 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[800] text-[#00ced1] md:text-[26px]">
+                    <h1 className="font-[800] text-[#00ced1] myd:text-[26px]">
                       The Complete App
                     </h1>
                   </motion.div>

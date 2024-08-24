@@ -53,7 +53,7 @@ const Aboutus = () => {
         </div>
 
         <section className="w-full md:w-[90%] mx-auto  py-[3rem]">
-          <p className="mb-[40px] text-center md:text-start px-5">
+          <p className="mb-[40px] text-center md:text-start">
             The Company got its corporate character in July 2021 under the name
             “MY FAMTO Private Limited” and began its journey in Kerala on July
             2021 for covering services like Delivery(Food, Grocery, Fruits &
@@ -85,7 +85,6 @@ const Aboutus = () => {
               </div>
             </div>
 
-            {/* <div className="hidden lg:block mt-[35px] inset-y-0 right-0 w-1 h-[110px] bg-[#b8e6fc]"></div> */}
             <div className="text-center md:text-start">
               <div className="md:flex grid w-full">
                 <div className="md:w-1/2">
@@ -97,7 +96,7 @@ const Aboutus = () => {
                   </figure>
                 </div>
                 <div className="md:w-1/2 md:p-[30px] py-8 text-center md:text-start ">
-                  <h4 className="font-bold text-[18px]  md:mt-0">Mission</h4>
+                  <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">Mission</h4>
                   <p>
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
@@ -120,8 +119,8 @@ const Aboutus = () => {
             {aboutTableChunks.map((chunk, index) => (
               <ul key={index} className="flex flex-col space-y-2">
                 {chunk.map((data, subIndex) => (
-                  <div className="text-[14px] p-1 flex gap-1">
-                    <SiTicktick className="text-[#00CED1]" />
+                  <div className="text-[14px] p-1 gap-2 flex items-center">
+                    <SiTicktick className="text-[#00CED1] text-[20px]" />
                     <li key={subIndex}>{data}</li>
                   </div>
                 ))}
