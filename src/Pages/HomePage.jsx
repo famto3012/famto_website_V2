@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
   useMotionValue,
   animate,
 } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import Apps from "../components/Apps";
 import useMeasure from "react-use-measure";
@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import { homeServicesData } from "../data";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 import Button from "../components/button";
+import emailjs from "@emailjs/browser";
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider1.svg?alt=media&token=8eb852f2-3ef8-4548-a553-4a5e89bf7eb7",
@@ -22,10 +23,16 @@ const images = [
 ];
 
 const HomePage = () => {
+  const form = useRef();
+  const [emailSuccess, setEmailSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   let [ref, { width }] = useMeasure();
+  const location = useLocation();
+
+  const isActive = (pathname) => location.pathname === pathname;
 
   useEffect(() => {
     const scrollToTop = () => {
@@ -96,6 +103,28 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    console.log("Button clicked");
+    try {
+      setIsLoading(true);
+      await emailjs.sendForm(
+        "service_7nbtc5s",
+        "template_ebje7y8",
+        form.current,
+        "BCksrsi3-GXimg3ZR" // Replace with your public key
+      );
+
+      setEmailSuccess(true);
+    } catch (err) {
+      setEmailSuccess(false);
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const text1Variants = {
     hidden: { opacity: 0, y: -5 },
     visible: { opacity: 1, y: 0 },
@@ -137,19 +166,25 @@ const HomePage = () => {
             <div className="text-white md:flex items-center gap-[70px] hidden md:mt-[35px]">
               <Link
                 to="/"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/") ? "text-white underline" : ""
+                }`}
               >
                 Home
               </Link>
               <Link
                 to="/delivery"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/delivery") ? "text-white underline" : ""
+                }`}
               >
                 Delivery
               </Link>
               <a
                 href="/it-service"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/it-service") ? "text-white underline" : ""
+                }`}
               >
                 IT Services
               </a>
@@ -173,21 +208,27 @@ const HomePage = () => {
                 <Link
                   to="/"
                   onClick={toggleMenu}
-                  className="border-b-2 border-gray-200 w-full flex justify-center p-3"
+                  className={`border-b-2 border-gray-200 w-full flex justify-center p-3 ${
+                    isActive("/") ? "font-bold" : ""
+                  }`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/delivery"
                   onClick={toggleMenu}
-                  className="border-b-2 border-gray-200 w-full flex justify-center pb-3"
+                  className={`border-b-2 border-gray-200 w-full flex justify-center pb-3 ${
+                    isActive("/delivery") ? "font-bold" : ""
+                  }`}
                 >
                   Delivery
                 </Link>
                 <Link
                   to="/it-service"
-                  className="rounded-md pb-3 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
+                  className={`rounded-md pb-3 hover:bg-white hover:text-black ${
+                    isActive("/it-service") ? "font-bold" : ""
+                  }`}
                 >
                   IT Services
                 </Link>
@@ -218,7 +259,6 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
-
                     <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
                       The Complete App
                     </h1>
@@ -254,9 +294,11 @@ const HomePage = () => {
             always within reach
           </p>
         </div>
-        <div className="flex justify-center p-8">
-          <Button value="Learn More" />
-        </div>
+        <Link to={"/about-us"}>
+          <div className="flex justify-center p-8">
+            <Button value="Learn More" />
+          </div>
+        </Link>
       </div>
       <div className="pb-10 md:mt-8 md:8">
         <div className="p-10">
@@ -266,25 +308,25 @@ const HomePage = () => {
 
         <div className="lg:flex grid md:grid-cols-2 gap-5 mx-10">
           {homeServicesData.map((service) => (
-            <div className="lg:w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-black/90 group">
-              <h1 className="text-[#00CED1] relative  after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out group-hover:after:w-full group-hover:text-white">
+            <div className="lg:w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all duration-500 ease-out hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-[#003435] group">
+              <h1 className="text-[#00CED1] relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all duration-500 ease-out after:ease-out group-hover:after:w-full group-hover:text-white">
                 {service.service}
               </h1>
-              <h2 className="font-[500] pb-14 group-hover:pb-8 hover:transition-all hover:ease-in-out text-[20px] group-hover:text-white">
+              <h2 className="font-[500] pb-14 group-hover:pb-8 transition-all duration-500 ease-out text-[20px] group-hover:text-white">
                 {service.head}
               </h2>
-              <p className="text-[14px] pb-8 group-hover:text-white">
+              <p className="text-[14px] pb-8 transition-all duration-500 ease-out group-hover:text-white">
                 {service.content}
               </p>
               <div
-                className="flex justify-center right-2 rounded-full hover:ease-in-out opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="flex justify-center right-2 rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100"
                 onMouseEnter={() => setIsHovered(false)}
                 onMouseLeave={() => setIsHovered(true)}
               >
                 {isHovered ? (
-                  <MdArrowForward className="text-white text-[46px] ease-in-out rounded-full border-4" />
+                  <MdArrowForward className="text-white text-[46px] ease-out rounded-full border-4 transition-transform duration-500" />
                 ) : (
-                  <MdArrowOutward className="text-white text-[46px] ease-in-out rounded-full border-4" />
+                  <MdArrowOutward className="text-white text-[46px] ease-out rounded-full border-4 transition-transform duration-500" />
                 )}
               </div>
             </div>
@@ -302,11 +344,17 @@ const HomePage = () => {
           </div>
         </div>
         <div className="md:w-2/3">
-          <form className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-[2rem] md:px-[3rem] md:text-[14px]">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-[2rem] md:px-[3rem] md:text-[14px]"
+          >
             <div>
               <label className="block text-gray-700">Name</label>
               <input
                 type="text"
+                required
+                name="name"
                 placeholder="Enter your name"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -316,6 +364,8 @@ const HomePage = () => {
               <label className="block text-gray-700">Phone Number</label>
               <input
                 type="text"
+                name="phoneNumber"
+                required
                 placeholder="Enter your phone number"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -325,6 +375,7 @@ const HomePage = () => {
               <label className="block text-gray-700">Mail</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your mail address"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -334,6 +385,7 @@ const HomePage = () => {
               <label className="block text-gray-700">Subject</label>
               <input
                 type="text"
+                name="subject"
                 placeholder="Give us a brief description on the matter"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -342,31 +394,47 @@ const HomePage = () => {
             <div className="sm:col-span-1 md:col-span-2">
               <label className="block text-gray-700">Description</label>
               <textarea
+                name="description"
                 placeholder="Describe the matter"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 rows="4"
               ></textarea>
             </div>
             <div>
-              <Button value="Send Us" />
+              {!emailSuccess && (
+                <Button
+                  click={sendEmail}
+                  value={isLoading ? "Sending..." : "Send  Us"}
+                />
+              )}
+
+              {emailSuccess && (
+                <p className="text-center text-[#21958f]">
+                  We have received your message and will get back to you
+                  shortly!
+                </p>
+              )}
             </div>
           </form>
         </div>
       </div>
-      <div className="md:flex grid justify-between pt-10 lg:gap-5 lg:mb-0 mt-14 bg-[#F6F6F6] h-[30rem]">
+      <div className="md:flex grid justify-between pt-10 lg:gap-5 lg:mb-0 mt-14 bg-[#F6F6F6] h-auto md:h-[30rem]">
         <div className="md:w-1/2 flex md:items-end xl:items-start mx-auto justify-center">
-          <figure className="w-full">
+          <figure className="w-full lg:ps-40">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fhome-app.png?alt=media&token=dd07156a-19a0-4f36-98ab-53bbcf59531b"
-              className="md:h-[28rem] h-[26rem] w-fit"
+              className="md:h-[27.5rem] h-[20rem] w-auto"
+              alt="Famto app"
             />
           </figure>
         </div>
-        <div className="md:mt-[3%] pb-10 bg-gray-100">
-          <h2 className="font-[600] md:text-[28px] text-center md:text-start mt-4 md:mt-0 md:ps-8">
+        <div className="md:mt-[3%] md:w-1/2 pb-10 bg-gray-100">
+          <h2 className="font-semibold text-lg md:text-2xl text-center md:text-left mt-4 md:mt-0 md:pl-8">
             Download the Famto app!
           </h2>
-          <Apps />
+          <div className="flex justify-center md:justify-start md:pl-8 mt-4">
+            <Apps />
+          </div>
         </div>
       </div>
 
