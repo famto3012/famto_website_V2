@@ -23,7 +23,7 @@ const Subscriptions = () => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="subscription.svg"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fsubscription.svg?alt=media&token=030f9829-9023-48e7-9899-87ba68d83f1f"
             alt="Terms & Condition"
           />
         </figure>

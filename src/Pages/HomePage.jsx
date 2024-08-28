@@ -318,17 +318,19 @@ const HomePage = () => {
               <p className="text-[14px] pb-8 transition-all duration-500 ease-out group-hover:text-white">
                 {service.content}
               </p>
-              <div
-                className="flex justify-center right-2 items-center ms-[40%] rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100 w-12"
-                onMouseEnter={() => setIsHovered(false)}
-                onMouseLeave={() => setIsHovered(true)}
-              >
-                {isHovered ? (
-                  <MdArrowForward className="text-white text-[46px]  ease-in rounded-full border-4 transition-transform duration-500" />
-                ) : (
-                  <MdArrowOutward className="text-white text-[46px] ease-in rounded-full border-4 transition-transform duration-500" />
-                )}
-              </div>
+              <Link to={service.path}>
+                <div
+                  className="flex justify-center right-2 items-center ms-[40%] rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100 w-12"
+                  onMouseEnter={() => setIsHovered(false)}
+                  onMouseLeave={() => setIsHovered(true)}
+                >
+                  {isHovered ? (
+                    <MdArrowForward className="text-white text-[46px]  ease-in rounded-full border-4 transition-all duration-300" />
+                  ) : (
+                    <MdArrowOutward className="text-white text-[46px] ease-in transition-all rounded-full border-4  duration-300" />
+                  )}
+                </div>
+              </Link>
             </div>
           ))}
         </div>

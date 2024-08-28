@@ -72,10 +72,8 @@ const Merchant = () => {
             </p>
 
             <div className="relative flex items-center md:gap-4 gap-3">
-              <Link to="/">
-              <button>
+              <Link to={"/"}>
               <FaArrowLeft className="md:text-[22px] text-[15px]" />
-              </button>
               </Link>
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
