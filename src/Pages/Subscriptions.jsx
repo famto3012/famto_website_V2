@@ -377,7 +377,7 @@ const Subscriptions = () => {
         <div className=" space-y-4 md:flex justify-between mt-10 ">
           <div className="md:w-2/3 font-medium">
             <h1 className="text-[16px]">For further assistance</h1>
-            <h1 className="text-[20px] md:text-[32px] text-[#00ced1] ">
+            <h1 className="text-[20px] md:text-[32px] text-[#00CED1] ">
               Contact our team!
             </h1>
           </div>

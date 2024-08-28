@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { FaArrowLeft, FaRupeeSign, FaUsers } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaArrowLeft, FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import MerchantForm from "../components/merchantForm";
 import { MdExposureZero, MdOutlineSpeed } from "react-icons/md";
 import { beAMerchantData, merchantDocumentsData } from "../data";
 import { SiTicktick } from "react-icons/si";
-import Button from "../components/button";
 import Apps from "../components/Apps";
 import Footer from "../components/Footer";
 import { LuIndianRupee } from "react-icons/lu";
+import MerchantForm from "../components/MerchantForm";
+import Button from "../components/button";
 
 const Merchant = () => {
   useEffect(() => {
@@ -21,6 +21,7 @@ const Merchant = () => {
 
     scrollToTop();
   }, []);
+
   const chunkArray = (array, chunkSize) => {
     const chunks = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -52,33 +53,36 @@ const Merchant = () => {
           />
         </figure>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent flex flex-col items-start">
-          <Link to="/" className="mt-2 md:mt-8 md:ms-10">
-            <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
-              alt="Logo"
-            />
+          <Link to={"/"}>
+            <div className="mt-2 md:mt-8 md:ms-10">
+              <img
+                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+                src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
+                alt="Logo"
+              />
+            </div>
           </Link>
 
-          
-          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:ps-10 ps-3 order-1">
-            <p className="grid md:ps-8 ps-4 mb-3">
-              {" "}
-              <span>Come,</span> Work with us
+          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:px-10 ps-8 order-1 md:mt-0 mt-8">
+            <p className="grid md:px-8 mb-3 text-[20px] md:text-[40px] lg:text-[48px] font-medium">
+              <span className="text-[14px] md:text-[24px] font-extralight">
+                Come,
+              </span>{" "}
+              Work with us
             </p>
 
-            <div className="relative flex items-center md:gap-4 gap-1">
+            <div className="relative flex items-center md:gap-4 gap-3">
               <FaArrowLeft className="md:text-[22px] text-[15px]" />
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
-                <p className="relative text-[18px] border-l-4 border-[#00ced1] ps-2 z-10">
+                <p className="relative text-[13px] md:text-[20px] border-l-4 border-[#00ced1] ps-2 z-10">
                   Famto Merchant
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-28 md:mt-0 p-5">
+          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-40 md:mt-0 p-5">
             <MerchantForm />
           </div>
         </div>
@@ -142,7 +146,7 @@ const Merchant = () => {
 
       <div className="relative md:flex grid py-10">
         <div className="md:w-1/2 relative flex items-center">
-          <figure className="h-full rounded-r-lg flex">
+          <figure className="h-full w-full rounded-r-lg flex">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmerchant-image.svg?alt=media&token=dc281977-e4a4-4942-9abc-7d322ae0c72a"
               alt="Merchant Image"
@@ -177,10 +181,11 @@ const Merchant = () => {
               </ul>
             ))}
           </div>
-
-          <div className="flex items-center md:justify-start justify-center">
-            <Button value="Contact Us" />
-          </div>
+          <Link to={"/contact-us"}>
+            <div className="flex items-center md:justify-start justify-center">
+              <Button value="Contact Us" />
+            </div>
+          </Link>
         </div>
       </div>
 

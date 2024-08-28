@@ -3,6 +3,27 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Apps = () => {
   const [isEmail, setIsEmail] = useState(true);
+  const [linkStatus, setLinkStatus] = useState(false);
+  const [contact, setContact] = useState({
+    email: "",
+    phone: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setContact((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    console.log(contact);
+  };
+
+  const sendLink = (e) => {
+    e.preventDefault();
+    setLinkStatus(true);
+    console.log("Link Button clicked");
+  };
+
   return (
     <>
       <div>
@@ -36,20 +57,35 @@ const Apps = () => {
             {isEmail ? (
               <input
                 type="email"
+                name="email"
+                value={contact.email}
+                onChange={handleInputChange}
                 placeholder="Email"
                 className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             ) : (
               <input
                 type="text"
+                name="phone"
+                value={contact.phone}
+                onChange={handleInputChange}
                 placeholder="Phone"
                 className="p-2 rounded-md outline-none border focus:outline-none md:w-fit  w-32"
               />
             )}
 
-            <div className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-2 p-1 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
-              Share Link <FaArrowRight />
-            </div>
+            <button onClick={(e) => sendLink(e)}>
+              {!linkStatus && (
+                <p className="bg-[#00ced1] flex lg:px-10 h-full md:px-[7px] px-2 p-1 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black hover:gap-6 transition-all ">
+                  Share Link <FaArrowRight />{" "}
+                </p>
+              )}
+              {linkStatus && (
+                <p className="bg-[#0E6500] flex lg:px-10 h-full md:px-[7px] px-2 p-1 text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:gap-6 transition-all ">
+                  Link Shared! <FaArrowRight />{" "}
+                </p>
+              )}
+            </button>
           </div>
           <div className="mt-5 gap-2 ">
             <p>Download from</p>

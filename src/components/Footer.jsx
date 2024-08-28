@@ -1,9 +1,14 @@
 import { FaRegCopyright } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const phoneNumber = "919778180794";
+
+  const isActive = (pathname) => location.pathname === pathname;
+
   return (
-    <div className="w-full py-[30px] bg-gradient-to-r from-black/85 via-black/90 to-black  md:px-[5rem] lg:px-[2rem]">
+    <div className="w-full py-[30px] bg-gradient-to-r from-black/85 via-black/90 to-black md:px-[5rem] lg:px-[2rem]">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <Link to={"/"} className="sm:mb-0 h-[6rem]">
           <img
@@ -19,25 +24,41 @@ const Footer = () => {
             </h4>
             <Link
               to={"/about-us"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white"
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/about-us")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               About Famto
             </Link>
             <Link
               to={"/contact-us"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white"
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/contact-us")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Contact Us
             </Link>
             <Link
               to={"/team"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white"
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/team")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Team
             </Link>
             <Link
               to={"/blogs"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white"
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/blogs")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Blog
             </Link>
@@ -48,13 +69,21 @@ const Footer = () => {
             </h4>
             <Link
               to={"/merchant"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/merchant")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Merchants
             </Link>
             <Link
               to={"/delivery-agent"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/delivery-agent")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Delivery Agents
             </Link>
@@ -65,35 +94,51 @@ const Footer = () => {
             </h4>
             <Link
               to={"/faq"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/faq")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               FAQs
             </Link>
             <Link
               to={"/terms-and-conditions"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/terms-and-conditions")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Terms & Conditions
             </Link>
             <Link
               to={"/privacy-policy"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/privacy-policy")
+                  ? "text-white underline underline-offset-2 font-[500]"
+                  : ""
+              }`}
             >
               Privacy Policy
             </Link>
             <Link
               to={"/cancellation-and-refund-policy"}
-              className="text-white/75 mb-[10px] text-[14px] hover:text-white "
+              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+                isActive("/cancellation-and-refund-policy")
+                  ? "text-white underline underline-offset-2 font-[600]"
+                  : ""
+              }`}
             >
               Cancellation & Refund Policy
             </Link>
           </div>
-          <div className="">
+          <div>
             <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
               Social Media
             </h4>
             <div className="flex gap-2">
-              <a href="whatsapp">
+              <a href={`https://wa.me/${phoneNumber}`}>
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwhatsapp.svg?alt=media&token=d94eb0bd-d702-4d2f-9769-c74d98848ba5"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
@@ -105,7 +150,7 @@ const Footer = () => {
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
-              <a href="whatsapp">
+              <a href="https://www.facebook.com/profile.php?id=61550100636862">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Ffacebook.svg?alt=media&token=c8aa526c-b0c1-4a2d-960c-92051a5f48e2"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
