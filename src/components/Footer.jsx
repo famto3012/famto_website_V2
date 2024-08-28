@@ -150,13 +150,13 @@ const Footer = () => {
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61550100636862">
+              <a href="https://www.facebook.com/FamtoServices">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Ffacebook.svg?alt=media&token=c8aa526c-b0c1-4a2d-960c-92051a5f48e2"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
-              <a href="https://www.linkedin.com/in/famto-admin-6067a630b/">
+              <a href="https://www.linkedin.com/company/myfamto/">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FlinkedIn.svg?alt=media&token=21bf4a0e-3708-41cd-9315-e21420fd53b8"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"

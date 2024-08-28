@@ -68,8 +68,8 @@ const ContactUs = () => {
           </h4>
         </div>
       </div>
-      <section className="flex flex-col md:flex-row w-full mt-[40px] mb-10">
-        <div className="w-full md:w-[50%] mb-[4rem]">
+      <section className="flex flex-col md:flex-row w-full ">
+        <div className="w-full md:w-[50%] mb-[4rem] mt-[40px]">
           <div className="flex flex-col space-y-12 mx-auto px-[2rem] md:px-[4rem]">
             <h1 className="text-[24px] font-[600]">
               Come Let's
@@ -131,10 +131,10 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[50%] lg:w-[70%]">
+        <div className="w-full md:w-[50%] lg:w-[70%] ">
           <div className="max-w-4xl lg:max-w-full bg-[#F7F7F7]">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between  mb-8 ps-8 gap-8 ">
-              <div className="flex items-center order-2 md:order-1">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between  ps-8 gap-8">
+              <div className="flex items-center order-2 md:order-1 md:mt-10">
                 <figure className="h-20 w-20">
                   <img
                     className="w-full h-full object-cover"
@@ -143,7 +143,7 @@ const ContactUs = () => {
                   />
                 </figure>
               </div>
-              <div className="text-black/50 text-[13px] md:text-lg flex items-center justify-end space-x-4 order-1 md:order-2">
+              <div className="text-black/50 text-[14px] sm:text-lg flex items-center justify-end space-x-4 order-1 md:order-2 mt-10">
                 <p>Great, We are excited to hear from you.</p>
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FArrow.svg?alt=media&token=d5b40fa8-cdfb-43a4-a660-ef061564e46c"
@@ -152,7 +152,7 @@ const ContactUs = () => {
               </div>
             </div>
             <form
-              className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 px-[2rem]  md:text-[14px] font-normal "
+              className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 px-[2rem] py-[2rem] md:text-[14px] font-normal "
               ref={form}
               onSubmit={sendEmail}
             >
@@ -205,6 +205,7 @@ const ContactUs = () => {
                   rows="4"
                 ></textarea>
               </div>
+              <div className="mb-20">
                {!emailSuccess && <Button click={sendEmail}
                 value={isLoading ? "Sending..." : "Send Us"} />}
                {emailSuccess && (
@@ -213,6 +214,7 @@ const ContactUs = () => {
                   shortly!
                 </p>
               )}
+              </div>
             </form>
           </div>
         </div>
