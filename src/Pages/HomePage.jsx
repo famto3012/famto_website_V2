@@ -319,14 +319,14 @@ const HomePage = () => {
                 {service.content}
               </p>
               <div
-                className="flex justify-center right-2 rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100"
+                className="flex justify-center right-2 items-center ms-[40%] rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100 w-12"
                 onMouseEnter={() => setIsHovered(false)}
                 onMouseLeave={() => setIsHovered(true)}
               >
                 {isHovered ? (
-                  <MdArrowForward className="text-white text-[46px] ease-out rounded-full border-4 transition-transform duration-500" />
+                  <MdArrowForward className="text-white text-[46px]  ease-in rounded-full border-4 transition-transform duration-500" />
                 ) : (
-                  <MdArrowOutward className="text-white text-[46px] ease-out rounded-full border-4 transition-transform duration-500" />
+                  <MdArrowOutward className="text-white text-[46px] ease-in rounded-full border-4 transition-transform duration-500" />
                 )}
               </div>
             </div>
@@ -438,7 +438,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="max-w-[90%] mx-auto overflow-hidden mt-[400px] md:mt-8">
+      <div className="max-w-[90%] mx-auto overflow-hidden mt-4 md:mt-8">
         <div className="grid md:justify-center md:text-center">
           <p className="font-[500] text-[14px] md:text-[18px]">
             These are some of our

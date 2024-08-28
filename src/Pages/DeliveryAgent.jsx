@@ -45,10 +45,14 @@ const DeliveryAgent = () => {
             </p>
 
             <div className="relative flex items-center md:gap-4 gap-3">
-              <FaArrowLeft className="md:text-[22px] text-[15px]" />
+              <Link to={"/"}>
+                <button>
+                  <FaArrowLeft className="md:text-[22px] text-[15px]" />
+                </button>
+              </Link>
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
-                <p className="relative text-[13px] md:text-[20px] border-l-4 border-[#00ced1] ps-2 z-10">
+                <p className="relative text-[15px] md:text-[20px] border-l-4 border-[#00ced1] ps-2 z-10">
                   Famto Delivery Agent
                 </p>
               </div>

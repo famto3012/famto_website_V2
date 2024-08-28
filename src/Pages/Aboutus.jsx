@@ -41,7 +41,7 @@ const Aboutus = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent flex flex-col items-start">
             <Link to={"/"} className="mt-2 md:mt-8 md:ms-10">
               <img
-                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+                className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
                 src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
                 alt="Logo"
               />
@@ -52,8 +52,8 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="w-full md:w-[90%] mx-auto  py-[3rem]">
-          <p className="mb-[40px] text-center md:text-start">
+        <section className="w-full md:w-[90%] px-3 md:px-0 mx-auto  py-[3rem]">
+          <p className="mb-[40px] text-center md:text-start text-[12px] md:text-[16px]">
             The Company got its corporate character in July 2021 under the name
             “MY FAMTO Private Limited” and began its journey in Kerala on July
             2021 for covering services like Delivery(Food, Grocery, Fruits &
@@ -99,7 +99,7 @@ const Aboutus = () => {
                   <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">
                     Mission
                   </h4>
-                  <p>
+                  <p className="px-6 md:px-0">
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
                     essential services. We empower individuals to cultivate
@@ -111,7 +111,7 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
-        <div className="bg-gray-100  md:flex grid px-20 w-full mb-20 justify-between">
+        <div className="bg-gray-100  md:flex grid px-10 md:px-20 w-full mb-20 justify-between">
           <div className="flex flex-col justify-center sm:ml-44 md:ml-10 items-center lg:items-end md:order-3 order-1 px-5 md:px-0 py-8">
             <p className="font-semibold">What we values at</p>
             <p className="text-[#00ced1] text-[32px]">Famto</p>
