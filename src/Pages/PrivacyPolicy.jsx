@@ -27,20 +27,20 @@ const PrivacyPolicy = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[18px] md:text-[28px] lg:text-[32px] text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] text-center absolute bottom-4 left-1/2 transform -translate-x-1/2">
             Privacy Policy
           </h4>
         </div>
       </div>
 
       <section
-        className="w-full text-[13px] md:w-[90%] mx-auto px-[2rem] md:px-[3rem]
-    py-[1rem] mb-[2rem]"
+        className="w-full text-[14px] md:text-[15px]  px-[2rem] md:px-[4rem] 
+      py-[1rem] mb-[2rem] font-[400]"
       >
         <h3 className="termHeading">Privacy Policy</h3>
         <p>

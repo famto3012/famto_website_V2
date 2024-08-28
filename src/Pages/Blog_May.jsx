@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { IoMdArrowBack } from "react-icons/io";
+import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 
 const Blog_May = () => {
   useEffect(() => {
@@ -41,7 +41,7 @@ const Blog_May = () => {
         <div className="absolute inset-0">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
               alt="Logo"
             />
@@ -49,14 +49,14 @@ const Blog_May = () => {
         </div>
       </div>
 
-      <section className="w-full text-[13px] md:text-[16px] mx-auto px-[2rem] md:px-[3rem] py-[1rem] mb-[2rem]">
+      <section className="w-full text-[13px] md:text-[16px] mx-auto px-[2rem] md:px-[4rem] py-[1rem] mb-[2rem]">
         <Link to="/blogs">
-          <div className="text-black flex items-center justify-start my-2 underline">
-            <IoMdArrowBack /> Back
+          <div className="text-black flex items-center gap-x-2 justify-start my-2 underline underline-offset-2">
+            <WestOutlinedIcon /> Back
           </div>
         </Link>
-        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-1/2 lg:w-1/2 mx-auto">
-          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
+        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-[80%]  mx-auto">
+          <h1 className="text-[18px] font-semibold md:text-[26px] lg:text-[32px] leading-tight">
             Between the red and orange bubbles, Is the Merchants unhappy?
           </h1>
           <h1 className="text-black/25 md:mt-4 order-4 md:order-3">

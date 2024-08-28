@@ -17,7 +17,7 @@ const FAQ = () => {
   return (
     <main className="relative">
       <div className="relative w-full">
-        <figure className="h-[30vh] md:h-[50vh] lg:h-[70vh]">
+        <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Ffaq.svg?alt=media&token=82573efe-719a-4a99-a387-8a34a50e58c2"
@@ -27,20 +27,20 @@ const FAQ = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FBlack_logo.svg?alt=media&token=214d8656-3f79-4af9-a37e-5f61daec8e63"
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[18px] md:text-[28px] lg:text-[32px] text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] text-center  absolute bottom-4 left-1/2 transform -translate-x-1/2">
             FAQ
           </h4>
         </div>
       </div>
 
       <section
-        className="w-full text-[13px] sm:text-[14px] md:w-[90%] mx-auto  px-[2rem] md:px-[3rem]
-    py-[1rem] mb-[2rem]"
+        className="w-full text-[14px] md:text-[15px]  px-[2rem] md:px-[4rem] 
+      py-[1rem] mb-[2rem] font-[400]"
       >
         <div
         // style={{ marginLeft: "70px", marginRight: "65px", maxWidth: "100vw" }}
