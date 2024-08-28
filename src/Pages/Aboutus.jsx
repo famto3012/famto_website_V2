@@ -46,7 +46,7 @@ const Aboutus = () => {
                 alt="Logo"
               />
             </Link>
-            <h4 className="text-white text-center text-2xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
+            <h4 className="text-white text-center md:text-[20px] absolute bottom-4 left-1/2 transform -translate-x-1/2">
               About Famto
             </h4>
           </div>
@@ -96,7 +96,9 @@ const Aboutus = () => {
                   </figure>
                 </div>
                 <div className="md:w-1/2 md:p-[30px] py-8 text-center md:text-start ">
-                  <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">Mission</h4>
+                  <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">
+                    Mission
+                  </h4>
                   <p>
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
@@ -109,7 +111,7 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
-        <div className="bg-gray-100  md:flex grid px-10 w-full mb-20 justify-between">
+        <div className="bg-gray-100  md:flex grid px-20 w-full mb-20 justify-between">
           <div className="flex flex-col justify-center sm:ml-44 md:ml-10 items-center lg:items-end md:order-3 order-1 px-5 md:px-0 py-8">
             <p className="font-semibold">What we values at</p>
             <p className="text-[#00ced1] text-[32px]">Famto</p>

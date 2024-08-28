@@ -43,7 +43,7 @@ const Blogs = () => {
   return (
     <main className="relative">
       <div className="relative w-full">
-        <figure className="h-[14rem] md:h-[70vh]">
+        <figure className="h-[16rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog.svg?alt=media&token=db5c8d77-a5e4-4294-a32f-84585c418857"
@@ -58,13 +58,13 @@ const Blogs = () => {
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[18px] md:text-[28px] lg:text-[32px] text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] lg:text-[32px] text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
             Blogs
           </h4>
         </div>
       </div>
 
-      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[5rem] grid md:grid-cols-2 gap-20">
+      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[3rem] md:py-[5rem] grid md:grid-cols-2 gap-20">
         {blogs.map((blog, index) => (
           <div
             key={index}

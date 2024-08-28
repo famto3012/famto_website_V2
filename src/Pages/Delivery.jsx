@@ -3,12 +3,14 @@ import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineVerifiedUser, MdSpeed } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import DeliverySlides from "../components/DeliverySlides";
 import { LuIndianRupee } from "react-icons/lu";
 
 const Delivery = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -22,6 +24,7 @@ const Delivery = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
+  const isActive = (pathname) => location.pathname === pathname;
 
   const toggleMenu = () => {
     if (menuOpen) {
@@ -60,19 +63,25 @@ const Delivery = () => {
             <div className="hidden md:flex items-center gap-[18px] lg:gap-[70px] mt-4 lg:mt-[35px] mx-8 text-white">
               <Link
                 to="/"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/") ? "text-white underline" : ""
+                }`}
               >
                 Home
               </Link>
               <Link
                 to="/delivery"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/delivery") ? "text-white underline" : ""
+                }`}
               >
                 Delivery
               </Link>
               <Link
                 to="/it-service"
-                className="text-white/75 hover:text-white hover:underline underline-offset-4"
+                className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
+                  isActive("/it-service") ? "text-white underline" : ""
+                }`}
               >
                 IT Services
               </Link>
@@ -96,21 +105,27 @@ const Delivery = () => {
                 <Link
                   to="/"
                   onClick={toggleMenu}
-                  className="border-b-2 border-gray-200 w-full flex justify-center p-3"
+                  className={`border-b-2 border-gray-200 w-full flex justify-center p-3 ${
+                    isActive("/") ? "font-bold" : ""
+                  }`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/delivery"
                   onClick={toggleMenu}
-                  className="border-b-2 border-gray-200 w-full flex justify-center pb-3"
+                  className={`border-b-2 border-gray-200 w-full flex justify-center pb-3 ${
+                    isActive("/delivery") ? "font-bold" : ""
+                  }`}
                 >
                   Delivery
                 </Link>
                 <Link
                   to="/it-service"
-                  className="rounded-md pb-3 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
+                  className={`rounded-md pb-3 hover:bg-white hover:text-black ${
+                    isActive("/it-service") ? "font-bold" : ""
+                  }`}
                 >
                   IT Services
                 </Link>
