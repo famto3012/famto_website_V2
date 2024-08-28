@@ -12,3 +12,8 @@ const Button = ({value, click}) => {
 }
 
 export default Button
+
+
+
+
+

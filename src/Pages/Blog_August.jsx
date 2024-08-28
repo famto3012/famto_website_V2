@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { IoMdArrowBack } from "react-icons/io";
+import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 
 const Blog_August = () => {
   useEffect(() => {
@@ -34,21 +34,21 @@ const Blog_August = () => {
         <div className="absolute inset-0">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
               alt="Logo"
             />
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] mx-auto px-[3rem] py-[1rem]">
+      <section className="w-full text-[13px] md:text-[15px] mx-auto px-[2rem] md:px-[4rem] py-[1rem]">
         <Link to="/blogs">
-          <div className="text-black flex items-center my-2 underline">
-            <IoMdArrowBack /> Back
+          <div className="text-black flex items-center my-2 gap-x-2 underline underline-offset-2">
+            <WestOutlinedIcon /> Back
           </div>
         </Link>
-        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-2/3 lg:w-1/2 mx-auto">
-          <h1 className="text-[18px] font-semibold md:text-[26px] leading-tight">
+        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-[80%]  mx-auto">
+          <h1 className="text-[18px] font-semibold md:text-[26px] lg:text-[32px] leading-tight">
             "An Award that Fuels Our Drive for Continuous Excellence"
           </h1>
           <h1 className="text-black/25 md:mt-4 order-4 md:order-3">
@@ -59,7 +59,7 @@ const Blog_August = () => {
           </h1>
         </div>
         <div className="flex items-center justify-center rounded-lg mx-auto order-1 lg:order-2">
-          <figure className="h-[11rem] sm:h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-[20rem] max-w-full">
+          <figure className="h-[20rem] lg:w-auto lg:h-[20rem] max-w-full">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FKarma%20awards.svg?alt=media&token=7940152e-67e9-41fb-90a9-eddb2ba2a2df"
               alt=""
@@ -68,21 +68,21 @@ const Blog_August = () => {
           </figure>
         </div>
         {/* <div className="grid grid-cols-1 md:space-y-4 lg:grid-cols-3 lg: items-center md:mb-[3rem] mb-[1rem] w-full gap-8"> */}
-          <div className=" md:space-y-5 py-10 order-2 lg:order-1">
-            <p>
-              At a prestigious event hosted by the Sree Vidya Kalanikethan
-              Cultural Society, the Director of a unique delivery service was
-              honored with an award recognizing outstanding contributions to the
-              business world, particularly in the online delivery sector. This
-              service, known for operating without the use of an app, has set a
-              new standard for reliability and speed. With an incredible track
-              record, it has become a lifeline for the elderly, ensuring they
-              receive essential items quickly and efficiently. The service is
-              highly flexible, adapting to each customer's specific needs and
-              preferences, making it an invaluable resource for those who may
-              have limited mobility or access to technology.
-            </p>
-          </div>
+        <div className=" md:space-y-5 py-10 order-2 lg:order-1">
+          <p>
+            At a prestigious event hosted by the Sree Vidya Kalanikethan
+            Cultural Society, the Director of a unique delivery service was
+            honored with an award recognizing outstanding contributions to the
+            business world, particularly in the online delivery sector. This
+            service, known for operating without the use of an app, has set a
+            new standard for reliability and speed. With an incredible track
+            record, it has become a lifeline for the elderly, ensuring they
+            receive essential items quickly and efficiently. The service is
+            highly flexible, adapting to each customer's specific needs and
+            preferences, making it an invaluable resource for those who may have
+            limited mobility or access to technology.
+          </p>
+        </div>
         {/* </div> */}
         <div className="space-y-6 mb-[2rem]">
           <p>

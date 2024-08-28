@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { FaArrowLeft, FaRegHeart, FaRupeeSign } from "react-icons/fa";
-import { FaRegCalendarCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AgentForm from "../components/AgentForm";
-import { MdOutlineLocationOn } from "react-icons/md";
 import Footer from "../components/Footer";
 import Apps from "../components/Apps";
+import { LuCalendarCheck, LuHeart, LuIndianRupee } from "react-icons/lu";
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 
 const DeliveryAgent = () => {
   useEffect(() => {
@@ -36,17 +36,19 @@ const DeliveryAgent = () => {
               alt="Logo"
             />
           </Link>
-          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:ps-10 ps-8 order-1md:mt-0 mt-8">
-            <p className="grid md:ps-8 mb-3 text-[20px]">
-              <span className="text-[14px] font-extralight">Come,</span> Work
-              with us
+          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:px-10 ps-8 order-1 md:mt-0 mt-8">
+            <p className="grid md:px-8 mb-3 text-[20px] md:text-[40px] lg:text-[48px] font-medium">
+              <span className="text-[14px] md:text-[24px] font-extralight">
+                Come,
+              </span>{" "}
+              Work with us
             </p>
 
             <div className="relative flex items-center md:gap-4 gap-3">
               <FaArrowLeft className="md:text-[22px] text-[15px]" />
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
-                <p className="relative text-[14px] md:text-[18px] border-l-4 border-[#00ced1] ps-2 z-10">
+                <p className="relative text-[13px] md:text-[20px] border-l-4 border-[#00ced1] ps-2 z-10">
                   Famto Delivery Agent
                 </p>
               </div>
@@ -69,7 +71,7 @@ const DeliveryAgent = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mx-8 mb-[3rem]">
         <div className="flex flex-col  p-6 border border-gray-200  rounded-lg ">
           <div className="grid ">
-            <FaRegCalendarCheck className="text-[46px] mb-[3rem] rounded  bg-[#F6F6F6] text-[#00ced1]" />
+            <LuCalendarCheck className="text-[46px] mb-[3rem] rounded p-1 bg-[#F6F6F6] text-[#00ced1]" />
             <h1 className="text-[20px] p-1 font-semibold">Flexible Schedule</h1>
             <p className="p-1 text-[14px]">
               Your vehicle, Your time. Say bye to fixed working hours and
@@ -80,7 +82,7 @@ const DeliveryAgent = () => {
 
         <div className="flex flex-col p-6 border border-gray-200  rounded-lg">
           <div className="grid">
-            <FaRupeeSign className="text-[43px] mb-[3rem] rounded  bg-[#F6F6F6] text-[#00ced1] " />
+            <LuIndianRupee className="text-[46px] mb-[3rem] p-1 rounded  bg-[#F6F6F6] text-[#00ced1] " />
             <h1 className="text-[20px] p-1 font-semibold">Earn More</h1>
             <p className="p-1 text-[14px] ">
               We provide our delivery agents the best in market compensation.
@@ -91,7 +93,7 @@ const DeliveryAgent = () => {
 
         <div className="flex flex-col p-6 border border-gray-200   rounded-lg">
           <div className="grid">
-            <FaRegHeart className="text-[46px] mb-[3rem] rounded  bg-[#F6F6F6] text-[#00ced1]" />
+            <LuHeart className="text-[46px] mb-[3rem] rounded p-1 bg-[#F6F6F6] text-[#00ced1]" />
             <h1 className="text-[20px] p-1 font-semibold">We're Family</h1>
             <p className="p-1 text-[14px]">
               Work without hierarchies. Work like a family in famto. All we ask
@@ -102,7 +104,12 @@ const DeliveryAgent = () => {
 
         <div className="flex flex-col  p-6 border border-gray-200  rounded-lg">
           <div className="grid">
-            <MdOutlineLocationOn className="text-[50px] mb-[3rem] rounded bg-[#F6F6F6] text-[#00ced1] font-thin" />
+            {/* <FmdGoodOutlinedIcon fontSize="large" className=" mb-[3rem] rounded bg-[#F6F6F6] text-[#00ced1] " /> */}
+            <FmdGoodOutlinedIcon
+              className="mb-[3rem] p-1 rounded bg-[#F6F6F6] text-[#00ced1]"
+              style={{ fontSize: "50px" }}
+            />
+
             <h1 className="text-[20px] p-1 font-semibold">Be in your city</h1>
             <p className="p-1 text-[14px]">
               No more job relocations. Cruise with your favourite playlist
@@ -153,19 +160,21 @@ const DeliveryAgent = () => {
           </div>
         </div>
       </div>
-      <div className="md:flex md:justify-between grid gap-3 sm:mb-7 md:mb-4 mb-10 ">
-        <div className="md:w-1/2 h-fit">
-          <figure className="w-full h-fit">
+
+      <div className="lg:flex grid pt-10 lg:gap-5 lg:mx-5 lg:mb-0 mb-10 mt-5 ">
+        <div className="lg:w-1/2 md:w-full h-fit flex justify-center">
+          <figure className="w-full h-fit flex justify-center">
             <img src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdeliveryagent-app.svg?alt=media&token=b5e2a761-b4ae-4705-903d-046d37fac4d1" />
           </figure>
         </div>
-        <div className=" xs:py-10  lg:bg-white  bg-gray-100 md:mr-8 ">
-          <h2 className="font-[600] text-[16px] lg:text-[24px] md:text-[20px] text-center mt-4 md:px-1">
-            Download the Famto Delivery Agent app!
+        <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100 ">
+          <h2 className="font-[600] text-[16px] lg:text-[24px] md:text-[20px] text-center">
+            Download the Famto Merchant app!
           </h2>
           <Apps />
         </div>
       </div>
+
       <Footer />
     </>
   );

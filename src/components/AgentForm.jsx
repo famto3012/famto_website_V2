@@ -1,30 +1,66 @@
-import React from "react";
-import Button from "./Button";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Button from "./button";
 
 const AgentForm = () => {
+  
+  const form = useRef();
+  const [emailSuccess, setEmailSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    console.log("Button clicked")
+    try {
+      setIsLoading(true);
+      await emailjs.sendForm(
+        "service_7nbtc5s",
+        "template_ebje7y8",
+        form.current,
+        "BCksrsi3-GXimg3ZR" // Replace with your public key
+      );
+
+      setEmailSuccess(true);
+    } catch (err) {
+      setEmailSuccess(false);
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <>
-      <main className="bg-white/90 p-4 rounded-lg lg:mx-0  w-[25rem] h-fit">
+      <form
+        className="bg-white/90 p-6 rounded-lg lg:mx-14  w-[25rem] h-fit"
+        ref={form}
+        onSubmit={sendEmail}
+      >
         <div className="py-2 font-medium text-[16px] md:text-[20px] mb-2">
           <h1>Become a Delivery Agent</h1>
         </div>
         <div className="grid gap-5">
+          <div className="hidden gap-1">
+            <input  name="type"  value="agent"></input>
+          </div>
           <div className="grid gap-1">
             <label className="font-[400] text-[14px] md:text-[16px]">
               Name
             </label>
             <input
               type="text"
+              name="name"
               placeholder="Enter your Name"
               className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg  placeholder:text-[13px]"
             ></input>
           </div>
+
           <div className="grid gap-1">
             <label className="font-[400] text-[14px] md:text-[16px]">
               Location
             </label>
             <input
               type="text"
+              name="location"
               placeholder="Enter your Location"
               className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
             ></input>
@@ -36,6 +72,7 @@ const AgentForm = () => {
             </label>
             <input
               type="tel"
+              name="phoneNumber"
               placeholder="Enter your Phone Number"
               className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg  placeholder:text-[13px]"
             ></input>
@@ -46,15 +83,23 @@ const AgentForm = () => {
             </label>
             <input
               type="text"
+              name="email"
               placeholder="Enter your mail address"
               className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg  placeholder:text-[13px]"
             ></input>
           </div>
           <div className="flex justify-end p-3">
-            <Button value="Get Started" />
-          </div>
+              {!emailSuccess && <Button click={sendEmail}
+                value={isLoading ? "Sending..." : "Get Started"} />}
+               {emailSuccess && (
+                <p className="text-center text-[#21958f]">
+                  We have received your message and will get back to you
+                  shortly!
+                </p>
+              )}
         </div>
-      </main>
+        </div>
+      </form>
     </>
   );
 };

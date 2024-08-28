@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { IoMdArrowBack } from "react-icons/io";
+import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 
 const Blog_June = () => {
   useEffect(() => {
@@ -28,29 +28,29 @@ const Blog_June = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
+              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
               alt="Logo"
             />
           </Link>
         </div>
       </div>
-      <section className="w-full text-[14px] md:text-[16px] md:w-[90%] mx-auto px-[2rem] md:px-[0rem] py-[2rem]">
-        <div className="md:text-center py-10">
-          <Link to="/blogs">
-            <div className="text-black flex items-center my-2 underline">
-              <IoMdArrowBack /> Back
-            </div>
-          </Link>
-          <h1 className="text-[18px] items-center font-semibold md:text-[26px] leading-tight order-1">
+      <section className="w-full text-[14px] md:text-[16px] px-[2rem] md:px-[4rem] py-[2rem]">
+        <Link to="/blogs">
+          <div className="text-black flex items-center gap-x-2 my-2 underline underline-offset-2">
+            <WestOutlinedIcon /> Back
+          </div>
+        </Link>
+
+        <div className="flex flex-col md:items-center md:justify-center md:text-center py-10 w-full md:w-[90%]  mx-auto">
+          <h1 className="text-[18px] font-semibold md:text-[26px] lg:text-[32px] leading-tight">
             A Comprehensive Guide to Price Comparison for Customers and
             Merchants on Indian Delivery Apps
           </h1>
-
-          <h1 className="text-black/25 my-2 order-4 md:order-3">
+          <h1 className="text-black/25 md:mt-4 order-4 md:order-3">
             June 01,2024
           </h1>
-          <h1 className="text-cyan-400 italic font-semibold order-3 md:order-4">
+          <h1 className="text-cyan-400 italic md:mt-4 my-4 font-semibold order-3 md:order-4">
             By Famto content team
           </h1>
         </div>
