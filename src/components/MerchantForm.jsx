@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import Button from "./button";
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_APP_BASE_URL;
+const BASE_URL = "https://famto-backend-api.vercel.app/api/v1"
 
 const MerchantForm = () => {
   const form = useRef();
