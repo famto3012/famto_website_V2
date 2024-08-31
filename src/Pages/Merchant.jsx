@@ -233,7 +233,7 @@ const Merchant = () => {
           </figure>
         </div>
         <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100">
-          <h2 className="font-[500] text-[28px] text-center">
+          <h2 className="md:font-[500] md:text-[32px] text-[16px] font-semibold text-center">
             Download the Famto Merchant app!
           </h2>
           <Apps />

@@ -66,7 +66,7 @@ const MerchantForm = () => {
 
   return (
     <>
-      <main className="bg-white/90 p-4 rounded-lg lg:mx-0 w-[25rem] h-fit">
+      <main className="bg-white/90 p-4 rounded-lg lg:mx-0 w-[25rem] h-fit mt-10 md:mt-0">
         <div className="py-2 font-medium text-[16px] mb-2 md:text-[20px]">
           <h1>Become a Merchant</h1>
         </div>

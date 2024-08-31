@@ -191,7 +191,7 @@ const HomePage = () => {
             </div>
 
             <button
-              className="block md:hidden focus:outline-none"
+              className="block md:hidden focus:outline-none -mt-[250px]"
               onClick={toggleMenu}
             >
               <IoMenu className="text-white text-[28px]" />
@@ -199,7 +199,7 @@ const HomePage = () => {
 
             {(menuOpen || menuClosing) && (
               <div
-                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
+                className={`absolute right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
                   menuOpen
                     ? "animate-slideInFromTopRight"
                     : "animate-slideOutToBottomLeft"
@@ -303,7 +303,7 @@ const HomePage = () => {
       <div className="pb-10 md:mt-8 md:8">
         <div className="p-10">
           <p>Overview of</p>
-          <h1 className="text-[32px] text-cyan-500">Our Services</h1>
+          <h1 className="text-[32px] text-[#00CED1]">Our Services</h1>
         </div>
 
         <div className="lg:flex grid md:grid-cols-2 gap-5 md:mx-10 mx-8">
