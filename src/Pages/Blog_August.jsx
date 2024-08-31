@@ -84,7 +84,7 @@ const Blog_August = () => {
           </p>
         </div>
         {/* </div> */}
-        <div className="space-y-6 mb-[2rem]">
+        <div className="space-y-6">
           <p>
             <span className="font-[600]">The Ceremony: </span>The award
             ceremony, held during the 12th anniversary of the SreeVidya

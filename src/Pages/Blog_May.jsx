@@ -207,7 +207,7 @@ const Blog_May = () => {
             arrives.
           </p>
           <h3 className="font-[600] mb-[15px]">Community-Driven</h3>
-          <p className="mb-[15px]">
+          <p>
             FAMTO actively engages with its community. Food festivals, cooking
             workshops, and charity drives—FAMTO is more than an app; it’s a
             movement. They even have a “Foodie of the Month” program,

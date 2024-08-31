@@ -165,19 +165,20 @@ const DeliveryAgent = () => {
         </div>
       </div>
 
-      <div className="lg:flex grid pt-10 lg:gap-5 lg:mx-5 lg:mb-0 mb-10 mt-5 ">
-        <div className="lg:w-1/2 md:w-full h-fit flex justify-center">
+      <div className="lg:flex grid pt-10 lg:gap-5  lg:mb-0 mb-10 mt-5">
+        <div className="lg:w-1/2 md:w-full h-fit flex lg:justify-center">
           <figure className="w-full h-fit flex justify-center">
             <img src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdeliveryagent-app.svg?alt=media&token=b5e2a761-b4ae-4705-903d-046d37fac4d1" />
           </figure>
         </div>
-        <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100 ">
-          <h2 className="font-[600] text-[16px] lg:text-[24px] md:text-[20px] text-center">
-            Download the Famto Merchant app!
+        <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100 lg:w-1/2 ">
+          <h2 className="font-[600] text-[16px] lg:text-[24px] md:text-[20px] text-center lg:text-start ">
+            Download the Famto Delivery Agent app!
           </h2>
           <Apps />
         </div>
       </div>
+
 
       <Footer />
     </>
