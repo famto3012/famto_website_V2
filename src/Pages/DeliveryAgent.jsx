@@ -59,7 +59,7 @@ const DeliveryAgent = () => {
             </div>
           </div>
 
-          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-28 md:mt-0 p-5">
+          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-48  md:mt-0 p-5 md:ml-[10rem]">
             <AgentForm />
           </div>
         </div>
@@ -172,7 +172,7 @@ const DeliveryAgent = () => {
           </figure>
         </div>
         <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100 lg:w-1/2 ">
-          <h2 className="font-[600] text-[16px] lg:text-[24px] md:text-[20px] text-center lg:text-start ">
+          <h2 className="font-medium text-[16px] md:text-[32px] text-center lg:text-start  ">
             Download the Famto Delivery Agent app!
           </h2>
           <Apps />

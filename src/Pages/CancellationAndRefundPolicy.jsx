@@ -31,7 +31,7 @@ const CancellationAndRefundPolicy = () => {
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[16px] md:text-[20px] text-center absolute bottom-5 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] font-medium text-center absolute bottom-5 left-1/2 transform -translate-x-1/2">
             Cancellation & Refund Policy
           </h4>
         </div>
