@@ -63,7 +63,7 @@ const Merchant = () => {
             </div>
           </Link>
 
-          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:px-10 ps-8 order-1 md:mt-0 mt-8">
+          <div className="text-white md:p-5 md:top-[50%] top-[10%] md:text-4xl absolute grid md:px-10 ps-8 order-1 md:mt-0 mt-5">
             <p className="grid md:px-8 mb-3 text-[20px] md:text-[40px] lg:text-[48px] font-medium">
               <span className="text-[14px] md:text-[24px] font-extralight">
                 Come,
@@ -72,8 +72,8 @@ const Merchant = () => {
             </p>
 
             <div className="relative flex items-center md:gap-4 gap-3">
-              <Link to={"/"}>
-              <FaArrowLeft className="md:text-[22px] text-[15px]" />
+              <Link to={"/delivery"}>
+                <FaArrowLeft className="md:text-[22px] text-[15px]" />
               </Link>
               <div className="relative flex-grow">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/30 via-[#00ced1]/10 to-transparent z-0"></div>
@@ -84,7 +84,7 @@ const Merchant = () => {
             </div>
           </div>
 
-          <div className="absolute inset-0 flex justify-center md:justify-end items-center mt-40 md:mt-0 p-5">
+            <div className="absolute inset-0 flex justify-center md:justify-end items-center md:ml-[50rem] mt-40 md:mt-0 p-5">
             <MerchantForm />
           </div>
         </div>
