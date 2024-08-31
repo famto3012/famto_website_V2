@@ -71,7 +71,7 @@ const Apps = () => {
                 value={contact.phone}
                 onChange={handleInputChange}
                 placeholder="Phone"
-                className="p-2 rounded-md outline-none border focus:outline-none md:w-72  w-32"
+                className="p-2 rounded-md outline-none border focus:outline-none md:w-72  w-full"
               />
             )}
 
