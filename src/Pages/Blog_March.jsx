@@ -125,7 +125,7 @@ const Blog_March = () => {
           focused on the well-being of the elderly, making sure that every
           aspect of our delivery process is tailored to their needs
         </p>
-        <p className="mb-[1rem]">
+        <p>
           <span className="font-[600]">A Future of Personalized Care:</span>{" "}
           Looking ahead, our vision is to become a trusted partner for elderly
           care, offering a comprehensive range of services that cater to their

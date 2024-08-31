@@ -106,7 +106,7 @@ const Blog_April = () => {
             </figure>
           </div>
         </div>
-        <div className="space-y-4 mb-[2rem]">
+        <div className="space-y-4">
           <h3 className=" text-[16px] font-semibold ">
             1.Navigating the Logistics Maze
           </h3>

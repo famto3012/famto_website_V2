@@ -123,7 +123,7 @@ const Blog_June = () => {
         <h1 className="font-[600] my-5">
           For Merchants: Optimizing Your Pricing Strategy
         </h1>
-        <div className="mb-[1rem]">
+        <div>
           <p className="mb-5">
             <span className="font-[600]">
               Understanding the Commission Structure:
