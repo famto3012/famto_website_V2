@@ -39,7 +39,7 @@ const FAQ = () => {
       </div>
 
       <section
-        className="w-full text-[14px] md:text-[15px]  px-[2rem] md:px-[4rem] 
+        className="w-full text-[13px] md:text-[14px]  px-[2rem] md:px-[4rem] 
       py-[1rem] mb-[2rem] font-[400]"
       >
         <div

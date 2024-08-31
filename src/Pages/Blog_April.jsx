@@ -35,7 +35,7 @@ const Blog_April = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] mx-auto px-[2rem] md:px-[4rem]  py-[1rem] mb-[2rem]">
+      <section className="w-full text-[13px] md:text-[14px] mx-auto px-[2rem] md:px-[4rem]  py-[1rem] mb-20">
         <Link to="/blogs">
           <div className="text-black flex items-center gap-x-2  mt-5 underline underline-offset-2">
             <WestOutlinedIcon /> Back

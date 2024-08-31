@@ -49,7 +49,7 @@ const Blog_May = () => {
         </div>
       </div>
 
-      <section className="w-full text-[13px] md:text-[16px] mx-auto px-[2rem] md:px-[4rem] py-[1rem] mb-[2rem]">
+      <section className="w-full text-[13px] md:text-[14px] mx-auto px-[2rem] md:px-[4rem] py-[1rem] mb-20">
         <Link to="/blogs">
           <div className="text-black flex items-center gap-x-2 justify-start my-2 underline underline-offset-2">
             <WestOutlinedIcon /> Back
@@ -67,7 +67,7 @@ const Blog_May = () => {
           </h1>
         </div>
 
-        <p className="mb-[15px]">
+        <p className="mb-[15px] ">
           Certainly! The Indian food delivery market is dominated by two giants:
           red and orange bubble. Let’s explore the reasons why merchants might
           still consider other options despite these market leaders.
