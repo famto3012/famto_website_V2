@@ -32,7 +32,7 @@ const FAQ = () => {
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[16px] md:text-[20px] text-center  absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] font-medium text-center  absolute bottom-4 left-1/2 transform -translate-x-1/2">
             FAQ
           </h4>
         </div>

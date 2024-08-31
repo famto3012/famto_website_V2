@@ -36,7 +36,7 @@ const Subscriptions = () => {
             />
           </Link>
 
-          <h1 className="text-white text-[16px] md:text-[20px] lg:text-[32px] text-center absolute bottom-5 left-1/2 transform -translate-x-1/2">
+          <h1 className="text-white text-[16px] md:text-[20px] font-medium text-center absolute bottom-5 left-1/2 transform -translate-x-1/2">
             Famto merchant
             <span className="italic font-thin md:px-3 px-1">subscriptions</span>
           </h1>

@@ -45,7 +45,7 @@ const Aboutus = () => {
                 alt="Logo"
               />
             </Link>
-            <h4 className="text-white text-center md:text-[20px] absolute bottom-4 left-1/2 transform -translate-x-1/2">
+            <h4 className="text-white text-center text-[16px] md:text-[20px] font-medium absolute bottom-4 left-1/2 transform -translate-x-1/2">
               About Famto
             </h4>
           </div>
