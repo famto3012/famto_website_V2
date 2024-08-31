@@ -72,7 +72,7 @@ const ITService = () => {
               />
             </Link>
 
-            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] mx-5 lg:mt-[35px] text-white">
+            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] mx-8 lg:mt-[35px] text-white">
               <Link
                 to="/"
                 className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
@@ -160,9 +160,9 @@ const ITService = () => {
         </div>
       </div>
       <div>
-        <div className="grid justify-center md:mt-14 mt-8">
-          <p className="flex justify-center">Our Services include</p>
-          <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+        <div className="grid justify-center md:mt-20 mt-8">
+          <p className="flex justify-center text-[16px] font-medium">Our Services include</p>
+          <h1 className="text-cyan-500  md:text-[32px] font-normal text-[20px]">
             Design & Development
           </h1>
         </div>
@@ -198,7 +198,7 @@ const ITService = () => {
               key={service}
               className="flex items-center gap-2 w-fit px-4 py-2 bg-gray-100 rounded-3xl text-[12px] sm:text-[14px] md:text-[16px]"
             >
-              <SiTicktick className="text-green-600 text-[20px]" />
+              <SiTicktick className="text-green-600 text-[14px] font-normal" />
               <p>{service}</p>
             </div>
           ))}
@@ -350,7 +350,7 @@ const ITService = () => {
         <div className="lg:flex grid sm:grid-cols-2 gap-5 md:mx-20 mx-5">
           <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Expertise and Experience</h1>
-            <p>
+            <p className="text-[14px] font-normal">
               Whether it's through advanced technology, skilled professionals,
               or innovative solutions, emphasize how your services deliver
               superior results.
@@ -358,21 +358,21 @@ const ITService = () => {
           </div>
           <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Client-Centric Approach</h1>
-            <p>
+            <p className="text-[14px] font-normal">
               We prioritize understanding your needs and delivering solutions
               that exceed your expectations.
             </p>
           </div>
           <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Innovative Solutions</h1>
-            <p>
+            <p className="text-[14px] font-normal">
               We stay ahead of the curve by adopting the latest technologies and
               trends in web and mobile app development.
             </p>
           </div>
           <div className="border border-gray-300 rounded-lg md:p-7 p-4 lg:w-1/4">
             <h1 className="font-semibold mb-3">Reliable Support</h1>
-            <p>
+            <p className="text-[14px] font-normal">
               Our commitment doesn't end with project delivery; we provide
               continuous support to keep your digital assets running smoothly.
             </p>

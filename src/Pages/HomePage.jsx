@@ -28,7 +28,7 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClosing, setMenuClosing] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
   let [ref, { width }] = useMeasure();
   const location = useLocation();
 
@@ -162,8 +162,8 @@ const HomePage = () => {
           })}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/25 flex flex-col items-center justify-center">
-          <nav className="absolute top-[3vh] md:top-0 right-0 flex items-center pe-[30px]">
-            <div className="text-white md:flex items-center gap-[70px] hidden md:mt-[35px]">
+          <nav className="absolute top-[80px]] md:top-0 right-0 flex items-center pe-12">
+            <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] lg:mt-[45px] text-white">
               <Link
                 to="/"
                 className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
@@ -180,14 +180,14 @@ const HomePage = () => {
               >
                 Delivery
               </Link>
-              <a
-                href="/it-service"
+              <Link
+                to="/it-service"
                 className={`text-white/75 hover:text-white hover:underline underline-offset-4 ${
                   isActive("/it-service") ? "text-white underline" : ""
                 }`}
               >
                 IT Services
-              </a>
+              </Link>
             </div>
 
             <button
@@ -244,9 +244,9 @@ const HomePage = () => {
       </div>
 
       <div className="bg-[#F3F3F3] grid justify-center">
-        <div className="bg-gray-100 md:p-10 py-5 md:flex grid md:px-20 pb-5 justify-center">
+        <div className="bg-gray-100 md:p-14 md:mt-5 py-5 md:flex grid md:px-20 pb-5 justify-center">
           <div className="flex flex-col justify-center items-center md:order-3 order-1 md:px-0 md:py-0">
-            <p className="font-semibold">We are Famto</p>
+            <p className="font-semibold text-[16px]">We are Famto</p>
 
             <div style={{ textAlign: "center", marginTop: "10px" }}>
               <AnimatePresence mode="wait">
@@ -282,7 +282,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="md:w-[55rem] flex justify-center">
-          <p className="text-center md:text-[15px] text-[13px] px-4">
+          <p className="text-center md:text-[15px] text-[13px] px-4 text-[#000000]">
             Introducing Famto, the ultimate all-in-one app designed to simplify
             your life! Whether you need a quick delivery, a reliable taxi,
             expert online consultation, or a skilled handyman, we've got you
@@ -295,7 +295,7 @@ const HomePage = () => {
           </p>
         </div>
         <Link to={"/about-us"}>
-          <div className="flex justify-center p-8">
+          <div className="flex justify-center p-14">
             <Button value="Learn More" />
           </div>
         </Link>
@@ -306,28 +306,28 @@ const HomePage = () => {
           <h1 className="text-[32px] text-cyan-500">Our Services</h1>
         </div>
 
-        <div className="lg:flex grid md:grid-cols-2 gap-5 mx-10">
+        <div className="lg:flex grid md:grid-cols-2 gap-5 md:mx-10 mx-8">
           {homeServicesData.map((service) => (
-            <div className="lg:w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all duration-500 ease-out hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-[#003435] group">
-              <h1 className="text-[#00CED1] relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all duration-500 ease-out after:ease-out group-hover:after:w-full group-hover:text-white">
+            <div className="lg:w-1/4 border border-gray-300 rounded-lg p-8 space-y-3 hover:cursor-pointer transition-all duration-500 md:h-[400px] ease-out hover:bg-gradient-to-b from-[#00CED1] via-[#00CED1] to-[#003435] group relative">
+              <h1 className="text-[#00CED1] relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 group-hover:underline underline-offset-2 transition transform after:transition-all duration-500 ease-out after:ease-out group-hover:after:w-full group-hover:text-white">
                 {service.service}
               </h1>
-              <h2 className="font-[500] pb-14 group-hover:pb-8 transition-all duration-500 ease-out text-[20px] group-hover:text-white">
+              <h2 className="font-[500] pb-14 group-hover:pb-10 transition-all duration-300 ease-out text-[20px] group-hover:text-white">
                 {service.head}
               </h2>
-              <p className="text-[14px] pb-8 transition-all duration-500 ease-out group-hover:text-white">
+              <p className="text-[14px] hidden md:block pb-10 transition-all duration-500 ease-out group-hover:text-white">
                 {service.content}
               </p>
               <Link to={service.path}>
                 <div
-                  className="flex justify-center right-2 items-center ms-[40%] rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100 w-12"
+                  className="flex justify-center items-center rounded-full transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100 w-12 absolute bottom-8 pt-20 left-1/2 transform -translate-x-1/2"
                   onMouseEnter={() => setIsHovered(false)}
                   onMouseLeave={() => setIsHovered(true)}
                 >
                   {isHovered ? (
-                    <MdArrowForward className="text-white text-[46px]  ease-in rounded-full border-4 transition-all duration-300" />
+                    <MdArrowForward className="text-white text-[38px] ease-in rounded-full transform border-4 transition-all duration-700" />
                   ) : (
-                    <MdArrowOutward className="text-white text-[46px] ease-in transition-all rounded-full border-4  duration-300" />
+                    <MdArrowOutward className="text-white text-[38px] ease-out transform transition-transform rounded-full border-4 duration-700" />
                   )}
                 </div>
               </Link>
@@ -420,7 +420,7 @@ const HomePage = () => {
           </form>
         </div>
       </div>
-      <div className="md:flex grid justify-between pt-10 lg:gap-5 lg:mb-0 mt-14 bg-[#F6F6F6] h-auto md:h-[30rem]">
+      <div className="md:flex grid justify-between pt-10 lg:gap-5 lg:mb-0 mt-20 bg-[#F6F6F6] h-auto md:h-[30rem]">
         <div className="md:w-1/2 flex md:items-end xl:items-start mx-auto justify-center">
           <figure className="w-full lg:ps-40">
             <img
@@ -440,9 +440,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="max-w-[90%] mx-auto overflow-hidden mt-4 md:mt-8">
+      <div className="max-w-[90%] mx-auto overflow-hidden mt-4 md:mt-20">
         <div className="grid md:justify-center md:text-center">
-          <p className="font-[500] text-[14px] md:text-[18px]">
+          <p className="font-[500] text-[14px] md:text-[16px]">
             These are some of our
           </p>
           <h1 className="md:text-[32px] text-[22px] text-cyan-500">

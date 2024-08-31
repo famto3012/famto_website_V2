@@ -90,55 +90,55 @@ const Merchant = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center items-center p-10">
-        <p className="md:font-semibold">Our offerings</p>
-        <p className="text-[#00ced1] md:text-[32px] text-[20px]">
+      <div className="flex flex-col justify-center items-center p-10 mt-10">
+        <p className="md:font-medium text-[16px]">Our offerings</p>
+        <p className="text-[#00ced1] md:text-[32px] font-normal text-[20px]">
           To Famto Merchants
         </p>
       </div>
       <div className="lg:flex grid sm:grid-cols-2  gap-3 mx-10 py-5">
-        <div className="flex p-2 border border-gray-200 lg:w-1/4 rounded-lg">
+        <div className="flex p-3 border border-gray-200 lg:w-1/4 py-4 rounded-lg">
           <div className="grid">
             <MdExposureZero className="text-[46px] m-2 rounded  bg-[#F6F6F6] text-[#00ced1]" />
-            <h1 className="text-[20px] p-2 font-semibold">Zero commission</h1>
-            <p className="p-2">
+            <h1 className="text-[16px] p-2 font-semibold">Zero commission</h1>
+            <p className="p-2 font-normal text-[14px]">
               We provide our services to all our merchants with zero commision
               charges.
             </p>
           </div>
         </div>
 
-        <div className="flex  p-2 border border-gray-200 lg:w-1/4 rounded-lg">
+        <div className="flex  p-3 py-4 border border-gray-200 lg:w-1/4 rounded-lg">
           <div className="grid">
             <MdOutlineSpeed className="text-[46px] p-2 m-2 rounded  bg-[#F6F6F6] text-[#00ced1]" />
-            <h1 className="text-[20px] p-2 font-semibold">Fast Delivery</h1>
-            <p className="p-2">
+            <h1 className="text-[16px] p-2 font-semibold">Fast Delivery</h1>
+            <p className="p-2 font-normal text-[14px]">
               We guarantee swift and reliable delivery services, ensuring your
               products arrive on time, every time.
             </p>
           </div>
         </div>
 
-        <div className="flex  p-2 border border-gray-200 lg:w-1/4  rounded-lg">
+        <div className="flex  p-3 py-4 border border-gray-200 lg:w-1/4  rounded-lg">
           <div className="grid">
             <LuIndianRupee className="text-[46px] m-2 rounded p-2 bg-[#F6F6F6] text-[#00ced1]" />
-            <h1 className="text-[20px] p-2 font-semibold">
+            <h1 className="text-[16px] p-2 font-semibold">
               Competitve Pricing
             </h1>
-            <p className="p-2">
+            <p className="p-2 font-normal text-[14px]">
               We offer competitive prices without compromising on quality,
               excellent value for money.
             </p>
           </div>
         </div>
 
-        <div className="flex  p-2 border border-gray-200 lg:w-1/4 rounded-lg">
+        <div className="flex  p-3 py-4 border pb-3 border-gray-200 lg:w-1/4 rounded-lg">
           <div className="grid">
             <FaUsers className="text-[46px] m-2 rounded p-2 bg-[#F6F6F6] text-[#00ced1]" />
-            <h1 className="text-[20px] p-2 font-semibold">
+            <h1 className="text-[16px] p-2 font-semibold">
               Expand Customer Base
             </h1>
-            <p className="p-2">
+            <p className="p-2 font-normal text-[14px]">
               Expand the boundaries of your business across various regions
               through famto
             </p>
@@ -209,7 +209,7 @@ const Merchant = () => {
                       key={subIndex}
                       className="text-[14px] flex gap-2 items-center font-[600]"
                     >
-                      <p className="border rounded-full px-4 p-2 font-[600]">
+                      <p className="border rounded-full px-3.5 p-2 bg-white font-[600]">
                         {item.number}
                       </p>
                       <li>{item.data}</li>

@@ -38,7 +38,7 @@ const Team = () => {
         </div>
       </div>
       <div className="my-[50px]">
-        <p className="max-w-[90%] mx-auto text-start ps-2 md:text-[14px] text-[13px]">
+        <p className="max-w-[90%] mx-auto text-start ps-2 md:text-[14px] font-normal text-[13px]">
           Welcome to our "Team Famto" page, where you'll discover the vibrant
           personalities behind our organization. Delve into the diverse
           backgrounds, expertise, and passions of each member who contributes to
@@ -50,8 +50,8 @@ const Team = () => {
         </p>
       </div>
 
-      <section className="w-full md:w-[90%] mx-auto px-[1rem] md:px-[0rem] py-[2rem]">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
+      <section className="w-fit md:w-[90%] mx-auto px-[1rem] md:px-[0rem] py-[2rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
           <Card
             image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FSujith%20Sir.jpg?alt=media&token=c25fe84e-38d7-40c0-9ba2-e654468a2305"
             name="J Sujith"
@@ -109,8 +109,6 @@ const Team = () => {
           />
         </div>
       </section>
-
-      <Whatsapp />
 
       <Footer />
     </main>
