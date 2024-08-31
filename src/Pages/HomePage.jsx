@@ -191,7 +191,7 @@ const HomePage = () => {
             </div>
 
             <button
-              className="block md:hidden focus:outline-none -mt-[250px]"
+              className="block md:hidden focus:outline-none  -mt-[250px]"
               onClick={toggleMenu}
             >
               <IoMenu className="text-white text-[28px]" />
@@ -259,7 +259,7 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-cyan-500 to-teal-500 bg-clip-text text-transparent">
+                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
                       The Complete App
                     </h1>
                   </motion.div>
@@ -342,7 +342,7 @@ const HomePage = () => {
           </figure>
           <div className="md:p-10 px-10 py-5 md:mt-10">
             <p>Let's</p>
-            <h1 className="md:text-[32px] text-cyan-500">Get in touch</h1>
+            <h1 className="md:text-[32px] text-[#00CED1]">Get in touch</h1>
           </div>
         </div>
         <div className="md:w-2/3">
@@ -445,7 +445,7 @@ const HomePage = () => {
           <p className="font-[500] text-[14px] md:text-[16px]">
             These are some of our
           </p>
-          <h1 className="md:text-[32px] text-[22px] text-cyan-500">
+          <h1 className="md:text-[32px] text-[22px] text-[#00CED1]">
             Esteemed Clients
           </h1>
         </div>

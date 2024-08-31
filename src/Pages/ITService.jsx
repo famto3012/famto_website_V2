@@ -162,7 +162,7 @@ const ITService = () => {
       <div>
         <div className="grid justify-center md:mt-20 mt-8">
           <p className="flex justify-center text-[16px] font-medium">Our Services include</p>
-          <h1 className="text-cyan-500  md:text-[32px] font-normal text-[20px]">
+          <h1 className="text-[#00CED1]  md:text-[32px] font-normal text-[20px]">
             Design & Development
           </h1>
         </div>
@@ -214,7 +214,7 @@ const ITService = () => {
       <div className="bg-gray-100 mt-14 md:flex grid md:px-20  justify-between">
         <div className="flex flex-col justify-center items-end md:order-3 order-1 px-5 py-5 md:px-0 md:py-0">
           <p className="font-semibold">Why Famto</p>
-          <p className="text-cyan-500 text-[32px]">IT Services?</p>
+          <p className="text-[#00CED1] text-[32px]">IT Services?</p>
         </div>
 
         <p className="md:w-1/2 px-5 md:py-10 py-5 text-[14px] md:order-1 order-2">
@@ -234,7 +234,7 @@ const ITService = () => {
       </div>
       <div className="grid items-center text-center justify-center md:mt-20 mt-10">
         <p className="font-[500]">Our </p>
-        <p className="text-cyan-500 text-[28px] font-[500]">Process</p>
+        <p className="text-[#00CED1] text-[28px] font-[500]">Process</p>
       </div>
       <div className=" mt-10 md:gap-5 md:flex">
         <div className="md:w-1/2 w-full h-full relative">
@@ -249,8 +249,8 @@ const ITService = () => {
         <div class="flex flex-col mx-auto px-5">
           <div class="flex items-center md:mt-0 mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">01</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">01</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -262,8 +262,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">02</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">02</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -275,8 +275,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">03</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">03</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -288,8 +288,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">04</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">04</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -301,8 +301,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">05</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">05</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -314,8 +314,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">06</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">06</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -327,8 +327,8 @@ const ITService = () => {
           </div>
           <div class="flex items-center mt-5">
             <div class="relative">
-              <div class="w-10 h-10 bg-white border-2 border-cyan-500 rounded-full flex items-center justify-center">
-                <span class="text-cyan-500 font-semibold">07</span>
+              <div class="w-10 h-10 bg-white border-2 border-[#00CED1] rounded-full flex items-center justify-center">
+                <span class="text-[#00CED1] font-semibold">07</span>
               </div>
             </div>
             <div class="pl-6 flex gap-2">
@@ -343,7 +343,7 @@ const ITService = () => {
       <div className="md:my-20 my-10">
         <div className="grid justify-center md:mt-14 m-8">
           <p className="flex justify-center font-semibold">FAMTO</p>
-          <h1 className="text-cyan-500  md:text-[34px] text-[20px]">
+          <h1 className="text-[#00CED1]  md:text-[34px] text-[20px]">
             Our Advantages
           </h1>
         </div>

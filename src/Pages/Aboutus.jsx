@@ -69,7 +69,7 @@ const Aboutus = () => {
                 <h4 className="font-semibold text-[20px] mb-[8px] text-center md:text-start ">
                   Vision
                 </h4>
-                <p className="font-normal text-[16px] text-start">
+                <p className="font-normal text-[14px] md:text-[16px] text-start">
                   Our vision is to transform the way people access essential
                   services, creating a premier platform that seamlessly connects
                   individuals, enriches lives, and builds strong community
@@ -100,7 +100,7 @@ const Aboutus = () => {
                   <h4 className="font-semibold text-[20px] mb-[8px]  md:mt-0 text-center md:text-start">
                     Mission
                   </h4>
-                  <p className=" font-normal text-[16px] text-start">
+                  <p className=" font-normal text-[14px] md:text-[16px] text-start">
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
                     essential services. We empower individuals to cultivate

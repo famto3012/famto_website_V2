@@ -59,7 +59,7 @@ const Blogs = () => {
               alt="Logo"
             />
           </Link>
-          <h4 className="text-white text-[16px] md:text-[20px] lg:text-[32px] text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <h4 className="text-white text-[16px] md:text-[20px] font-medium text-center text-3xl absolute bottom-4 left-1/2 transform -translate-x-1/2">
             Blogs
           </h4>
         </div>
@@ -79,7 +79,7 @@ const Blogs = () => {
               />
             </figure>
             <div className="p-5">
-              <p className="text-lg font-medium">{blog}</p>
+              <p className="md:text-[20px] text-[15px] font-medium">{blog}</p>
               <Link to={paths[index]} className="flex justify-end p-3">
                 <Button
                 value="Read More"
