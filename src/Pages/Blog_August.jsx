@@ -41,7 +41,7 @@ const Blog_August = () => {
           </Link>
         </div>
       </div>
-      <section className="w-full text-[13px] md:text-[15px] mx-auto px-[2rem] md:px-[4rem] py-[1rem]">
+      <section className="w-full text-[13px] md:text-[14px] mx-auto px-[2rem] md:px-[4rem] py-[1rem] mb-20">
         <Link to="/blogs">
           <div className="text-black flex items-center my-2 gap-x-2 underline underline-offset-2">
             <WestOutlinedIcon /> Back

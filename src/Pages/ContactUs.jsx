@@ -71,9 +71,9 @@ const ContactUs = () => {
       <section className="flex flex-col md:flex-row w-full ">
         <div className="w-full md:w-[50%] mb-[4rem] mt-[40px]">
           <div className="flex flex-col space-y-12 mx-auto px-[2rem] md:px-[4rem]">
-            <h1 className="text-[24px] font-[600]">
+            <h1 className="md:text-[16px] text-[14px] font-[500]">
               Come Let's
-              <span className="block text-[32px] font-normal text-[#00Ced1]">
+              <span className="block md:text-[32px] text-[20px] font-normal text-[#00Ced1]">
                 Get In Touch
               </span>
             </h1>

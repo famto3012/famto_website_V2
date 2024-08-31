@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import Whatsapp from "../components/Whatsapp";
 import { useEffect } from "react";
 import { aboutTableData } from "../data";
 import { SiTicktick } from "react-icons/si";
@@ -52,8 +51,8 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <section className="w-full md:w-[90%] px-3 md:px-0 mx-auto  py-[3rem]">
-          <p className="mb-[40px] text-center md:text-start text-[12px] md:text-[16px]">
+        <section className="w-full md:w-[90%] px-[2rem] md:px-0 mx-auto  py-[3rem]">
+          <p className="mb-[60px] md:text-start text-[12px] md:text-[14px] font-normal">
             The Company got its corporate character in July 2021 under the name
             “MY FAMTO Private Limited” and began its journey in Kerala on July
             2021 for covering services like Delivery(Food, Grocery, Fruits &
@@ -64,42 +63,44 @@ const Aboutus = () => {
             we provide other services which can ease in for customers as well as
             merchants.
           </p>
-          <div className="bg-gray-100 rounded-lg mb-[40px]">
-            <div className="md:flex grid w-full">
+          <div className="bg-gray-100 rounded-lg mb-[40px] ">
+            <div className="md:flex grid w-full ">
               <div className="md:w-1/2 md:p-[30px] p-8 text-center md:text-start order-2 md:order-1">
-                <h4 className="font-bold text-[18px] mb-[8px] ">Vision</h4>
-                <p>
+                <h4 className="font-semibold text-[20px] mb-[8px] text-center md:text-start ">
+                  Vision
+                </h4>
+                <p className="font-normal text-[16px] text-start">
                   Our vision is to transform the way people access essential
                   services, creating a premier platform that seamlessly connects
                   individuals, enriches lives, and builds strong community
                   connections.
                 </p>
               </div>
-              <div className="md:w-1/2 md:order-2 order-1">
-                <figure className="w-full h-[15rem]">
+              <div className="md:w-1/2 md:order-2 order-1 bg-[#00CED1]">
+                <figure className="w-full h-[15rem] py-8">
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fabout-vision.svg?alt=media&token=1f32a0e2-b38a-4d6d-a07b-7fb0842c672c"
-                    className="bg-[#00CED1] p-10 w-full h-full object-contain"
+                    className="p-10 w-full h-full object-contain"
                   />
                 </figure>
               </div>
             </div>
 
-            <div className="text-center md:text-start">
+            <div className=" md:text-start">
               <div className="md:flex grid w-full">
-                <div className="md:w-1/2">
-                  <figure className="w-full h-[15rem]">
+                <div className="md:w-1/2 bg-[rgb(0,206,209)]">
+                  <figure className="w-full h-[15rem] py-8">
                     <img
                       src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fabout-mission.svg?alt=media&token=b843fba3-a8b6-4701-88d1-f61700bbddf6"
                       className="bg-[#00CED1] p-10 w-full h-full object-contain"
                     />
                   </figure>
                 </div>
-                <div className="md:w-1/2 md:p-[30px] py-8 text-center md:text-start ">
-                  <h4 className="font-bold text-[18px] mb-[8px]  md:mt-0">
+                <div className="md:w-1/2 md:p-[30px] p-8 text-center md:text-start ">
+                  <h4 className="font-semibold text-[20px] mb-[8px]  md:mt-0 text-center md:text-start">
                     Mission
                   </h4>
-                  <p className="px-6 md:px-0">
+                  <p className=" font-normal text-[16px] text-start">
                     Our mission is to simplify lives by offering a
                     customer-centric platform that provides convenient access to
                     essential services. We empower individuals to cultivate
@@ -137,8 +138,6 @@ const Aboutus = () => {
             />
           </figure>
         </div>
-
-        <Whatsapp />
 
         <Footer />
       </main>
