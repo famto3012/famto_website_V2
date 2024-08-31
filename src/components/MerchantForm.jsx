@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import Button from "./button";
 import axios from "axios";
 
-const BASE_URL = "https://famto-backend-api.vercel.app/api/v1"
+const BASE_URL = "https://famto-backend-api.vercel.app/api/v1";
 
 const MerchantForm = () => {
   const form = useRef();
@@ -70,9 +70,9 @@ const MerchantForm = () => {
         <div className="py-2 font-medium text-[16px] mb-2 md:text-[20px]">
           <h1>Become a Merchant</h1>
         </div>
-        <form ref={form} onSubmit={handleFormSubmit} className="grid gap-5">
-          <div className="grid gap-1">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+        <form ref={form} onSubmit={handleFormSubmit} className="grid gap-6">
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Name
             </label>
             <input
@@ -85,18 +85,22 @@ const MerchantForm = () => {
             />
           </div>
 
-          <div className="grid gap-1">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Business Type
             </label>
             <select
               name="businessType"
               value={merchantData.businessType}
               onChange={handleInputChange}
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-3 p-2 border border-gray-200 rounded-lg placeholder:text-[13px] placeholder:text-gray-100"
             >
-              <option defaultValue="Business Type" hidden className="text-[13px] text-gray-500">
-                Select your Business Type
+              <option
+                defaultValue="Business Type"
+                hidden
+                className="text-[10px] text-gray-500"
+              >
+               <p className="text-[13px] text-gray-500">Enter your business type</p>
               </option>
               {allBusinessType.map((businessType) => (
                 <option key={businessType._id} value={businessType.title}>
@@ -106,8 +110,8 @@ const MerchantForm = () => {
             </select>
           </div>
 
-          <div className="grid gap-1">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Business Location
             </label>
             <input
@@ -120,8 +124,8 @@ const MerchantForm = () => {
             />
           </div>
 
-          <div className="grid gap-1">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Business Phone
             </label>
             <input
@@ -134,8 +138,8 @@ const MerchantForm = () => {
             />
           </div>
 
-          <div className="grid gap-1">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Business Mail
             </label>
             <input
@@ -148,7 +152,7 @@ const MerchantForm = () => {
             />
           </div>
           <div className="hidden">
-            <label className="font-[400] text-[14px] md:text-[16px]">
+            <label className="font-[400] text-[14px] md:text-[14px]">
               Type of user
             </label>
             <input
@@ -164,7 +168,7 @@ const MerchantForm = () => {
             {!emailSuccess && (
               <Button
                 click={handleFormSubmit}
-                value={isLoading ? "Sending..." : "Send  Us"}
+                value={isLoading ? "Sending..." : "Get Started"}
               />
             )}
 

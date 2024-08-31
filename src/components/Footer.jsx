@@ -19,12 +19,12 @@ const Footer = () => {
         </Link>
         <div className="grid sm:grid-cols-2 lg:flex sm:flex-row ps-[2rem] lg:gap-[50px] gap-[30px] text-left">
           <div className="flex flex-col">
-            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
+            <h4 className="text-[#eee] mb-[20px] text-[16px] font-medium">
               Company
             </h4>
             <Link
               to={"/about-us"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/about-us")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -34,7 +34,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/contact-us"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/contact-us")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -44,7 +44,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/team"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/team")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -54,7 +54,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/blogs"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/blogs")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -64,12 +64,12 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col">
-            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
+            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[500]">
               Partner with us
             </h4>
             <Link
               to={"/merchant"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/merchant")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -79,7 +79,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/delivery-agent"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/delivery-agent")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -89,12 +89,12 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col">
-            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
+            <h4 className="text-[#eee] mb-[20px] text-[16px] font-medium">
               Help & Legal
             </h4>
             <Link
               to={"/faq"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-[400] hover:text-white ${
                 isActive("/faq")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -104,7 +104,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/terms-and-conditions"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/terms-and-conditions")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -114,7 +114,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/privacy-policy"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/privacy-policy")
                   ? "text-white underline underline-offset-2 font-[500]"
                   : ""
@@ -124,7 +124,7 @@ const Footer = () => {
             </Link>
             <Link
               to={"/cancellation-and-refund-policy"}
-              className={`text-white/75 mb-[10px] text-[14px] hover:text-white ${
+              className={`text-white/75 mb-[10px] text-[14px] font-normal hover:text-white ${
                 isActive("/cancellation-and-refund-policy")
                   ? "text-white underline underline-offset-2 font-[600]"
                   : ""
@@ -134,7 +134,7 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[600]">
+            <h4 className="text-[#eee] mb-[20px] text-[16px] font-[500]">
               Social Media
             </h4>
             <div className="flex gap-2">

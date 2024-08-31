@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import { FiArrowUpRight } from "react-icons/fi";
+import Button from "../components/button";
 
 const Blogs = () => {
   useEffect(() => {
@@ -68,9 +69,9 @@ const Blogs = () => {
         {blogs.map((blog, index) => (
           <div
             key={index}
-            className="bg-white rounded-3xl border border-gray-300 overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="bg-white rounded-3xl border border-gray-300 overflow-hidden hover:shadow-md transition-shadow duration-300"
           >
-            <figure className="rounded-t-3xl w-full h-[15rem] overflow-hidden">
+            <figure className="rounded-t-3xl w-full h-[12rem] overflow-hidden">
               <img
                 src={images[index % images.length]}
                 className="h-full w-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-110"
@@ -79,10 +80,10 @@ const Blogs = () => {
             </figure>
             <div className="p-5">
               <p className="text-lg font-medium">{blog}</p>
-              <Link to={paths[index]}>
-                <button className="text-teal-400 border border-teal-400 rounded-3xl p-2 gap-1 px-4 flex items-center mt-7 hover:bg-teal-400 hover:text-white transition-all duration-300">
-                  Read More <FiArrowUpRight />
-                </button>
+              <Link to={paths[index]} className="flex justify-end p-3">
+                <Button
+                value="Read More"
+                />
               </Link>
             </div>
           </div>
