@@ -188,6 +188,14 @@ const HomePage = () => {
               >
                 IT Services
               </Link>
+              <button className="transition-all">
+                <a
+                  href="https://dashboard.famto.in/home"
+                  className="border rounded-md border-white px-5 py-2 hover:bg-white hover:text-black transform transition-transform duration-500 ease-in-out hover:duration-500 hover:ease-in-out group-hover:-translate-x-1"
+                >
+                  Login
+                </a>
+              </button>
             </div>
 
             <button
@@ -226,12 +234,20 @@ const HomePage = () => {
                 <Link
                   to="/it-service"
                   onClick={toggleMenu}
-                  className={`rounded-md pb-3 hover:bg-white hover:text-black ${
+                  className={`border-b-2 border-gray-200 w-full flex justify-center pb-3 hover:bg-white hover:text-black ${
                     isActive("/it-service") ? "font-bold" : ""
                   }`}
                 >
                   IT Services
                 </Link>
+                <button className="transition-all">
+                <a
+                  href="https://dashboard.famto.in/home"
+                  className=" border rounded-md border-white px-5 py-2 hover:bg-white hover:text-black transform transition-transform duration-500 ease-in-out hover:duration-500 hover:ease-in-out group-hover:-translate-x-1"
+                >
+                  Login 
+                </a>
+              </button>
               </div>
             )}
           </nav>
