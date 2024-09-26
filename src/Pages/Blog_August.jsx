@@ -21,7 +21,7 @@ const Blog_August = () => {
         <div className="inset-0 bg-gradient-to-bl from-[#014546] via-black/35 to transparent h-[19rem] md:h-[70vh] flex items-center justify-center md:space-x-4 space-x-3">
           <figure className="md:h-[4rem] h-[2rem]">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fbluelogonew.svg?alt=media&token=a4d700e2-82d5-45c9-91b1-cae9cd4ef1f1"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(30)%201.svg?alt=media&token=5491c133-13a7-4e45-8edb-a0a36f338536"
               alt=""
               className="object-cover h-full"
             />
@@ -35,7 +35,7 @@ const Blog_August = () => {
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
               className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
               alt="Logo"
             />
           </Link>

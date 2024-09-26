@@ -59,7 +59,7 @@ const ContactUs = () => {
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FBlack_logo.svg?alt=media&token=214d8656-3f79-4af9-a37e-5f61daec8e63"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
               alt="Logo"
             />
           </Link>

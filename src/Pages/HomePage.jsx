@@ -188,6 +188,12 @@ const HomePage = () => {
               >
                 IT Services
               </Link>
+              <Link
+                to="https://dashboard.famto.in/auth/login"
+                className="border rounded-md border-white py-2 px-7 hover:bg-white hover:text-black"
+              >
+                Login
+              </Link>
             </div>
 
             <button
@@ -226,18 +232,25 @@ const HomePage = () => {
                 <Link
                   to="/it-service"
                   onClick={toggleMenu}
-                  className={`rounded-md pb-3 hover:bg-white hover:text-black ${
+                  className={`border-b-2 border-gray-200 w-full flex justify-center rounded-md pb-3 hover:bg-white hover:text-black ${
                     isActive("/it-service") ? "font-bold" : ""
                   }`}
                 >
                   IT Services
+                </Link>
+                <Link
+                  to="https://dashboard.famto.in/auth/login"
+                  className="border rounded-md border-white px-5 hover:bg-white hover:text-black"
+                  onClick={toggleMenu}
+                >
+                  Login
                 </Link>
               </div>
             )}
           </nav>
           <img
             className="m-[45px] w-[140px] h-35"
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
             alt="Logo"
           />
         </div>

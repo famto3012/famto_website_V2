@@ -38,7 +38,7 @@ const Blogs = () => {
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_may.svg?alt=media&token=fd5df35b-8b34-4507-9356-430897de579f",
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog-june.svg?alt=media&token=3d5d7d5a-1b76-4e44-8a8c",
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_march.svg?alt=media&token=04614eea-7b31-4389-99f2-8ad0972ced12",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog-august.svg?alt=media&token=a2023f44-db61-4a3f-9337-b3a18eb4d6e9",
+    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FGroup%20427320300.svg?alt=media&token=ccde05c3-22f3-44ba-a0be-382626068263",
   ];
 
   return (
@@ -55,7 +55,7 @@ const Blogs = () => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Flogo.svg?alt=media&token=08e766da-ec03-4d84-b665-212f06c23ff3"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
               alt="Logo"
             />
           </Link>
@@ -74,7 +74,7 @@ const Blogs = () => {
             <figure className="rounded-t-3xl w-full h-[12rem] overflow-hidden">
               <img
                 src={images[index % images.length]}
-                className="h-full w-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className={`h-full w-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-150 ${images[index] === images[4] ? "scale-125" : ""} `}
                 alt={`Blog ${index + 1}`}
               />
             </figure>

@@ -28,7 +28,7 @@ const Team = () => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] ps-[10] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
               alt="Logo"
             />
           </Link>
@@ -104,7 +104,7 @@ const Team = () => {
           />
           <Card
             image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FSanju.jpg?alt=media&token=2c8cbcb2-5c87-4cdf-b2de-b7c10a3d86d7"
-            name="Sanju Babukuttan"
+            name="Sanju Bahukuttan"
             role="Business Development Executive"
           />
         </div>

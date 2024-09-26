@@ -31,7 +31,7 @@ const Subscriptions = () => {
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
               className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Flogo.svg?alt=media&token=d1f9913a-91b2-482e-9a03-a44080d57d4e"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
               alt="Logo"
             />
           </Link>
@@ -61,7 +61,7 @@ const Subscriptions = () => {
                 <div className="text-[#00ced1] text-3xl font-bold mb-2 flex items-center">
                   <LuIndianRupee /> 16,419
                   <span className="text-black text-sm font-medium mx-1">
-                    /Year
+                    /Year + GST
                   </span>
                 </div>
                 <div className="text-gray-500 mb-[2rem]">
@@ -118,7 +118,7 @@ const Subscriptions = () => {
                 <div className="text-[#00ced1] text-3xl font-bold mb-2 flex items-center">
                   <LuIndianRupee /> 8,549
                   <span className="text-black text-sm font-medium mx-1">
-                    /Six Months
+                    /Six Months + GST
                   </span>
                 </div>
                 <div className="text-gray-500 mb-[2rem]">
@@ -173,7 +173,7 @@ const Subscriptions = () => {
                 <div className="text-[#00ced1] text-3xl font-bold mb-2 flex items-center">
                   <LuIndianRupee /> 1,499
                   <span className="text-black text-sm font-medium mx-1">
-                    /Month
+                    /Month + GST
                   </span>
                 </div>
               </div>
@@ -211,7 +211,7 @@ const Subscriptions = () => {
                   <div className="text-[#00ced1] text-3xl font-bold mb-2 flex items-center ">
                     <LuIndianRupee /> 16,419
                     <span className="text-black text-sm font-medium mx-1">
-                      /Year
+                      /Year + GST
                     </span>
                   </div>
                   <div className="text-gray-500 mb-[2rem] ">
@@ -273,7 +273,7 @@ const Subscriptions = () => {
                   <div className="text-[#00ced1] text-3xl font-bold mb-2 flex items-center">
                     <LuIndianRupee /> 8,549
                     <span className="text-black text-sm font-medium mx-1">
-                      /Six Months
+                      /Six Months + GST
                     </span>
                   </div>
                   <div className="text-gray-500 mb-[2rem] ">
@@ -335,7 +335,7 @@ const Subscriptions = () => {
                   <div className="text-[#00ced1] text-3xl font-bold mb-[4rem] flex items-center">
                     <LuIndianRupee /> 1,499
                     <span className="text-black text-sm font-medium mx-1">
-                      /Month
+                      /Month + GST
                     </span>
                   </div>
                 </div>

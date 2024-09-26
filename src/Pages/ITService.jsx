@@ -67,7 +67,7 @@ const ITService = () => {
             <Link to="/" className="mt-2 md:mt-8 md:ml-[40px]">
               <img
                 className="w-[6rem] h-[3rem] md:w-[10rem] md:h-[4rem] pl-[1rem] md:pl-[2rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Flogo.svg?alt=media&token=08e766da-ec03-4d84-b665-212f06c23ff3"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
                 alt="Logo"
               />
             </Link>

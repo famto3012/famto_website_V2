@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <Link to={"/"} className="sm:mb-0 h-[6rem]">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FTeal_logo.svg?alt=media&token=36094adf-2443-434f-a9bb-fb4b1f270535"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(5).svg?alt=media&token=74125141-5e35-40b8-9141-3faf2bd33794"
             alt="my-famto logo"
             className="w-[200px] h-[30px]"
           />
