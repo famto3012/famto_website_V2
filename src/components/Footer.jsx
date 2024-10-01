@@ -14,7 +14,7 @@ const Footer = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(5).svg?alt=media&token=74125141-5e35-40b8-9141-3faf2bd33794"
             alt="my-famto logo"
-            className="w-[200px] h-[30px]"
+            className="w-[150px] h-[20px]"
           />
         </Link>
         <div className="grid sm:grid-cols-2 lg:flex sm:flex-row ps-[2rem] lg:gap-[50px] gap-[30px] text-left">
