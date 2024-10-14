@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "./button";
 import axios from "axios";
+import Select from "react-select";
 
-const BASE_URL = "https://famto-backend-api.vercel.app/api/v1";
+const BASE_URL = "https://api.famto.in/api/v1";
 
 const MerchantForm = () => {
   const form = useRef();
@@ -18,6 +19,7 @@ const MerchantForm = () => {
   });
 
   const [allBusinessType, setAllBusinessType] = useState([]);
+  const [category, setCategory] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +43,16 @@ const MerchantForm = () => {
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const categoryOptions = allBusinessType.map((category) => ({
+    label: category.title,
+    value: category.title,
+  }));
+
+  const handleChangeSelect = (option) => {
+    setCategory(option.value);
+    setMerchantData({ ...merchantData, businessType: option.value });
   };
 
   const handleFormSubmit = async (e) => {
@@ -73,7 +85,35 @@ const MerchantForm = () => {
         <form ref={form} onSubmit={handleFormSubmit} className="grid gap-6">
           <div className="grid gap-2">
             <label className="font-[400] text-[14px] md:text-[14px]">
-              Name
+              Business Type
+            </label>
+
+            <Select
+              options={categoryOptions}
+              value={categoryOptions.find(
+                (option) => option.value === category
+              )}
+              onChange={handleChangeSelect}
+              className="min-w-[10rem]"
+              placeholder="Select Business category"
+              isSearchable={true}
+              isMulti={false}
+              styles={{
+                control: (provided) => ({
+                  ...provided,
+                  paddingRight: "",
+                }),
+                dropdownIndicator: (provided) => ({
+                  ...provided,
+                  padding: "10px",
+                }),
+              }}
+            />
+          </div>
+
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
+              Name of Owner
             </label>
             <input
               type="text"
@@ -83,31 +123,6 @@ const MerchantForm = () => {
               placeholder="Enter your Name"
               className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
             />
-          </div>
-
-          <div className="grid gap-2">
-            <label className="font-[400] text-[14px] md:text-[14px]">
-              Business Type
-            </label>
-            <select
-              name="businessType"
-              value={merchantData.businessType}
-              onChange={handleInputChange}
-              className="outline-none focus:outline-none px-3 p-2 border border-gray-200 rounded-lg placeholder:text-[13px] placeholder:text-gray-100"
-            >
-              <option
-                defaultValue="Business Type"
-                hidden
-                className="text-[10px] text-gray-500"
-              >
-               <p className="text-[13px] text-gray-500">Enter your business type</p>
-              </option>
-              {allBusinessType.map((businessType) => (
-                <option key={businessType._id} value={businessType.title}>
-                  {businessType.title}
-                </option>
-              ))}
-            </select>
           </div>
 
           <div className="grid gap-2">

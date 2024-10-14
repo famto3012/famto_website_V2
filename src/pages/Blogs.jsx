@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
-import { FiArrowUpRight } from "react-icons/fi";
 import Button from "../components/button";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Blogs = () => {
   useEffect(() => {
@@ -74,16 +74,16 @@ const Blogs = () => {
             <figure className="rounded-t-3xl w-full h-[12rem] overflow-hidden">
               <img
                 src={images[index % images.length]}
-                className={`h-full w-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-150 ${images[index] === images[4] ? "scale-125" : ""} `}
+                className={`h-full w-full object-cover transform transition-transform duration-300 ease-in-out hover:scale-150 ${
+                  images[index] === images[4] ? "scale-125" : ""
+                } `}
                 alt={`Blog ${index + 1}`}
               />
             </figure>
             <div className="p-5">
               <p className="md:text-[20px] text-[15px] font-medium">{blog}</p>
               <Link to={paths[index]} className="flex justify-end p-3">
-                <Button
-                value="Read More"
-                />
+                <Button value="Read More" />
               </Link>
             </div>
           </div>
@@ -93,6 +93,8 @@ const Blogs = () => {
       <Whatsapp />
 
       <Footer />
+
+      <ScrollToTop />
     </main>
   );
 };

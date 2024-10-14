@@ -1,16 +1,15 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "./button";
 
 const AgentForm = () => {
-  
   const form = useRef();
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    console.log("Button clicked")
+    console.log("Button clicked");
     try {
       setIsLoading(true);
       await emailjs.sendForm(
@@ -40,7 +39,7 @@ const AgentForm = () => {
         </div>
         <div className="grid gap-5">
           <div className="hidden gap-1">
-            <input  name="type"  value="agent"></input>
+            <input name="type" value="agent"></input>
           </div>
           <div className="grid gap-1">
             <label className="font-[400] text-[14px] md:text-[16px]">
@@ -89,15 +88,18 @@ const AgentForm = () => {
             ></input>
           </div>
           <div className="flex justify-end p-3">
-              {!emailSuccess && <Button click={sendEmail}
-                value={isLoading ? "Sending..." : "Get Started"} />}
-               {emailSuccess && (
-                <p className="text-center text-[#21958f]">
-                  We have received your message and will get back to you
-                  shortly!
-                </p>
-              )}
-        </div>
+            {!emailSuccess && (
+              <Button
+                click={sendEmail}
+                value={isLoading ? "Sending..." : "Get Started"}
+              />
+            )}
+            {emailSuccess && (
+              <p className="text-center text-[#21958f]">
+                We have received your message and will get back to you shortly!
+              </p>
+            )}
+          </div>
         </div>
       </form>
     </>

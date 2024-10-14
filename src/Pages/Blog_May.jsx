@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Blog_May = () => {
   useEffect(() => {
@@ -216,6 +217,7 @@ const Blog_May = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

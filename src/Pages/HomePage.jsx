@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -14,6 +14,7 @@ import { homeServicesData } from "../data";
 import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 import Button from "../components/button";
 import emailjs from "@emailjs/browser";
+import ScrollToTop from "../components/ScrollToTop";
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider1.svg?alt=media&token=8eb852f2-3ef8-4548-a553-4a5e89bf7eb7",
@@ -93,10 +94,10 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const [showFirst, setShowFirst] = React.useState(true);
+  const [showFirst, setShowFirst] = useState(true);
 
   // Toggle between two texts every 3 seconds
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setShowFirst((prev) => !prev);
     }, 2000); // Change text every 3 seconds
@@ -255,7 +256,6 @@ const HomePage = () => {
           />
         </div>
       </div>
-
       <div className="bg-[#F3F3F3] grid justify-center">
         <div className="bg-gray-100 md:p-14 md:mt-5 py-5 md:flex grid md:px-20 pb-5 justify-center">
           <div className="flex flex-col justify-center items-center md:order-3 order-1 md:px-0 md:py-0">
@@ -272,7 +272,7 @@ const HomePage = () => {
                     variants={text1Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
+                    <h1 className="font-[500] text-[#00ced1] text-[14px] md:text-[26px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
                       The Complete App
                     </h1>
                   </motion.div>
@@ -285,7 +285,7 @@ const HomePage = () => {
                     variants={text2Variants}
                     transition={{ duration: 0.1 }}
                   >
-                    <h1 className="font-[500] text-[#00ced1] md:text-[26px] text-[14px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
+                    <h1 className="font-[500] text-[#00ced1] text-[14px] md:text-[26px] bg-gradient-to-r from-[#00CED1] to-[#006369] bg-clip-text text-transparent">
                       One-Stop Solution for Everything you need
                     </h1>
                   </motion.div>
@@ -452,7 +452,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
       <div className="max-w-[90%] mx-auto overflow-hidden mt-4 md:mt-20">
         <div className="grid md:justify-center md:text-center">
           <p className="font-[500] text-[14px] md:text-[16px]">
@@ -552,6 +551,8 @@ const HomePage = () => {
       </div>
 
       <Footer />
+
+      <ScrollToTop />
     </>
   );
 };

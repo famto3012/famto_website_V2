@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { BiLinkExternal } from "react-icons/bi";
@@ -7,6 +7,7 @@ import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import Button from "../components/button";
 import emailjs from "@emailjs/browser";
+import ScrollToTop from "../components/ScrollToTop";
 
 const ContactUs = () => {
   const form = useRef();
@@ -27,7 +28,7 @@ const ContactUs = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    console.log("Button clicked")
+    console.log("Button clicked");
     try {
       setIsLoading(true);
       await emailjs.sendForm(
@@ -206,20 +207,25 @@ const ContactUs = () => {
                 ></textarea>
               </div>
               <div className="mb-20">
-               {!emailSuccess && <Button click={sendEmail}
-                value={isLoading ? "Sending..." : "Send Us"} />}
-               {emailSuccess && (
-                <p className="text-center text-[#21958f]">
-                  We have received your message and will get back to you
-                  shortly!
-                </p>
-              )}
+                {!emailSuccess && (
+                  <Button
+                    click={sendEmail}
+                    value={isLoading ? "Sending..." : "Send Us"}
+                  />
+                )}
+                {emailSuccess && (
+                  <p className="text-center text-[#21958f]">
+                    We have received your message and will get back to you
+                    shortly!
+                  </p>
+                )}
               </div>
             </form>
           </div>
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

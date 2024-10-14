@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const DeliverySlides = () => {
   const [isHovered, setIsHovered] = useState(true);
@@ -32,7 +32,9 @@ const DeliverySlides = () => {
             !isHovered ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <div className="text-[28px] text-white">Order Anything</div>
+          <div className="text-[20px] md:text-[28px] text-white">
+            Order Anything
+          </div>
         </div>
         <div
           className={`absolute inset-0 flex items-start p-5 transition-opacity duration-300 ${
@@ -46,7 +48,7 @@ const DeliverySlides = () => {
           >
             Order food, grocery, cake, meat, fish, stationery, and any item from
             anywhere in the city that is legally permitted.
-            <div className="absolute inset-0 flex items-end p-8 ps-36 font-medium text-[22px]">
+            <div className="absolute inset-0 flex items-end p-8 ps-36 font-medium text-[16px] md:text-[22px]">
               Order Anything
             </div>
           </div>
@@ -77,7 +79,9 @@ const DeliverySlides = () => {
             !card2IsHovered ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <div className="text-[28px] text-white">Custom Order</div>
+          <div className="text-[20px] md:text-[28px] text-white">
+            Custom Order
+          </div>
         </div>
         <div
           className={`absolute inset-0 flex items-start p-5 transition-opacity duration-300 ${
@@ -91,7 +95,7 @@ const DeliverySlides = () => {
           >
             Order anything from any nearby Store. The Delivery boy will shop for
             you and deliver to your doorsteps.
-            <div className="absolute inset-0 flex items-end p-8 ps-40 font-medium text-[22px]">
+            <div className="absolute inset-0 flex items-end p-8 ps-40 font-medium text-[16px] md:text-[22px]">
               Custom Order
             </div>
           </div>
@@ -122,7 +126,9 @@ const DeliverySlides = () => {
             !card3IsHovered ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <div className="text-[28px] text-white">Pick & Drop</div>
+          <div className="text-[20px] md:text-[28px] text-white">
+            Pick & Drop
+          </div>
         </div>
         <div
           className={`absolute inset-0 flex items-start p-5 transition-opacity duration-300 ${
@@ -136,7 +142,7 @@ const DeliverySlides = () => {
           >
             Hire a delivery boy that will do your errand jobs of Pickup & Drop
             in your nearby area.
-            <div className="absolute inset-0 flex items-end p-8 text-center ps-44 font-medium text-[22px]">
+            <div className="absolute inset-0 flex items-end p-8 text-center ps-44 font-medium text-[16px] md:text-[22px]">
               Pick & Drop
             </div>
           </div>
@@ -168,7 +174,9 @@ const DeliverySlides = () => {
             !card4IsHovered ? "translate-x-full" : "translate-x-0"
           }`}
         >
-          <div className="text-[28px] text-white">Schedule Order</div>
+          <div className="text-[20px] md:text-[28px] text-white">
+            Schedule Order
+          </div>
         </div>
         <div
           className={`absolute inset-0 flex items-start p-5 transition-opacity duration-300 ${
@@ -182,7 +190,7 @@ const DeliverySlides = () => {
           >
             Order anything from any nearby Store. the Delivery boy will shop for
             you and deliver to your door steps.
-            <div className="absolute inset-0 flex items-end p-8 text-center ps-36 font-medium text-[22px]">
+            <div className="absolute inset-0 flex items-end p-8 text-center ps-36 font-medium text-[16px] md:text-[22px]">
               Schedule Order
             </div>
           </div>

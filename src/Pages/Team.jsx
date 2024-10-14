@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import Whatsapp from "../components/Whatsapp";
 import { useEffect } from "react";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Team = () => {
   useEffect(() => {
@@ -51,7 +51,7 @@ const Team = () => {
       </div>
 
       <section className="w-fit md:w-[90%] mx-auto px-[1rem] md:px-[0rem] py-[2rem]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[30px]">
           <Card
             image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FSujith%20Sir.jpg?alt=media&token=c25fe84e-38d7-40c0-9ba2-e654468a2305"
             name="J Sujith"
@@ -71,11 +71,6 @@ const Team = () => {
             image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FAadhi.jpg?alt=media&token=fa0831ae-ad53-4dd4-a4de-d7fea7532c5f"
             name="Aadhil Muhammed H"
             role="HR Executive"
-          />
-          <Card
-            image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Friyas%20(2).jpg?alt=media&token=9cd22d3c-ca8a-4158-afd7-8aa596a55543"
-            name="Riyas F"
-            role="Software Developer"
           />
           <Card
             image="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FAkhilRaj.jpg?alt=media&token=d1821f0e-c967-40f8-a46c-974015a65192"
@@ -111,6 +106,8 @@ const Team = () => {
       </section>
 
       <Footer />
+
+      <ScrollToTop />
     </main>
   );
 };

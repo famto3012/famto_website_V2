@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { aboutTableData } from "../data";
 import { SiTicktick } from "react-icons/si";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Aboutus = () => {
   useEffect(() => {
@@ -141,6 +142,8 @@ const Aboutus = () => {
 
         <Footer />
       </main>
+
+      <ScrollToTop />
     </>
   );
 };

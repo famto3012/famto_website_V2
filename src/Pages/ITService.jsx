@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 import { SiTicktick } from "react-icons/si";
 import Footer from "../components/Footer";
 import Button from "../components/button";
+import ScrollToTop from "../components/ScrollToTop";
 
 const ITService = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -161,7 +162,9 @@ const ITService = () => {
       </div>
       <div>
         <div className="grid justify-center md:mt-20 mt-8">
-          <p className="flex justify-center text-[16px] font-medium">Our Services include</p>
+          <p className="flex justify-center text-[16px] font-medium">
+            Our Services include
+          </p>
           <h1 className="text-[#00CED1]  md:text-[32px] font-normal text-[20px]">
             Design & Development
           </h1>
@@ -380,6 +383,7 @@ const ITService = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

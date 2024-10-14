@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import Button from "../components/button"; // Ensure Button component is correctly imported
+import Button from "../components/button";
 import { Carousel } from "antd";
 import { LuIndianRupee } from "react-icons/lu";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Subscriptions = () => {
   useEffect(() => {
@@ -390,6 +391,7 @@ const Subscriptions = () => {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

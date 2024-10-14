@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const TermsAndConditions = () => {
   useEffect(() => {
@@ -38,8 +39,10 @@ const TermsAndConditions = () => {
         </div>
       </div>
 
-      <section className="w-full text-[13px] md:text-[14px]  px-[2rem] md:px-[4rem] 
-      py-[1rem] mb-[2rem] font-[400]">
+      <section
+        className="w-full text-[13px] md:text-[14px]  px-[2rem] md:px-[4rem] 
+      py-[1rem] mb-[2rem] font-[400]"
+      >
         <h3 className="termHeading">General Terms</h3>
         <p className="mb-[1rem]">
           By accessing and placing an order with Famto , you confirm that you
@@ -663,6 +666,7 @@ const TermsAndConditions = () => {
         </p>
       </section>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

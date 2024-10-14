@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-import { FaArrowLeft, FaRegHeart, FaRupeeSign } from "react-icons/fa";
+import { useEffect } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AgentForm from "../components/AgentForm";
 import Footer from "../components/Footer";
 import Apps from "../components/Apps";
 import { LuCalendarCheck, LuHeart, LuIndianRupee } from "react-icons/lu";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+import ScrollToTop from "../components/ScrollToTop";
 
 const DeliveryAgent = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const DeliveryAgent = () => {
   return (
     <>
       <div className="relative w-full">
-        <figure className="h-[50rem] md:h-[80vh]">
+        <figure className="h-[50rem] md:h-[95vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-agent.svg?alt=media&token=247f8151-2725-4808-a421-8cdcd7853236"
@@ -168,9 +169,10 @@ const DeliveryAgent = () => {
       <div className="lg:flex grid pt-10 lg:gap-5  lg:mb-0 mb-10 mt-5">
         <div className="lg:w-1/2 md:w-full h-fit flex lg:justify-center">
           <figure className="w-full h-fit flex justify-center">
-            <img 
-            className="w-[80%] md:w-[60%] lg:w-[85%]"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FGroup%20427320318.png?alt=media&token=048ee271-8320-43ed-96c4-d451bb01dadd" />
+            <img
+              className="w-[80%] md:w-[60%] lg:w-[85%]"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FGroup%20427320318.png?alt=media&token=048ee271-8320-43ed-96c4-d451bb01dadd"
+            />
           </figure>
         </div>
         <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100 lg:w-1/2 ">
@@ -181,8 +183,9 @@ const DeliveryAgent = () => {
         </div>
       </div>
 
-
       <Footer />
+
+      <ScrollToTop />
     </>
   );
 };

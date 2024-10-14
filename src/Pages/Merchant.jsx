@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaArrowLeft, FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdExposureZero, MdOutlineSpeed } from "react-icons/md";
@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import { LuIndianRupee } from "react-icons/lu";
 import MerchantForm from "../components/MerchantForm";
 import Button from "../components/button";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Merchant = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ const Merchant = () => {
   return (
     <>
       <div className="relative w-full">
-        <figure className="h-[50rem] md:h-[80vh]">
+        <figure className="h-[50rem] md:h-[95vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FbeaMerchant.svg?alt=media&token=94c116e2-38c8-4e65-88de-294b853f9d21"
@@ -71,7 +72,7 @@ const Merchant = () => {
               Work with us
             </p>
 
-            <div className="relative flex items-center md:gap-4 gap-3">
+            <div className="relative flex items-center md:gap-4 gap-3 z-20">
               <Link to={"/delivery"}>
                 <FaArrowLeft className="md:text-[22px] text-[15px]" />
               </Link>
@@ -84,7 +85,7 @@ const Merchant = () => {
             </div>
           </div>
 
-            <div className="absolute inset-0 flex justify-center md:justify-end items-center md:ml-[50rem] mt-40 md:mt-0 p-5">
+          <div className="absolute inset-0 flex justify-center md:justify-end items-center md:ml-[50rem] mt-40 md:mt-0 p-5 z-10">
             <MerchantForm />
           </div>
         </div>
@@ -240,6 +241,7 @@ const Merchant = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

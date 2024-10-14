@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import DeliverySlides from "../components/DeliverySlides";
 import { LuIndianRupee } from "react-icons/lu";
 import Button from "../components/button";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Delivery = () => {
   const location = useLocation();
@@ -242,7 +243,8 @@ const Delivery = () => {
           <div className="hidden md:flex w-full md:w-1/2 h-20 items-center gap-32 ps-8 py-20 border-l-4 mt-10 border-gray-200">
             <div className="w-1/2 grid gap-3">
               <p className="text-[17px] font-normal">
-                Become a <span className="font-semibold text-[20px]">Merchant</span>
+                Become a{" "}
+                <span className="font-semibold text-[20px]">Merchant</span>
               </p>
               <p className="text-[14px] font-normal">
                 Start Selling Online with us. Register or signup on FAMTO with
@@ -282,7 +284,9 @@ const Delivery = () => {
             <div className="w-1/2 grid gap-3">
               <p className="text-[17px] font-medium">
                 Become a{" "}
-                <span className="font-semibold text-[20px] ">Delivery Partner</span>
+                <span className="font-semibold text-[20px] ">
+                  Delivery Partner
+                </span>
               </p>
               <p className="text-[14px] font-normal">
                 As a delivery driver, you'll make reliable money working
@@ -297,6 +301,8 @@ const Delivery = () => {
       </div>
 
       <Footer />
+
+      <ScrollToTop />
     </>
   );
 };

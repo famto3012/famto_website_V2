@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const CancellationAndRefundPolicy = () => {
   useEffect(() => {
@@ -206,6 +207,7 @@ const CancellationAndRefundPolicy = () => {
         </p>
       </section>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };
