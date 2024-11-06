@@ -113,7 +113,7 @@ const Aboutus = React.memo(() => {
             </div>
           </div>
         </section>
-        <div className="bg-gray-100 md:flex grid px-10 md:px-20 w-full mb-8 md:mb-20 justify-between">
+        <div className="bg-gray-100 md:flex grid px-10 md:px-20 w-full md:mb-20 py-7 justify-between">
           <div className="flex flex-col justify-center items-start md:items-start lg:items-end order-1 md:order-3 px-3 md:px-0 py-2">
             <p className="font-semibold text-left lg:text-right">
               What we value at
