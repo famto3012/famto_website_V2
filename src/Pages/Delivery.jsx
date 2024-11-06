@@ -99,7 +99,7 @@ const Delivery = React.memo(() => {
               className="block md:hidden focus:outline-none mr-[30px]"
               onClick={toggleMenu}
             >
-              <IoMenu className="text-white text-[24px] sm:text-[28px]" />
+              <IoMenu className="text-white text-[28px]" />
             </button>
 
             {(menuOpen || menuClosing) && (
