@@ -8,11 +8,20 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import Button from "../components/button";
 import emailjs from "@emailjs/browser";
 import ScrollToTop from "../components/ScrollToTop";
+import { useToast } from "@chakra-ui/react";
 
 const ContactUs = React.memo(() => {
   const form = useRef();
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    subject: "",
+    phoneNumber: "",
+    email: "",
+    description: "",
+  });
+  const toast = useToast();
 
   useEffect(() => {
     const scrollToTop = () => {
@@ -28,7 +37,24 @@ const ContactUs = React.memo(() => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    console.log("Button clicked");
+    // Check if any field is empty
+    if (
+      !formData.name ||
+      !formData.description ||
+      !formData.phoneNumber ||
+      !formData.subject ||
+      !formData.email
+    ) {
+      toast({
+        title: "Error",
+        description: "Please fill in all the fields before submitting.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
+
     try {
       setIsLoading(true);
       await emailjs.sendForm(
@@ -46,6 +72,15 @@ const ContactUs = React.memo(() => {
       setIsLoading(false);
     }
   };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <main className="relative">
       <div className="relative w-full">
@@ -133,7 +168,7 @@ const ContactUs = React.memo(() => {
           </div>
         </div>
         <div className="w-full md:w-[50%] lg:w-[70%] ">
-          <div className="max-w-4xl lg:max-w-full bg-[#F7F7F7]">
+          <div className="max-w-4xl lg:max-w-full bg-[#f7f7f7] pb-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between  ps-8 gap-8">
               <div className="flex items-center order-2 md:order-1 md:mt-10">
                 <figure className="h-20 w-20">
@@ -153,66 +188,74 @@ const ContactUs = React.memo(() => {
               </div>
             </div>
             <form
-              className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 px-[2rem] py-[2rem] md:text-[14px] font-normal "
               ref={form}
               onSubmit={sendEmail}
+              className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 px-[2rem] md:px-[3rem] md:text-[14px]"
             >
               <div>
-                <label className="block ">Name</label>
+                <label className="block text-gray-700">Name</label>
                 <input
                   type="text"
+                  required
                   name="name"
                   placeholder="Enter your name"
-                  className="mt-1 p-3 w-full border rounded-md  placeholder:text-[14px] outline-none focus:outline-none"
+                  onChange={handleInputChange}
+                  className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 />
               </div>
 
               <div>
-                <label className="block ">Phone Number</label>
+                <label className="block text-gray-700">Phone Number</label>
                 <input
                   type="text"
                   name="phoneNumber"
+                  required
                   placeholder="Enter your phone number"
-                  className="mt-1 p-3 w-full border rounded-md  placeholder:text-[14px] outline-none focus:outline-none"
+                  onChange={handleInputChange}
+                  className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 />
               </div>
 
               <div>
-                <label className="block font-normal">Mail</label>
+                <label className="block text-gray-700">Mail</label>
                 <input
                   type="email"
                   name="email"
+                  onChange={handleInputChange}
                   placeholder="Enter your mail address"
-                  className="mt-1 p-3 w-full border  rounded-md  placeholder:text-[14px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 />
               </div>
 
               <div>
-                <label className="block ">Subject</label>
+                <label className="block text-gray-700">Subject</label>
                 <input
                   type="text"
                   name="subject"
+                  onChange={handleInputChange}
                   placeholder="Give us a brief description on the matter"
-                  className="mt-1 p-3 w-full border rounded-md placeholder:text-[14px] outline-none focus:outline-none"
+                  className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 />
               </div>
 
-              <div className="sm:col-span-1 md:col-span-1 lg:col-span-2">
-                <label className="block ">Description</label>
+              <div className="sm:col-span-1 md:col-span-2">
+                <label className="block text-gray-700">Description</label>
                 <textarea
-                  placeholder="Describe the matter"
                   name="description"
-                  className="mt-1 p-3 w-full border rounded-md  placeholder:text-[14px] outline-none focus:outline-none"
+                  placeholder="Describe the matter"
+                  className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                   rows="4"
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
-              <div className="mb-20">
+              <div>
                 {!emailSuccess && (
                   <Button
                     click={sendEmail}
-                    value={isLoading ? "Sending..." : "Send Us"}
+                    value={isLoading ? "Sending..." : "Send  Us"}
                   />
                 )}
+
                 {emailSuccess && (
                   <p className="text-center text-[#21958f]">
                     We have received your message and will get back to you
@@ -230,6 +273,6 @@ const ContactUs = React.memo(() => {
   );
 });
 
-ContactUs.displayName = "ContactUs"
+ContactUs.displayName = "ContactUs";
 
 export default ContactUs;

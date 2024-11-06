@@ -401,6 +401,6 @@ const ITService = React.memo(() => {
   );
 });
 
-ITService.displayName = "ITService"
+ITService.displayName = "ITService";
 
 export default ITService;

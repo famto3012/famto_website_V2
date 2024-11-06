@@ -28,7 +28,7 @@ const MerchantForm = React.memo(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${BASE_URL}/admin/business-categories/get-allbusiness-category`
+          `${BASE_URL}/admin/business-categories/get-all-business-category`
         );
         if (response.status === 200) {
           setAllBusinessType(response.data.data);

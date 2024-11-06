@@ -32,12 +32,11 @@ const Blog_August = React.memo(() => {
           </h1>
         </div>
 
-        <div className="absolute inset-0 flex flex-col items-start ps-5">
-          <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
+          <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
               src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
-              alt="Logo"
             />
           </Link>
         </div>
@@ -150,6 +149,6 @@ const Blog_August = React.memo(() => {
   );
 });
 
-Blog_August.displayName = "Blog_August"
+Blog_August.displayName = "Blog_August";
 
 export default Blog_August;

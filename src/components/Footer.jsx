@@ -11,7 +11,7 @@ const Footer = React.memo(() => {
   return (
     <div className="w-full py-[30px] bg-gradient-to-r from-black/85 via-black/90 to-black md:px-[5rem] lg:px-[2rem]">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <Link to={"/"} className="sm:mb-0 ml-4 h-[6rem]">
+        <Link to={"/"} className="sm:mb-0 ml-7 h-[6rem]">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite%201.svg?alt=media&token=9bb73b4e-be18-4c24-86a3-8e715710cc97"
             alt="my-famto logo"

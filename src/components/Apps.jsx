@@ -92,7 +92,7 @@ const Apps = React.memo(() => {
 
             <button onClick={(e) => sendLink(e)}>
               {!linkStatus && (
-                <p className="bg-[#00ced1] flex lg:px-10 h-full md:px-[7px] px-3 p-2 text-center justify-center text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black transition-all group relative over:">
+                <p className="bg-[#00ced1] flex lg:px-10 md:px-[7px] px-3 p-2 text-center justify-center text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit hover:bg-black transition-all group relative h-[50px]">
                   <p className="transform transition-transform duration-300 group-hover:-translate-x-1">
                     Share Link
                   </p>
@@ -100,7 +100,7 @@ const Apps = React.memo(() => {
                 </p>
               )}
               {linkStatus && (
-                <p className="bg-[#0E6500] flex lg:px-10 h-full md:px-[7px] text-white gap-1 md:gap-2 items-center rounded-lg md:w-fit transition-all ">
+                <p className="bg-[#0E6500] flex lg:px-10 md:px-[7px] text-white gap-1 md:gap-2 items-center justify-center rounded-lg md:w-fit transition-all h-[50px]">
                   <TiTick className="transform transition-transform duration-300 group-hover:-translate-x-2 text-[22px]" />
                   <p className="transform transition-transform duration-300 group-hover:translate-x-1">
                     Link Shared
@@ -132,6 +132,6 @@ const Apps = React.memo(() => {
   );
 });
 
-Apps.displayName = "Apps"
+Apps.displayName = "Apps";
 
 export default Apps;
