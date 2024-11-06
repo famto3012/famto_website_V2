@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Blog_August = () => {
+const Blog_August = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -20,23 +20,23 @@ const Blog_August = () => {
     <main className="relative">
       <div className="relative w-full bg-[#00ced1] ">
         <div className="inset-0 bg-gradient-to-bl from-[#014546] via-black/35 to transparent h-[19rem] md:h-[70vh] flex items-center justify-center md:space-x-4 space-x-3">
-          <figure className="md:h-[4rem] h-[2rem]">
+          {/* <figure className="md:h-[4rem] h-[2rem]">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(30)%201.svg?alt=media&token=5491c133-13a7-4e45-8edb-a0a36f338536"
+              src="https://firebasestorage.googleapis.com/v0/b/famto-aa73e.appspot.com/o/admin_panel_assets%2FGroup.svg?alt=media&token=9629e049-c607-4f98-9fee-1cd435b5754f"
               alt=""
               className="object-cover h-full"
             />
-          </figure>
+          </figure> */}
           <h1 className="text-white text-center text-[14px] md:text-[32px] font-semibold">
             Famto<span className="italic font-thin md:px-3 px-1">honours</span>
           </h1>
         </div>
 
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 flex flex-col items-start ps-5">
           <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
             <img
-              className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
               alt="Logo"
             />
           </Link>
@@ -148,6 +148,8 @@ const Blog_August = () => {
       <ScrollToTop />
     </main>
   );
-};
+});
+
+Blog_August.displayName = "Blog_August"
 
 export default Blog_August;

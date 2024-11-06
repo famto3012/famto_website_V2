@@ -1,18 +1,21 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Button from "./button";
 import axios from "axios";
 import Select from "react-select";
+import { useToast } from "@chakra-ui/react";
 
 const BASE_URL = "https://api.famto.in/api/v1";
 
-const MerchantForm = () => {
+const MerchantForm = React.memo(() => {
   const form = useRef();
+  const toast = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [merchantData, setMerchantData] = useState({
     name: "",
     businessType: "",
+    businessName: "",
     location: "",
     phoneNumber: "",
     email: "",
@@ -25,7 +28,7 @@ const MerchantForm = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${BASE_URL}/admin/business-categories/get-all-business-category`
+          `${BASE_URL}/admin/business-categories/get-allbusiness-category`
         );
         if (response.status === 200) {
           setAllBusinessType(response.data.data);
@@ -58,6 +61,27 @@ const MerchantForm = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    const { name, businessType, businessName, location, phoneNumber, email } =
+      merchantData;
+
+    if (
+      !name ||
+      !businessType ||
+      !businessName ||
+      !location ||
+      !phoneNumber ||
+      !email
+    ) {
+      toast({
+        title: "Error",
+        description: "Please fill in all the fields before submitting.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
+
     try {
       setIsLoading(true);
       await emailjs.sendForm(
@@ -79,10 +103,10 @@ const MerchantForm = () => {
   return (
     <>
       <main className="bg-white/90 p-4 rounded-lg lg:mx-0 w-[25rem] h-fit mt-10 md:mt-0">
-        <div className="py-2 font-medium text-[16px] mb-2 md:text-[20px]">
+        <div className="py-2 font-medium text-[16px] mb-1 md:text-[20px]">
           <h1>Become a Merchant</h1>
         </div>
-        <form ref={form} onSubmit={handleFormSubmit} className="grid gap-6">
+        <form ref={form} onSubmit={handleFormSubmit} className="grid gap-2">
           <div className="grid gap-2">
             <label className="font-[400] text-[14px] md:text-[14px]">
               Business Type
@@ -121,7 +145,21 @@ const MerchantForm = () => {
               value={merchantData.name}
               onChange={handleInputChange}
               placeholder="Enter your Name"
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-2 p-1 border h-[43px] border-gray-200 rounded-lg placeholder:text-[13px]"
+            />
+          </div>
+
+          <div className="grid gap-2">
+            <label className="font-[400] text-[14px] md:text-[14px]">
+              Business name
+            </label>
+            <input
+              type="text"
+              name="businessName"
+              value={merchantData.businessName}
+              onChange={handleInputChange}
+              placeholder="Enter your Business Name"
+              className="outline-none focus:outline-none px-2 p-1 border h-[43px] border-gray-200 rounded-lg placeholder:text-[13px]"
             />
           </div>
 
@@ -135,7 +173,7 @@ const MerchantForm = () => {
               value={merchantData.location}
               onChange={handleInputChange}
               placeholder="Enter your Location"
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-2 p-1 h-[43px] border border-gray-200 rounded-lg placeholder:text-[13px]"
             />
           </div>
 
@@ -149,7 +187,7 @@ const MerchantForm = () => {
               value={merchantData.phoneNumber}
               onChange={handleInputChange}
               placeholder="Enter your Phone Number"
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-2 p-1 h-[43px] border border-gray-200 rounded-lg placeholder:text-[13px]"
             />
           </div>
 
@@ -163,7 +201,7 @@ const MerchantForm = () => {
               value={merchantData.email}
               onChange={handleInputChange}
               placeholder="Enter your Business mail address"
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-2 p-1 h-[43px] border border-gray-200 rounded-lg placeholder:text-[13px]"
             />
           </div>
           <div className="hidden">
@@ -175,11 +213,11 @@ const MerchantForm = () => {
               name="type"
               value="Merchant"
               placeholder="Enter your Type"
-              className="outline-none focus:outline-none px-2 p-1 border border-gray-200 rounded-lg placeholder:text-[13px]"
+              className="outline-none focus:outline-none px-2 p-1 h-[43px] border border-gray-200 rounded-lg placeholder:text-[13px]"
             />
           </div>
 
-          <div className="flex justify-end p-3">
+          <div className="flex justify-end mt-3 mb-3">
             {!emailSuccess && (
               <Button
                 click={handleFormSubmit}
@@ -197,6 +235,8 @@ const MerchantForm = () => {
       </main>
     </>
   );
-};
+});
+
+MerchantForm.displayName = 'MerchantForm'
 
 export default MerchantForm;

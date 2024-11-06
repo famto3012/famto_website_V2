@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const Button = ({ value, click }) => {
+const Button = React.memo(({ value, click }) => {
   return (
     <>
       <button
@@ -15,6 +15,8 @@ const Button = ({ value, click }) => {
       </button>
     </>
   );
-};
+});
+
+Button.displayName = "Button";
 
 export default Button;

@@ -1,4 +1,6 @@
-const Card = ({ image, name, role }) => {
+import React from "react";
+
+const Card = React.memo(({ image, name, role }) => {
   return (
     <a
       className="flex flex-col group bg-white border shadow-sm rounded-xl overflow-hidden hover:shadow-lg transition mx-auto w-[280px] md:w-full"
@@ -17,6 +19,8 @@ const Card = ({ image, name, role }) => {
       </div>
     </a>
   );
-};
+});
+
+Card.displayName = "Card";
 
 export default Card;

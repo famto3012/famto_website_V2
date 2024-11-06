@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -15,6 +15,7 @@ import { MdArrowForward, MdArrowOutward } from "react-icons/md";
 import Button from "../components/button";
 import emailjs from "@emailjs/browser";
 import ScrollToTop from "../components/ScrollToTop";
+import { useToast } from "@chakra-ui/react";
 
 const images = [
   "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider1.svg?alt=media&token=8eb852f2-3ef8-4548-a553-4a5e89bf7eb7",
@@ -23,7 +24,7 @@ const images = [
   "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider4.svg?alt=media&token=5a1cc6b0-0ac0-4a9b-9acb-166badf4f1d2",
 ];
 
-const HomePage = () => {
+const HomePage = React.memo(() => {
   const form = useRef();
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +33,14 @@ const HomePage = () => {
   const [isHovered, setIsHovered] = useState(true);
   let [ref, { width }] = useMeasure();
   const location = useLocation();
+  const [formData, setFormData] = useState({
+    name: "",
+    subject: "",
+    phoneNumber: "",
+    email: "",
+    description: "",
+  });
+  const toast = useToast();
 
   const isActive = (pathname) => location.pathname === pathname;
 
@@ -107,7 +116,24 @@ const HomePage = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    console.log("Button clicked");
+    // Check if any field is empty
+    if (
+      !formData.name ||
+      !formData.description ||
+      !formData.phoneNumber ||
+      !formData.subject ||
+      !formData.email
+    ) {
+      toast({
+        title: "Error",
+        description: "Please fill in all the fields before submitting.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
+
     try {
       setIsLoading(true);
       await emailjs.sendForm(
@@ -138,6 +164,14 @@ const HomePage = () => {
     exit: { opacity: 0, y: 5 },
   };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <div className="relative flex w-full">
@@ -163,7 +197,7 @@ const HomePage = () => {
           })}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/25 flex flex-col items-center justify-center">
-          <nav className="absolute top-[80px]] md:top-0 right-0 flex items-center pe-12">
+          <nav className="absolute lg:top-[15px] md:top-[61px] right-0 flex items-center pe-12">
             <div className="hidden md:flex items-center gap-[20px] lg:gap-[70px] lg:mt-[45px] text-white">
               <Link
                 to="/"
@@ -198,7 +232,7 @@ const HomePage = () => {
             </div>
 
             <button
-              className="block md:hidden focus:outline-none  -mt-[250px]"
+              className="block md:hidden focus:outline-none mt-[-250px]"
               onClick={toggleMenu}
             >
               <IoMenu className="text-white text-[28px]" />
@@ -251,7 +285,7 @@ const HomePage = () => {
           </nav>
           <img
             className="m-[45px] w-[140px] h-35"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
             alt="Logo"
           />
         </div>
@@ -328,7 +362,7 @@ const HomePage = () => {
               <h2 className="font-[500] pb-14 group-hover:pb-10 transition-all duration-300 ease-out text-[20px] group-hover:text-white">
                 {service.head}
               </h2>
-              <p className="text-[14px] hidden md:block pb-10 transition-all duration-500 ease-out group-hover:text-white">
+              <p className="text-[14px] md:block pb-10 transition-all duration-500 ease-out group-hover:text-white">
                 {service.content}
               </p>
               <Link to={service.path}>
@@ -371,6 +405,7 @@ const HomePage = () => {
                 required
                 name="name"
                 placeholder="Enter your name"
+                onChange={handleInputChange}
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
             </div>
@@ -382,6 +417,7 @@ const HomePage = () => {
                 name="phoneNumber"
                 required
                 placeholder="Enter your phone number"
+                onChange={handleInputChange}
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
             </div>
@@ -391,6 +427,7 @@ const HomePage = () => {
               <input
                 type="email"
                 name="email"
+                onChange={handleInputChange}
                 placeholder="Enter your mail address"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -401,6 +438,7 @@ const HomePage = () => {
               <input
                 type="text"
                 name="subject"
+                onChange={handleInputChange}
                 placeholder="Give us a brief description on the matter"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
               />
@@ -413,6 +451,7 @@ const HomePage = () => {
                 placeholder="Describe the matter"
                 className="mt-1 p-3 w-full border outline-none focus:outline-none rounded-md shadow-sm placeholder:text-[13px]"
                 rows="4"
+                onChange={handleInputChange}
               ></textarea>
             </div>
             <div>
@@ -555,6 +594,8 @@ const HomePage = () => {
       <ScrollToTop />
     </>
   );
-};
+});
+
+HomePage.displayName = "HomePage"
 
 export default HomePage;

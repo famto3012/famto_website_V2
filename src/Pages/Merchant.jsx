@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaArrowLeft, FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdExposureZero, MdOutlineSpeed } from "react-icons/md";
@@ -11,7 +11,7 @@ import MerchantForm from "../components/MerchantForm";
 import Button from "../components/button";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Merchant = () => {
+const Merchant = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -46,7 +46,7 @@ const Merchant = () => {
   return (
     <>
       <div className="relative w-full">
-        <figure className="h-[50rem] md:h-[95vh]">
+        <figure className="h-[60rem] md:h-[100vh]">
           <img
             className="w-full h-full object-cover"
             src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FbeaMerchant.svg?alt=media&token=94c116e2-38c8-4e65-88de-294b853f9d21"
@@ -57,8 +57,8 @@ const Merchant = () => {
           <Link to={"/"}>
             <div className="mt-2 md:mt-8 md:ms-10">
               <img
-                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
                 alt="Logo"
               />
             </div>
@@ -124,7 +124,7 @@ const Merchant = () => {
           <div className="grid">
             <LuIndianRupee className="text-[46px] m-2 rounded p-2 bg-[#F6F6F6] text-[#00ced1]" />
             <h1 className="text-[16px] p-2 font-semibold">
-              Competitve Pricing
+              Competitive Pricing
             </h1>
             <p className="p-2 font-normal text-[14px]">
               We offer competitive prices without compromising on quality,
@@ -227,7 +227,7 @@ const Merchant = () => {
           </figure>
         </div>
       </div>
-      <div className="lg:flex grid pt-10 lg:gap-5 lg:mx-5 lg:mb-0 mb-10 mt-5">
+      <div className="lg:flex grid pt-10 lg:gap-5 lg:mx-5 lg:mb-0 mt-5">
         <div className="lg:w-1/2 md:w-[20rem] h-fit flex justify-center">
           <figure className="w-full h-fit flex justify-center">
             <img src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmerchant-app.png?alt=media&token=3ddaf461-4e7d-4096-b611-f9114fb8e5f5" />
@@ -244,6 +244,8 @@ const Merchant = () => {
       <ScrollToTop />
     </>
   );
-};
+});
+
+Merchant.displayName = "Merchant"
 
 export default Merchant;

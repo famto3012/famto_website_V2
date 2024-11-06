@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AgentForm from "../components/AgentForm";
@@ -8,7 +8,7 @@ import { LuCalendarCheck, LuHeart, LuIndianRupee } from "react-icons/lu";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import ScrollToTop from "../components/ScrollToTop";
 
-const DeliveryAgent = () => {
+const DeliveryAgent = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -32,8 +32,8 @@ const DeliveryAgent = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent flex flex-col items-start ">
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-10">
             <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
               alt="Logo"
             />
           </Link>
@@ -166,12 +166,12 @@ const DeliveryAgent = () => {
         </div>
       </div>
 
-      <div className="lg:flex grid pt-10 lg:gap-5  lg:mb-0 mb-10 mt-5">
+      <div className="lg:flex grid pt-10 lg:gap-5  lg:mb-0 mt-5">
         <div className="lg:w-1/2 md:w-full h-fit flex lg:justify-center">
           <figure className="w-full h-fit flex justify-center">
             <img
               className="w-[80%] md:w-[60%] lg:w-[85%]"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FGroup%20427320318.png?alt=media&token=048ee271-8320-43ed-96c4-d451bb01dadd"
+              src="https://firebasestorage.googleapis.com/v0/b/famto-aa73e.appspot.com/o/admin_panel_assets%2FGroup%20427320318.svg?alt=media&token=70161f44-219e-44b0-a9f6-35f48bce2ae0"
             />
           </figure>
         </div>
@@ -188,6 +188,8 @@ const DeliveryAgent = () => {
       <ScrollToTop />
     </>
   );
-};
+});
+
+DeliveryAgent.displayName = "DeliveryAgent"
 
 export default DeliveryAgent;

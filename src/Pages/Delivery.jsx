@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import { BsEmojiGrin } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
@@ -10,7 +10,7 @@ import { LuIndianRupee } from "react-icons/lu";
 import Button from "../components/button";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Delivery = () => {
+const Delivery = React.memo(() => {
   const location = useLocation();
 
   useEffect(() => {
@@ -53,11 +53,11 @@ const Delivery = () => {
         </div>
         <div className="absolute top-0 inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/30"></div>
         <div className="absolute top-0 inset-0">
-          <nav className="flex items-center justify-between h-[80PX] p-4">
-            <Link to="/" className="mt-2 md:mt-8 md:ml-[40px]">
+          <nav className="flex items-center justify-between h-[80px] p-5 md:mt-[34px] lg:mt-[24px]">
+            <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
               <img
-                className="w-[6rem] h-[3rem] md:w-[10rem] md:h-[4rem] pl-[1rem] md:pl-[2rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
                 alt="Logo"
               />
             </Link>
@@ -87,10 +87,16 @@ const Delivery = () => {
               >
                 IT Services
               </Link>
+              <Link
+                to="https://dashboard.famto.in/auth/login"
+                className="border rounded-md border-white py-2 px-7 hover:bg-white hover:text-black"
+              >
+                Login
+              </Link>
             </div>
 
             <button
-              className="block md:hidden focus:outline-none"
+              className="block md:hidden focus:outline-none mr-[30px]"
               onClick={toggleMenu}
             >
               <IoMenu className="text-white text-[24px] sm:text-[28px]" />
@@ -98,7 +104,7 @@ const Delivery = () => {
 
             {(menuOpen || menuClosing) && (
               <div
-                className={`absolute top-[5vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
+                className={`absolute top-[10vh] right-[5vh] w-[200px] z-30 bg-white flex flex-col items-center gap-[20px] p-4 rounded-md md:hidden ${
                   menuOpen
                     ? "animate-slideInFromTopRight"
                     : "animate-slideOutToBottomLeft"
@@ -125,17 +131,24 @@ const Delivery = () => {
                 <Link
                   to="/it-service"
                   onClick={toggleMenu}
-                  className={`rounded-md pb-3 hover:bg-white hover:text-black ${
+                  className={`border-b-2 border-gray-200 w-full flex justify-center rounded-md pb-3 hover:bg-white hover:text-black ${
                     isActive("/it-service") ? "font-bold" : ""
                   }`}
                 >
                   IT Services
                 </Link>
+                <Link
+                  to="https://dashboard.famto.in/auth/login"
+                  className="border rounded-md border-white px-5 hover:bg-white hover:text-black"
+                  onClick={toggleMenu}
+                >
+                  Login
+                </Link>
               </div>
             )}
           </nav>
 
-          <div className="absolute top-[25%] md:ps-12 left-8">
+          <div className="absolute top-[30%] md:ps-12 left-8">
             <p className="text-white text-[14px] sm:text-[20px] md:text-[25px] w-fit">
               Reliable & Fast
             </p>
@@ -305,6 +318,8 @@ const Delivery = () => {
       <ScrollToTop />
     </>
   );
-};
+});
+
+Delivery.displayName = "Delivery";
 
 export default Delivery;

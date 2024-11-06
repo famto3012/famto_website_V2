@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Team = () => {
+const Team = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -24,11 +24,11 @@ const Team = () => {
           src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fteam.svg?alt=media&token=ed5d2b86-faba-4d7c-b9c6-af9c33345c86"
           alt="About Us"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent flex flex-col items-start ps-5">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] ps-[10] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
               alt="Logo"
             />
           </Link>
@@ -110,6 +110,8 @@ const Team = () => {
       <ScrollToTop />
     </main>
   );
-};
+});
+
+Team.displayName = "Team"
 
 export default Team;

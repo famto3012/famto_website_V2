@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const DeliverySlides = () => {
+const DeliverySlides = React.memo(() => {
   const [isHovered, setIsHovered] = useState(true);
   const [card2IsHovered, setCard2IsHovered] = useState(true);
   const [card3IsHovered, setCard3IsHovered] = useState(true);
@@ -198,6 +198,8 @@ const DeliverySlides = () => {
       </div>
     </div>
   );
-};
+});
+
+DeliverySlides.displayName = 'DeliverySlides';
 
 export default DeliverySlides;

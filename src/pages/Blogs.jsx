@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import Button from "../components/button";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Blogs = () => {
+const Blogs = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -38,7 +38,7 @@ const Blogs = () => {
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_may.svg?alt=media&token=fd5df35b-8b34-4507-9356-430897de579f",
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog-june.svg?alt=media&token=3d5d7d5a-1b76-4e44-8a8c",
     "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_march.svg?alt=media&token=04614eea-7b31-4389-99f2-8ad0972ced12",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FGroup%20427320300.svg?alt=media&token=ccde05c3-22f3-44ba-a0be-382626068263",
+    "https://firebasestorage.googleapis.com/v0/b/famto-aa73e.appspot.com/o/admin_panel_assets%2FGroup%20427320300%20(1).svg?alt=media&token=d37e10c9-5cc2-4c3f-8f97-b06ad39e7d42",
   ];
 
   return (
@@ -54,8 +54,8 @@ const Blogs = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
               alt="Logo"
             />
           </Link>
@@ -65,7 +65,7 @@ const Blogs = () => {
         </div>
       </div>
 
-      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[3rem] md:py-[5rem] grid md:grid-cols-2 gap-20">
+      <section className="w-full mx-auto px-[1rem] md:px-[3rem] py-[3rem] md:py-[5rem] grid md:grid-cols-2 gap-6 md:gap-20">
         {blogs.map((blog, index) => (
           <div
             key={index}
@@ -97,6 +97,8 @@ const Blogs = () => {
       <ScrollToTop />
     </main>
   );
-};
+});
+
+Blogs.displayName = "Blogs"
 
 export default Blogs;

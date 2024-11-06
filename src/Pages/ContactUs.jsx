@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { BiLinkExternal } from "react-icons/bi";
@@ -9,7 +9,7 @@ import Button from "../components/button";
 import emailjs from "@emailjs/browser";
 import ScrollToTop from "../components/ScrollToTop";
 
-const ContactUs = () => {
+const ContactUs = React.memo(() => {
   const form = useRef();
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -56,11 +56,11 @@ const ContactUs = () => {
             alt=""
           />
         </figure>
-        <div className="absolute inset-0">
-          <Link to={"/"} className="mt-2 md:mt-8 ms-[40px]">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
+          <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
-              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[2rem] md:ps-[4rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+              className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
               alt="Logo"
             />
           </Link>
@@ -228,6 +228,8 @@ const ContactUs = () => {
       <ScrollToTop />
     </main>
   );
-};
+});
+
+ContactUs.displayName = "ContactUs"
 
 export default ContactUs;

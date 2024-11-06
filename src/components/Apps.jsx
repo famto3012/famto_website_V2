@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useToast } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 
-const Apps = () => {
+const Apps = React.memo(() => {
   const [isEmail, setIsEmail] = useState(true);
   const [linkStatus, setLinkStatus] = useState(false);
   const [contact, setContact] = useState({
     email: "",
     phone: "",
   });
+  const toast = useToast();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,8 +23,21 @@ const Apps = () => {
 
   const sendLink = (e) => {
     e.preventDefault();
+    if (!contact.email && !contact.phone) {
+      toast({
+        title: "Error",
+        description: "Please enter either email or phone number.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
     setLinkStatus(true);
-    console.log("Link Button clicked");
+
+    setTimeout(() => {
+      setLinkStatus(false);
+    }, 3000);
   };
 
   return (
@@ -94,10 +109,9 @@ const Apps = () => {
               )}
             </button>
           </div>
-          <div className="mt-5 gap-2 ">
+          <div className="mt-5">
             <p>Download from</p>
-
-            <div className="flex gap-3 mt-5 ">
+            <div className="flex gap-3 mt-5 sm:mt-2 xs:mt-1">
               <a href="">
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.png?alt=media&token=c94ca732-53fa-4343-87c8-39f138fdf36f"
@@ -116,5 +130,8 @@ const Apps = () => {
       </div>
     </>
   );
-};
+});
+
+Apps.displayName = "Apps"
+
 export default Apps;

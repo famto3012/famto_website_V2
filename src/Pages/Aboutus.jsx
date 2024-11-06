@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { aboutTableData } from "../data";
 import { SiTicktick } from "react-icons/si";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Aboutus = () => {
+const Aboutus = React.memo(() => {
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -41,8 +41,8 @@ const Aboutus = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/30 to-transparent flex flex-col items-start">
             <Link to={"/"} className="mt-2 md:mt-8 md:ms-10">
               <img
-                className="w-[7rem] h-[2rem] md:w-[10rem] md:h-[4rem] ps-[2rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(3).svg?alt=media&token=785637f7-1df8-4c7e-9e92-1f5e0a91e73c"
+                className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
+                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
                 alt="Logo"
               />
             </Link>
@@ -113,24 +113,36 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
-        <div className="bg-gray-100  md:flex grid px-10 md:px-20 w-full mb-20 justify-between">
-          <div className="flex flex-col justify-center sm:ml-44 md:ml-10 items-center lg:items-end md:order-3 order-1 px-5 md:px-0 py-8">
-            <p className="font-semibold">What we values at</p>
-            <p className="text-[#00ced1] text-[32px]">Famto</p>
+        <div className="bg-gray-100 md:flex grid px-10 md:px-20 w-full mb-8 md:mb-20 justify-between">
+          <div className="flex flex-col justify-center items-start md:items-start lg:items-end order-1 md:order-3 px-3 md:px-0 py-2">
+            <p className="font-semibold text-left lg:text-right">
+              What we value at
+            </p>
+            <p className="text-[#00ced1] text-[32px] text-left lg:text-right">
+              Famto
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 md:py-10 py-8 order-2 md:order-1">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 md:py-10 py-2 order-2 md:order-1">
             {aboutTableChunks.map((chunk, index) => (
-              <ul key={index} className="flex flex-col space-y-2">
+              <ul key={index} className="flex flex-col gap-4">
+                {" "}
+                {/* Consistent spacing applied here */}
                 {chunk.map((data, subIndex) => (
-                  <div className="text-[14px] p-1 gap-2 flex items-center">
+                  <li
+                    key={subIndex}
+                    className="text-[14px] p-1 flex items-center gap-2"
+                  >
+                    {" "}
+                    {/* Individual bullet styling */}
                     <SiTicktick className="text-[#00CED1] text-[20px]" />
-                    <li key={subIndex}>{data}</li>
-                  </div>
+                    {data}
+                  </li>
                 ))}
               </ul>
             ))}
           </div>
+
           <figure className="h-[14rem] hidden md:block order-2">
             <img
               className="hidden md:block md:order-2 h-full"
@@ -146,6 +158,8 @@ const Aboutus = () => {
       <ScrollToTop />
     </>
   );
-};
+});
+
+Aboutus.displayName = 'Aboutus';
 
 export default Aboutus;

@@ -1,7 +1,8 @@
+import React from "react";
 import { FaRegCopyright } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
-const Footer = () => {
+const Footer = React.memo(() => {
   const location = useLocation();
   const phoneNumber = "919778180794";
 
@@ -12,9 +13,9 @@ const Footer = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <Link to={"/"} className="sm:mb-0 ml-4 h-[6rem]">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FNew%20logo%20(5).svg?alt=media&token=74125141-5e35-40b8-9141-3faf2bd33794"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite%201.svg?alt=media&token=9bb73b4e-be18-4c24-86a3-8e715710cc97"
             alt="my-famto logo"
-            className="w-[150px] h-[20px]"
+            className="w-[130px] h-[23px]"
           />
         </Link>
         <div className="grid sm:grid-cols-2 lg:flex sm:flex-row ps-[2rem] lg:gap-[50px] gap-[30px] text-left">
@@ -187,6 +188,8 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

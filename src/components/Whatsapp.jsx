@@ -1,4 +1,6 @@
-const Whatsapp = () => {
+import React from "react";
+
+const Whatsapp = React.memo(() => {
     const phoneNumber = "919778180794";
   
     return (
@@ -11,7 +13,9 @@ const Whatsapp = () => {
         </figure>
       </a>
     );
-  };
+  });
+
+  Whatsapp.displayName = "Whatsapp"
   
   export default Whatsapp;
   
