@@ -212,6 +212,6 @@ const CancellationAndRefundPolicy = React.memo(() => {
   );
 });
 
-CancellationAndRefundPolicy.displayName = "CancellationAndRefundPolicy"
+CancellationAndRefundPolicy.displayName = "CancellationAndRefundPolicy";
 
 export default CancellationAndRefundPolicy;

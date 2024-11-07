@@ -596,6 +596,6 @@ const HomePage = React.memo(() => {
   );
 });
 
-HomePage.displayName = "HomePage"
+HomePage.displayName = "HomePage";
 
 export default HomePage;

@@ -396,6 +396,6 @@ const Subscriptions = React.memo(() => {
   );
 });
 
-Subscriptions.displayName = "Subscriptions"
+Subscriptions.displayName = "Subscriptions";
 
 export default Subscriptions;

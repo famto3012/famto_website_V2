@@ -671,6 +671,6 @@ const TermsAndConditions = React.memo(() => {
   );
 });
 
-TermsAndConditions.displayName = 'TermsAndConditions';
+TermsAndConditions.displayName = "TermsAndConditions";
 
 export default TermsAndConditions;

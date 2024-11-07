@@ -38,7 +38,7 @@ const MerchantForm = React.memo(() => {
       }
     };
     fetchData();
-  },[]);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -237,6 +237,6 @@ const MerchantForm = React.memo(() => {
   );
 });
 
-MerchantForm.displayName = 'MerchantForm'
+MerchantForm.displayName = "MerchantForm";
 
 export default MerchantForm;

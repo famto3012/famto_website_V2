@@ -99,6 +99,6 @@ const Blogs = React.memo(() => {
   );
 });
 
-Blogs.displayName = "Blogs"
+Blogs.displayName = "Blogs";
 
 export default Blogs;

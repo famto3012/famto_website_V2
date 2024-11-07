@@ -149,6 +149,6 @@ const AgentForm = React.memo(() => {
   );
 });
 
-AgentForm.displayName = 'AgentForm'
+AgentForm.displayName = "AgentForm";
 
 export default AgentForm;

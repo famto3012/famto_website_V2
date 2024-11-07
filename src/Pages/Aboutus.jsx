@@ -160,6 +160,6 @@ const Aboutus = React.memo(() => {
   );
 });
 
-Aboutus.displayName = 'Aboutus';
+Aboutus.displayName = "Aboutus";
 
 export default Aboutus;

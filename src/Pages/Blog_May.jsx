@@ -222,6 +222,6 @@ const Blog_May = React.memo(() => {
   );
 });
 
-Blog_May.displayName = "Blog_May"
+Blog_May.displayName = "Blog_May";
 
 export default Blog_May;

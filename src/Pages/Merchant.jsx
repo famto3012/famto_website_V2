@@ -246,6 +246,6 @@ const Merchant = React.memo(() => {
   );
 });
 
-Merchant.displayName = "Merchant"
+Merchant.displayName = "Merchant";
 
 export default Merchant;
