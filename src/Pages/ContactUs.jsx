@@ -87,7 +87,7 @@ const ContactUs = React.memo(() => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fcontact-us.svg?alt=media&token=ec53562e-7f37-42ce-92f4-0bde4aa4d8cf"
+            src="/contactus/contact-us.svg"
             alt=""
           />
         </figure>
@@ -95,7 +95,7 @@ const ContactUs = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>
@@ -174,17 +174,14 @@ const ContactUs = React.memo(() => {
                 <figure className="h-20 w-20">
                   <img
                     className="w-full h-full object-cover"
-                    src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwaving-hand.svg?alt=media&token=a7133b52-0416-41b9-a9f2-d5c69b998a27"
+                    src="/home/logo/waving-hand.svg"
                     alt=""
                   />
                 </figure>
               </div>
               <div className="text-black/50 text-[14px] sm:text-lg flex items-center justify-end space-x-4 order-1 md:order-2 mt-10">
                 <p>Great, We are excited to hear from you.</p>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FArrow.svg?alt=media&token=d5b40fa8-cdfb-43a4-a660-ef061564e46c"
-                  alt="arrow"
-                />
+                <img src="/contactus/Arrow.svg" alt="arrow" />
               </div>
             </div>
             <form

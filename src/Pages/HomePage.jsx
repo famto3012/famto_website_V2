@@ -18,10 +18,10 @@ import ScrollToTop from "../components/ScrollToTop";
 import { useToast } from "@chakra-ui/react";
 
 const images = [
-  "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider1.svg?alt=media&token=8eb852f2-3ef8-4548-a553-4a5e89bf7eb7",
-  "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider2.svg?alt=media&token=199768c0-e023-438b-9b12-762f7591144c",
-  "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider3.svg?alt=media&token=b17048b9-276d-4588-9c00-73d83f1a3544",
-  "https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fheroslider4.svg?alt=media&token=5a1cc6b0-0ac0-4a9b-9acb-166badf4f1d2",
+  "/home/heroslider1.svg",
+  "/home/heroslider2.svg",
+  "/home/heroslider3.svg",
+  "/home/heroslider4.svg",
 ];
 
 const HomePage = React.memo(() => {
@@ -224,7 +224,7 @@ const HomePage = React.memo(() => {
                 IT Services
               </Link>
               <Link
-                to="https://dashboard.famto.in/auth/login"
+                to="https://dashboard.famto.in/auth/sign-in"
                 className="border rounded-md border-white py-2 px-7 hover:bg-white hover:text-black"
               >
                 Login
@@ -274,7 +274,7 @@ const HomePage = React.memo(() => {
                   IT Services
                 </Link>
                 <Link
-                  to="https://dashboard.famto.in/auth/login"
+                  to="https://dashboard.famto.in/auth/sign-in"
                   className="border rounded-md border-white px-5 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
                 >
@@ -285,7 +285,7 @@ const HomePage = React.memo(() => {
           </nav>
           <img
             className="m-[45px] w-[140px] h-35"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+            src="/home/logo/whiteLogo.svg"
             alt="Logo"
           />
         </div>
@@ -385,7 +385,7 @@ const HomePage = React.memo(() => {
       <div className="md:flex grid md:border md:mt-10 border-gray-300 rounded-lg md:mx-10 md:p-10">
         <div className="md:w-1/3">
           <figure className="ps-8">
-            <img src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwaving-hand.svg?alt=media&token=a7133b52-0416-41b9-a9f2-d5c69b998a27" />
+            <img src="/home/logo/waving-hand.svg" />
           </figure>
           <div className="md:p-10 px-10 py-5 md:mt-10">
             <p>Let's</p>
@@ -476,7 +476,7 @@ const HomePage = React.memo(() => {
         <div className="md:w-1/2 flex md:items-end xl:items-start mx-auto justify-center">
           <figure className="w-full lg:ps-40">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fhome-app.png?alt=media&token=dd07156a-19a0-4f36-98ab-53bbcf59531b"
+              src="/home/home-app.png"
               className="md:h-[27.5rem] h-[20rem] w-auto"
               alt="Famto app"
             />
@@ -506,86 +506,26 @@ const HomePage = React.memo(() => {
           ref={ref}
           style={{ x: XTranslation }}
         >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim1.svg?alt=media&token=3481a4b4-1800-499c-a020-f8c0e22ab12d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewclientanim.svg?alt=media&token=11521e91-307c-4171-856b-f4ce8371467c"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim3.svg?alt=media&token=c1dedae9-9e6c-477c-97ab-165230b73457"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim4.svg?alt=media&token=4953922b-9935-4e2c-8a2a-e970d6c1f7a6"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim5.svg?alt=media&token=708f08a2-c504-479b-a152-70311fdc9c7d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewerlogo.svg?alt=media&token=3f77029c-efe9-4249-90bf-faf43755db6f"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim7.svg?alt=media&token=d9e255e8-26bf-479f-884f-987ff6a17b61"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim8.svg?alt=media&token=15f0655d-4328-40f5-95c1-dedb13ae6232"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim9.svg?alt=media&token=07942576-1496-4120-a761-a01958cabb2d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim10.svg?alt=media&token=9173dd0b-aec9-4ae7-af36-0bfb172d9f51"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim1.svg?alt=media&token=3481a4b4-1800-499c-a020-f8c0e22ab12d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewclientanim.svg?alt=media&token=11521e91-307c-4171-856b-f4ce8371467c"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim3.svg?alt=media&token=c1dedae9-9e6c-477c-97ab-165230b73457"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim4.svg?alt=media&token=4953922b-9935-4e2c-8a2a-e970d6c1f7a6"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim5.svg?alt=media&token=708f08a2-c504-479b-a152-70311fdc9c7d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fnewerlogo.svg?alt=media&token=3f77029c-efe9-4249-90bf-faf43755db6f"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim7.svg?alt=media&token=d9e255e8-26bf-479f-884f-987ff6a17b61"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim8.svg?alt=media&token=15f0655d-4328-40f5-95c1-dedb13ae6232"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim9.svg?alt=media&token=07942576-1496-4120-a761-a01958cabb2d"
-            alt=""
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Fanim10.svg?alt=media&token=9173dd0b-aec9-4ae7-af36-0bfb172d9f51"
-            alt=""
-          />
+          <img src="/home/anim1.svg" alt="" />
+          <img src="/home/anim2.svg" alt="" />
+          <img src="/home/anim3.svg" alt="" />
+          <img src="/home/anim4.svg" alt="" />
+          <img src="/home/anim5.svg" alt="" />
+          <img src="/home/anim6.svg" alt="" />
+          <img src="/home/anim7.svg" alt="" />
+          <img src="/home/anim8.svg" alt="" />
+          <img src="/home/anim9.svg" alt="" />
+          <img src="/home/anim10.svg" alt="" />
+          <img src="/home/anim1.svg" alt="" />
+          <img src="/home/anim2.svg" alt="" />
+          <img src="/home/anim3.svg" alt="" />
+          <img src="/home/anim4.svg" alt="" />
+          <img src="/home/anim5.svg" alt="" />
+          <img src="/home/anim6.svg" alt="" />
+          <img src="/home/anim7.svg" alt="" />
+          <img src="/home/anim8.svg" alt="" />
+          <img src="/home/anim9.svg" alt="" />
+          <img src="/home/anim10.svg" alt="" />
         </motion.div>
       </div>
 

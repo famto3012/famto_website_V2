@@ -56,7 +56,7 @@ const ITService = React.memo(() => {
           <figure className="h-[20rem] md:h-[30rem]">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FIT-service%20Banner.svg?alt=media&token=3d312e53-9c70-4141-96e8-b6442f758184"
+              src="/itservices/IT-service Banner.svg"
               alt="IT-service Banner"
             />
           </figure>
@@ -68,7 +68,7 @@ const ITService = React.memo(() => {
             <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
               <img
                 className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+                src="/home/logo/whiteLogo.svg"
                 alt="Logo"
               />
             </Link>
@@ -99,7 +99,7 @@ const ITService = React.memo(() => {
                 IT Services
               </Link>
               <Link
-                to="https://dashboard.famto.in/auth/login"
+                to="https://dashboard.famto.in/auth/sign-in"
                 className="border rounded-md border-white py-2 px-7 hover:bg-white hover:text-black"
               >
                 Login
@@ -149,7 +149,7 @@ const ITService = React.memo(() => {
                   IT Services
                 </Link>
                 <Link
-                  to="https://dashboard.famto.in/auth/login"
+                  to="https://dashboard.famto.in/auth/sign-in"
                   className="border rounded-md border-white px-5 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
                 >
@@ -187,7 +187,7 @@ const ITService = React.memo(() => {
             <figure className="md:h-[15rem] h-[10rem]">
               <img
                 className="w-full h-full object-cover rounded-xl"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmobile_application.svg?alt=media&token=b93e7ff7-8282-4f93-a8af-808f6c5be7d5"
+                src="/itservices/mobile_application.svg"
                 alt="mobile-application"
               />
             </figure>
@@ -199,7 +199,7 @@ const ITService = React.memo(() => {
             <figure className="md:h-[15rem] h-[10rem]">
               <img
                 className="w-full h-full object-cover rounded-xl"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fweb-application.svg?alt=media&token=1a512533-6f6d-42ee-b068-dae1e00245be"
+                src="/itservices/web-application.svg"
                 alt="websites"
               />
             </figure>
@@ -244,7 +244,7 @@ const ITService = React.memo(() => {
 
         <img
           className="hidden md:block md:order-2"
-          src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FVector.svg?alt=media&token=e8ad9498-ea74-471f-bd94-a646d258a60e"
+          src="/itservices/Vector.svg"
           alt="vector"
         />
       </div>
@@ -255,10 +255,7 @@ const ITService = React.memo(() => {
       <div className=" mt-10 md:gap-5 md:flex">
         <div className="md:w-1/2 w-full h-full relative">
           <figure className="w-full">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fit%20service.svg?alt=media&token=6da1923d-2519-448a-8a2c-88abb68f6c24"
-              alt="process"
-            />
+            <img src="/itservices/it service.svg" alt="process" />
           </figure>
         </div>
 

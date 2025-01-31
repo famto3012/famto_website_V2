@@ -34,11 +34,11 @@ const Blogs = React.memo(() => {
   ];
 
   const images = [
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblogsimg.svg?alt=media&token=eeb36501-e2e2-4060-8849-ab79a8b23895",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_may.svg?alt=media&token=fd5df35b-8b34-4507-9356-430897de579f",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog-june.svg?alt=media&token=3d5d7d5a-1b76-4e44-8a8c",
-    "https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog_march.svg?alt=media&token=04614eea-7b31-4389-99f2-8ad0972ced12",
-    "https://firebasestorage.googleapis.com/v0/b/famto-aa73e.appspot.com/o/admin_panel_assets%2FGroup%20427320300%20(1).svg?alt=media&token=d37e10c9-5cc2-4c3f-8f97-b06ad39e7d42",
+    "/blogs/april/blogsimg.svg",
+    "/blogs/may/blog_may.svg",
+    "/blogs/june/blog-june.svg",
+    "/blogs/march/blog_march.svg",
+    "/blogs/honours.svg",
   ];
 
   return (
@@ -47,7 +47,7 @@ const Blogs = React.memo(() => {
         <figure className="h-[16rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblog.svg?alt=media&token=db5c8d77-a5e4-4294-a32f-84585c418857"
+            src="/blogs/blog.svg"
             alt="Blog"
           />
         </figure>
@@ -55,7 +55,7 @@ const Blogs = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>

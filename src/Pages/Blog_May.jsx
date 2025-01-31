@@ -21,21 +21,13 @@ const Blog_May = React.memo(() => {
       <div className="relative w-full">
         <div className=" inset-0 bg-gradient-to-tr from-rose-600 to-amber-400 h-[19rem] md:h-[70vh] flex justify-evenly items-center">
           <figure className="hidden md:block h-[10rem] md:h-[40vh] flex-shrink-0">
-            <img
-              className="h-full"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FiPhone%2015.svg?alt=media&token=2e8c0963-3c19-466e-a192-a99d0aa79595"
-              alt=""
-            />
+            <img className="h-full" src="/blogs/may/iPhone 15.svg" alt="" />
           </figure>
           <h1 className="text-white/25 text-center text-6xl md:text-9xl font-thin">
             V/S
           </h1>
           <figure className="hidden md:block h-[10rem] md:h-[40vh] flex-shrink-0">
-            <img
-              className="h-full"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FiPhone%2013.svg?alt=media&token=73ac49ec-65af-4d16-bf1a-fe76e54e99a2"
-              alt=""
-            />
+            <img className="h-full" src="/blogs/may/iPhone 13.svg" alt="" />
           </figure>
         </div>
 
@@ -43,7 +35,7 @@ const Blog_May = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>
@@ -154,7 +146,7 @@ const Blog_May = React.memo(() => {
           <div className="flex items-center justify-center md:justify-end mx-auto  ">
             <figure className="h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-auto max-w-full">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FPie%20Chart.svg?alt=media&token=8c9978d0-0f44-4045-bfc7-81b560d6dd0a"
+                src="/blogs/may/Pie Chart.svg"
                 alt=""
                 className=" object-cover h-full w-full"
               />

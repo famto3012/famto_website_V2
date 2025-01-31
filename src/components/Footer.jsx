@@ -13,7 +13,7 @@ const Footer = React.memo(() => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <Link to={"/"} className="sm:mb-0 ml-7 h-[6rem]">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite%201.svg?alt=media&token=9bb73b4e-be18-4c24-86a3-8e715710cc97"
+            src="/other/greenlogo.svg"
             alt="my-famto logo"
             className="w-[130px] h-[23px]"
           />
@@ -141,25 +141,25 @@ const Footer = React.memo(() => {
             <div className="flex gap-2">
               <a href={`https://wa.me/${phoneNumber}`}>
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fwhatsapp.svg?alt=media&token=d94eb0bd-d702-4d2f-9769-c74d98848ba5"
+                  src="/other/whatsapp.svg"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
               <a href="https://www.instagram.com/famtoapp">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Finstagram.svg?alt=media&token=2fa55112-6619-4d24-84e0-d75a99c3d903"
+                  src="/other/instagram.svg"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
               <a href="https://www.facebook.com/FamtoServices">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Ffacebook.svg?alt=media&token=c8aa526c-b0c1-4a2d-960c-92051a5f48e2"
+                  src="/other/facebook.svg"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
               <a href="https://www.linkedin.com/company/myfamto/">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FlinkedIn.svg?alt=media&token=21bf4a0e-3708-41cd-9315-e21420fd53b8"
+                  src="/other/linkedIn.svg"
                   className="border border-gray-800 p-2 h-10 md:w-20 lg:w-full md:p-1 rounded-xl lg:p-2"
                 ></img>
               </a>
@@ -167,13 +167,13 @@ const Footer = React.memo(() => {
             <div className="mt-5 flex gap-2">
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.png?alt=media&token=c94ca732-53fa-4343-87c8-39f138fdf36f"
+                  src="/other/play-store.png"
                   className="p-1 h-12 border md:border-gray-800 rounded-lg border-white"
                 />
               </a>
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.png?alt=media&token=0c68fe33-2a2e-42b7-9859-ee921a9e9cae"
+                  src="/other/app-store.png"
                   className="p-1 h-12 border md:border-gray-800 rounded-lg border-white"
                 />
               </a>
@@ -190,6 +190,6 @@ const Footer = React.memo(() => {
   );
 });
 
-Footer.displayName = 'Footer';
+Footer.displayName = "Footer";
 
 export default Footer;

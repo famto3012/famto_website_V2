@@ -114,13 +114,13 @@ const Apps = React.memo(() => {
             <div className="flex gap-3 mt-5 sm:mt-2 xs:mt-1">
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fplay-store.png?alt=media&token=c94ca732-53fa-4343-87c8-39f138fdf36f"
+                  src="/other/play-store.png"
                   className=" md:border-gray-800 rounded-lg border-white h-12"
                 />
               </a>
               <a href="">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fapp-store.png?alt=media&token=0c68fe33-2a2e-42b7-9859-ee921a9e9cae"
+                  src="/other/app-store.png"
                   className=" md:border-gray-800 rounded-lg border-white h-12"
                 />
               </a>

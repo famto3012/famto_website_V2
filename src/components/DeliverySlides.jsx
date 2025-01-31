@@ -21,7 +21,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Forder_anything.svg?alt=media&token=fda50c9f-df55-4cc5-a867-00d8b15554f2"
+              src="/other/order_anything.svg"
               className="w-full opacity-95"
               alt="Order Anything"
             />
@@ -68,7 +68,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fcustomer-order.svg?alt=media&token=edfdae38-58ef-45e1-9a48-1b621bf53ee0"
+              src="/other/customer-order.svg"
               className="w-full opacity-90"
               alt="Custom Order"
             />
@@ -115,7 +115,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fpickanddrop.svg?alt=media&token=6b817bff-124a-499f-a882-8f29d7e6da78"
+              src="/other/pickanddrop.svg"
               className="w-full opacity-90"
               alt="Pick & Drop"
             />
@@ -163,7 +163,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FscheduledOrder.svg?alt=media&token=bce66bb0-63a7-469d-b3dd-a1e94cc52e8b"
+              src="/other/scheduledOrder.svg"
               className="w-full opacity-95"
               alt="Pick & Drop"
             />
@@ -200,6 +200,6 @@ const DeliverySlides = React.memo(() => {
   );
 });
 
-DeliverySlides.displayName = 'DeliverySlides';
+DeliverySlides.displayName = "DeliverySlides";
 
 export default DeliverySlides;

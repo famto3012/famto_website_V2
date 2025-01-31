@@ -46,7 +46,7 @@ const Delivery = React.memo(() => {
         <div className="relative w-full">
           <figure className="h-[20rem] md:h-[70vh]">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FDelivery.svg?alt=media&token=68ca57aa-1fa9-457f-9562-f5c36bb535f3"
+              src="/delivery/Delivery.svg"
               className="w-full h-full object-cover"
             ></img>
           </figure>
@@ -57,7 +57,7 @@ const Delivery = React.memo(() => {
             <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
               <img
                 className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+                src="/home/logo/whiteLogo.svg"
                 alt="Logo"
               />
             </Link>
@@ -88,7 +88,7 @@ const Delivery = React.memo(() => {
                 IT Services
               </Link>
               <Link
-                to="https://dashboard.famto.in/auth/login"
+                to="https://dashboard.famto.in/auth/sign-in"
                 className="border rounded-md border-white py-2 px-7 hover:bg-white hover:text-black"
               >
                 Login
@@ -138,7 +138,7 @@ const Delivery = React.memo(() => {
                   IT Services
                 </Link>
                 <Link
-                  to="https://dashboard.famto.in/auth/login"
+                  to="https://dashboard.famto.in/auth/sign-in"
                   className="border rounded-md border-white px-5 hover:bg-white hover:text-black"
                   onClick={toggleMenu}
                 >
@@ -234,7 +234,7 @@ const Delivery = React.memo(() => {
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
           <figure className="w-full md:w-1/2 h-[15rem] relative">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fmerchant.svg?alt=media&token=c12c453c-0bf0-45c4-8e22-a40753a11c8f"
+              src="/delivery/merchant.svg"
               className="h-full w-full rounded-r-lg object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/50 to-transparent pointer-events-none"></div>
@@ -273,7 +273,7 @@ const Delivery = React.memo(() => {
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
           <figure className="w-full md:w-1/2 h-[15rem] relative">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-partner.svg?alt=media&token=f1124faa-30b8-4529-b97a-11379f1e126a"
+              src="/delivery/delivery-partner.svg"
               className="h-full w-full rounded-r-lg object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/40 to-transparent pointer-events-none"></div>

@@ -22,7 +22,7 @@ const Blog_April = React.memo(() => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fblogsimg.svg?alt=media&token=eeb36501-e2e2-4060-8849-ab79a8b23895"
+            src="/blogs/april/blogsimg.svg"
             alt=""
           />
         </figure>
@@ -30,7 +30,7 @@ const Blog_April = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>
@@ -100,7 +100,7 @@ const Blog_April = React.memo(() => {
           <div className="flex items-center justify-center md:justify-end mx-auto">
             <figure className="h-[11rem] sm:h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-auto max-w-full">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fon-demand-criteria.svg?alt=media&token=3d81a529-5c98-4dc5-a2e4-a700ee0bd2a0"
+                src="/blogs/april/on-demand-criteria.svg"
                 alt=""
                 className=" object-cover h-full w-full"
               />

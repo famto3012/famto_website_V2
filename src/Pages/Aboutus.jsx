@@ -34,7 +34,7 @@ const Aboutus = React.memo(() => {
           <figure className="h-[15rem] md:h-[70vh]">
             <img
               className="w-full h-full object-cover"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fabout-famto.svg?alt=media&token=d02d9f30-5520-4ee4-81de-485c81161a3f"
+              src="/aboutus/about-famto.svg"
               alt="About"
             />
           </figure>
@@ -42,7 +42,7 @@ const Aboutus = React.memo(() => {
             <Link to={"/"} className="mt-2 md:mt-8 md:ms-10">
               <img
                 className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-                src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+                src="/home/logo/whiteLogo.svg"
                 alt="Logo"
               />
             </Link>
@@ -80,7 +80,7 @@ const Aboutus = React.memo(() => {
               <div className="md:w-1/2 md:order-2 order-1 bg-[#00CED1]">
                 <figure className="w-full h-[15rem] py-8">
                   <img
-                    src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fabout-vision.svg?alt=media&token=1f32a0e2-b38a-4d6d-a07b-7fb0842c672c"
+                    src="/aboutus/about-vision.svg"
                     className="p-10 w-full h-full object-contain"
                   />
                 </figure>
@@ -92,7 +92,7 @@ const Aboutus = React.memo(() => {
                 <div className="md:w-1/2 bg-[rgb(0,206,209)]">
                   <figure className="w-full h-[15rem] py-8">
                     <img
-                      src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fabout-mission.svg?alt=media&token=b843fba3-a8b6-4701-88d1-f61700bbddf6"
+                      src="/aboutus/about-mission.svg"
                       className="bg-[#00CED1] p-10 w-full h-full object-contain"
                     />
                   </figure>
@@ -146,7 +146,7 @@ const Aboutus = React.memo(() => {
           <figure className="h-[14rem] hidden md:block order-2">
             <img
               className="hidden md:block md:order-2 h-full"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FVector.svg?alt=media&token=e8ad9498-ea74-471f-bd94-a646d258a60e"
+              src="/aboutus/Vector.svg"
               alt="vector"
             />
           </figure>

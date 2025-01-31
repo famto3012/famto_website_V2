@@ -20,7 +20,7 @@ const CancellationAndRefundPolicy = React.memo(() => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/famto-admin-panel.appspot.com/o/Famto%20website%20assets%2Frefund.svg?alt=media&token=18dfff7e-affa-489f-9ad7-a08267d84d14"
+            src="/cancellation/refund.svg"
             alt="Terms & Condition"
           />
         </figure>
@@ -28,7 +28,7 @@ const CancellationAndRefundPolicy = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>

@@ -25,7 +25,7 @@ const DeliveryAgent = React.memo(() => {
         <figure className="h-[50rem] md:h-[95vh]">
           <img
             className="w-full h-full object-cover"
-            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Fdelivery-agent.svg?alt=media&token=247f8151-2725-4808-a421-8cdcd7853236"
+            src="/deliveryAgent/delivery-agent.svg"
             alt="Be A Merchant logo"
           />
         </figure>
@@ -33,7 +33,7 @@ const DeliveryAgent = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-10">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
               alt="Logo"
             />
           </Link>
@@ -171,7 +171,7 @@ const DeliveryAgent = React.memo(() => {
           <figure className="w-full h-fit flex justify-center">
             <img
               className="w-[80%] md:w-[60%] lg:w-[85%]"
-              src="https://firebasestorage.googleapis.com/v0/b/famto-aa73e.appspot.com/o/admin_panel_assets%2FGroup%20427320318.svg?alt=media&token=70161f44-219e-44b0-a9f6-35f48bce2ae0"
+              src="/deliveryAgent/vector.svg"
             />
           </figure>
         </div>
@@ -190,6 +190,6 @@ const DeliveryAgent = React.memo(() => {
   );
 });
 
-DeliveryAgent.displayName = "DeliveryAgent"
+DeliveryAgent.displayName = "DeliveryAgent";
 
 export default DeliveryAgent;

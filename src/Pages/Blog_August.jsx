@@ -27,7 +27,7 @@ const Blog_August = React.memo(() => {
               className="object-cover h-full"
             />
           </figure> */}
-          <h1 className="text-white text-center text-[14px] md:text-[32px] font-semibold">
+          <h1 className="text-white text-center text-[14px] md:text-[32px] font-semibold z-10">
             Famto<span className="italic font-thin md:px-3 px-1">honours</span>
           </h1>
         </div>
@@ -36,7 +36,7 @@ const Blog_August = React.memo(() => {
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FWhite.svg?alt=media&token=3d91a036-029f-4d67-816e-19b1f8dd3f6e"
+              src="/home/logo/whiteLogo.svg"
             />
           </Link>
         </div>
@@ -61,7 +61,7 @@ const Blog_August = React.memo(() => {
         <div className="flex items-center justify-center rounded-lg mx-auto order-1 lg:order-2">
           <figure className="h-[20rem] lg:w-auto lg:h-[20rem] max-w-full">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2FKarma%20awards.svg?alt=media&token=7940152e-67e9-41fb-90a9-eddb2ba2a2df"
+              src="/blogs/august/Karma awards.svg"
               alt=""
               className=" object-cover rounded-lg h-full w-full"
             />
