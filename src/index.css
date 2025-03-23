@@ -2,15 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-    
-    .termHeading {
+  .termHeading {
     @apply text-[18px] font-medium md:text-[20px]  mt-8 mb-6;
   }
-    .faq {
-    @apply text-[14px] font-[600] md:text-[15px] mt-[2rem] mb-[0.7rem] ;
-    }
-  
-   
+  .faq {
+    @apply text-[14px] font-[600] md:text-[15px] mt-[2rem] mb-[0.7rem];
   }
+}

@@ -19,6 +19,7 @@ import HomePage from "./Pages/HomePage";
 import ContactUs from "./Pages/ContactUs";
 import DeliveryAgent from "./Pages/DeliveryAgent";
 import Subscriptions from "./Pages/Subscriptions";
+import ReferralAppRedirect from "./Pages/ReferralAppRedirect";
 
 function App() {
   return (
@@ -29,23 +30,24 @@ function App() {
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/team" element={<Team />} />
         <Route path="/merchant" element={<Merchant />} />
-        <Route path="/delivery-agent" element={<DeliveryAgent/>}/>
+        <Route path="/delivery-agent" element={<DeliveryAgent />} />
         <Route path="/it-service" element={<ITService />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog-march" element={<Blog_March/>}/>
-        <Route path="/blog-april" element={<Blog_April/>}/>
-        <Route path="/blog-may" element={<Blog_May/>} />
+        <Route path="/blog-march" element={<Blog_March />} />
+        <Route path="/blog-april" element={<Blog_April />} />
+        <Route path="/blog-may" element={<Blog_May />} />
         <Route path="/blog-june" element={<Blog_June />} />
-        <Route path="/blog-august" element={<Blog_August />}/>
-        <Route path="/contact-us" element={<ContactUs/>}/>
-        <Route path="/subscriptions" element={<Subscriptions/>}/>
+        <Route path="/blog-august" element={<Blog_August />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
           path="/cancellation-and-refund-policy"
           element={<CancellationAndRefundPolicy />}
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/ref/customer-app" element={<ReferralAppRedirect />} />
       </Routes>
     </BrowserRouter>
   );
