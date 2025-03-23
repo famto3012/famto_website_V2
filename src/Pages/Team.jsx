@@ -60,11 +60,6 @@ const Team = React.memo(() => {
             role="Business Development Executive"
           />
           <Card
-            image="/team/AkhilRaj.jpg"
-            name="Akhilraj B"
-            role="Software Developer"
-          />
-          <Card
             image="/team/AkhilBabu.jpg"
             name="Akhil Babu S"
             role="Software Developer"
@@ -84,11 +79,7 @@ const Team = React.memo(() => {
             name="Sarath S B"
             role="Software Developer"
           />
-          <Card
-            image="/team/Sanju.jpg"
-            name="Sanju Bahukuttan"
-            role="Business Development Executive"
-          />
+      
         </div>
       </section>
 
