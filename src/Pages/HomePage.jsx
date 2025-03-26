@@ -18,10 +18,10 @@ import ScrollToTop from "../components/ScrollToTop";
 import { useToast } from "@chakra-ui/react";
 
 const images = [
-  "/home/heroslider1.svg",
-  "/home/heroslider2.svg",
-  "/home/heroslider3.svg",
-  "/home/heroslider4.svg",
+  "/home/heroslider1.jpg",
+  "/home/heroslider2.jpg",
+  "/home/heroslider3.jpg",
+  "/home/heroslider4.jpg",
 ];
 
 const HomePage = React.memo(() => {

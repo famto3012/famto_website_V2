@@ -34,7 +34,7 @@ const Aboutus = React.memo(() => {
           <figure className="h-[15rem] md:h-[70vh]">
             <img
               className="w-full h-full object-cover"
-              src="/aboutus/about-famto.svg"
+              src="/aboutus/about-famto.jpg"
               alt="About"
             />
           </figure>
