@@ -34,11 +34,11 @@ const Blogs = React.memo(() => {
   ];
 
   const images = [
-    "/blogs/april/blogsimg.svg",
-    "/blogs/may/blog_may.svg",
-    "/blogs/june/blog-june.svg",
-    "/blogs/march/blog_march.svg",
-    "/blogs/honours.svg",
+    "/blog/april/blogsimg.svg",
+    "/blog/may/blog_may.svg",
+    "/blog/june/blog-june.svg",
+    "/blog/march/blog_march.svg",
+    "/blog/honours.svg",
   ];
 
   return (
@@ -47,7 +47,7 @@ const Blogs = React.memo(() => {
         <figure className="h-[16rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="/blogs/blog.svg"
+            src="/blog/blog.jpg"
             alt="Blog"
           />
         </figure>

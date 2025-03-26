@@ -21,7 +21,7 @@ const FAQ = React.memo(() => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="/faq/faq.svg"
+            src="https://firebasestorage.googleapis.com/v0/b/famtowebsite.appspot.com/o/images%2Ffaq.jpg?alt=media&token=40ba117d-acc8-4154-92c8-be6daf7423e0"
             alt="FAQ"
           />
         </figure>

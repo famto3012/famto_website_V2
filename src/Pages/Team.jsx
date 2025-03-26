@@ -21,8 +21,8 @@ const Team = React.memo(() => {
       <div className="relative w-full h-[16rem] md:h-[70vh]">
         <img
           className="w-full object-cover h-full"
-          src="/team/team.svg"
-          alt="About Us"
+          src="/Team/team.jpg"
+          alt="Team"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
@@ -52,30 +52,30 @@ const Team = React.memo(() => {
 
       <section className="w-fit md:w-[90%] mx-auto px-[1rem] md:px-[0rem] py-[2rem]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[30px]">
-          <Card image="/team/Sujith Sir.jpg" name="J Sujith" role="Director" />
-          <Card image="/team/Magi.jpg" name="Magi GR" role="Director" />
+          <Card image="/Team/Sujith Sir.jpg" name="J Sujith" role="Director" />
+          <Card image="/Team/Magi.jpg" name="Magi GR" role="Director" />
           <Card
-            image="/team/sangeetha (1).jpg"
+            image="/Team/sangeetha (1).jpg"
             name="Sangeetha TP"
             role="Business Development Executive"
           />
           <Card
-            image="/team/AkhilBabu.jpg"
+            image="/Team/AkhilBabu.jpg"
             name="Akhil Babu S"
             role="Software Developer"
           />
           <Card
-            image="/team/SarathRs.jpg"
+            image="/Team/SarathRs.jpg"
             name="Sarath R S"
             role="Software Developer"
           />
           <Card
-            image="/team/Gowri US.jpg"
+            image="/Team/Gowri US.jpg"
             name="Gowri U S"
             role="Software Developer"
           />
           <Card
-            image="/team/Sarath S B.jpg"
+            image="/Team/Sarath S B.jpg"
             name="Sarath S B"
             role="Software Developer"
           />

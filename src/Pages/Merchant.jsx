@@ -49,7 +49,7 @@ const Merchant = React.memo(() => {
         <figure className="h-[60rem] md:h-[100vh]">
           <img
             className="w-full h-full object-cover"
-            src="/merchant/beaMerchant.svg"
+            src="/Merchant/beaMerchant.svg"
             alt="Be A Merchant logo"
           />
         </figure>
@@ -151,7 +151,7 @@ const Merchant = React.memo(() => {
         <div className="md:w-1/2 relative flex items-center">
           <figure className="h-full w-full rounded-r-lg flex">
             <img
-              src="/merchant/merchant-image.svg"
+              src="/Merchant/merchant-image.svg"
               alt="Merchant Image"
               className="w-full h-full object-cover rounded-r-lg"
             />
@@ -223,14 +223,14 @@ const Merchant = React.memo(() => {
         </div>
         <div className="md:w-1/3 order-1 md:order-2">
           <figure>
-            <img src="/merchant/merchant-documents.svg" />
+            <img src="/Merchant/merchant-documents.svg" />
           </figure>
         </div>
       </div>
       <div className="lg:flex grid pt-10 lg:gap-5 lg:mx-5 lg:mb-0 mt-5">
         <div className="lg:w-1/2 md:w-[20rem] h-fit flex justify-center">
           <figure className="w-full h-fit flex justify-center">
-            <img src="/merchant/merchant-app.png" />
+            <img src="/Merchant/merchant-app.png" />
           </figure>
         </div>
         <div className="lg:mt-[8%] lg:bg-white pb-10 pt-5 lg:pt-0 bg-gray-100">
