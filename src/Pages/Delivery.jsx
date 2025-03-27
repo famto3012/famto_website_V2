@@ -46,7 +46,7 @@ const Delivery = React.memo(() => {
         <div className="relative w-full">
           <figure className="h-[20rem] md:h-[70vh]">
             <img
-              src="/delivery/Delivery.svg"
+              src="/Delivery/Delivery.jpeg"
               className="w-full h-full object-cover"
             ></img>
           </figure>
@@ -234,7 +234,7 @@ const Delivery = React.memo(() => {
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
           <figure className="w-full md:w-1/2 h-[15rem] relative">
             <img
-              src="/delivery/merchant.svg"
+              src="/Delivery/merchant.svg"
               className="h-full w-full rounded-r-lg object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/50 to-transparent pointer-events-none"></div>
@@ -273,7 +273,7 @@ const Delivery = React.memo(() => {
         <div className="grid md:flex mt-10 gap-20 md:gap-10 relative">
           <figure className="w-full md:w-1/2 h-[15rem] relative">
             <img
-              src="/delivery/delivery-partner.svg"
+              src="/Delivery/delivery-partner.svg"
               className="h-full w-full rounded-r-lg object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#00ced1]/40 to-transparent pointer-events-none"></div>

@@ -25,7 +25,7 @@ const DeliveryAgent = React.memo(() => {
         <figure className="h-[50rem] md:h-[95vh]">
           <img
             className="w-full h-full object-cover"
-            src="/deliveryAgent/delivery-agent.svg"
+            src="/deliveryAgent/delivery-agent.jpg"
             alt="Be A Merchant logo"
           />
         </figure>

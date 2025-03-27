@@ -56,7 +56,7 @@ const ITService = React.memo(() => {
           <figure className="h-[20rem] md:h-[30rem]">
             <img
               className="w-full h-full object-cover"
-              src="/itservices/IT-service Banner.svg"
+              src="/itservices/IT-service Banner.jpg"
               alt="IT-service Banner"
             />
           </figure>
@@ -187,7 +187,7 @@ const ITService = React.memo(() => {
             <figure className="md:h-[15rem] h-[10rem]">
               <img
                 className="w-full h-full object-cover rounded-xl"
-                src="/itservices/mobile_application.svg"
+                src="/itservices/mobile_application.jpg"
                 alt="mobile-application"
               />
             </figure>
@@ -199,7 +199,7 @@ const ITService = React.memo(() => {
             <figure className="md:h-[15rem] h-[10rem]">
               <img
                 className="w-full h-full object-cover rounded-xl"
-                src="/itservices/web-application.svg"
+                src="/itservices/web-application.jpg"
                 alt="websites"
               />
             </figure>
