@@ -21,7 +21,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="/other/order_anything.svg"
+              src="/other/order_anything.jpg"
               className="w-full opacity-95"
               alt="Order Anything"
             />
@@ -68,7 +68,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="/other/customer-order.svg"
+              src="/other/customer-order.jpg"
               className="w-full opacity-90"
               alt="Custom Order"
             />
@@ -115,7 +115,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="/other/pickanddrop.svg"
+              src="/other/pickanddrop.jpg"
               className="w-full opacity-90"
               alt="Pick & Drop"
             />
@@ -163,7 +163,7 @@ const DeliverySlides = React.memo(() => {
         >
           <figure className="w-full">
             <img
-              src="/other/scheduledOrder.svg"
+              src="/other/scheduledOrder.jpg"
               className="w-full opacity-95"
               alt="Pick & Drop"
             />
