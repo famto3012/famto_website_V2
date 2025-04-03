@@ -18,9 +18,7 @@ import Blog_August from "./Pages/Blog_August";
 import HomePage from "./Pages/HomePage";
 import ContactUs from "./Pages/ContactUs";
 import DeliveryAgent from "./Pages/DeliveryAgent";
-import Order_Now from './Pages/Order_Pages/Order_Now';
 import Subscriptions from "./Pages/Subscriptions";
-import Pick_Drop from "./Pages/Order_Pages/PickDrop/Pick_Drop";
 import ReferralAppRedirect from "./Pages/ReferralAppRedirect";
 
 function App() {
@@ -42,8 +40,6 @@ function App() {
         <Route path="/blog-june" element={<Blog_June />} />
         <Route path="/blog-august" element={<Blog_August />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/order-now" element={<Order_Now />} />
-        <Route path="/pick-drop" element={<Pick_Drop />} />
         <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route
