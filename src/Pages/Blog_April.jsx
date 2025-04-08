@@ -27,7 +27,7 @@ const Blog_April = React.memo(() => {
           />
         </figure>
         <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
-          <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
+          <Link to={"/"} className="mt-4 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
               src="/home/logo/whiteLogo.svg"
