@@ -165,7 +165,7 @@ const Footer = React.memo(() => {
               </a>
             </div>
             <div className="mt-5 flex gap-2">
-              <a href="">
+              <a href="https://play.google.com/store/apps/details?id=com.famto.customerapp">
                 <img
                   src="/other/play-store.png"
                   className="p-1 h-12 border md:border-gray-800 rounded-lg border-white"

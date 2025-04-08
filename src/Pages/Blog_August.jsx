@@ -61,7 +61,7 @@ const Blog_August = React.memo(() => {
         <div className="flex items-center justify-center rounded-lg mx-auto order-1 lg:order-2">
           <figure className="h-[20rem] lg:w-auto lg:h-[20rem] max-w-full">
             <img
-              src="/blogs/august/Karma awards.svg"
+              src="/blog/august/Karma awards.svg"
               alt=""
               className=" object-cover rounded-lg h-full w-full"
             />

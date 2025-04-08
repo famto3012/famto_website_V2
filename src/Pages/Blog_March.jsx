@@ -22,7 +22,7 @@ const Blog_March = React.memo(() => {
         <figure className="h-[19rem] md:h-[70vh]">
           <img
             className="w-full h-full object-cover"
-            src="/blogs/march/blog_march.svg"
+            src="/blog/march/blog_march.png"
             alt=""
           />
         </figure>

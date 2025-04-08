@@ -112,7 +112,7 @@ const Apps = React.memo(() => {
           <div className="mt-5">
             <p>Download from</p>
             <div className="flex gap-3 mt-5 sm:mt-2 xs:mt-1">
-              <a href="">
+              <a href="https://play.google.com/store/apps/details?id=com.famto.customerapp">
                 <img
                   src="/other/play-store.png"
                   className=" md:border-gray-800 rounded-lg border-white h-12"

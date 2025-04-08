@@ -34,10 +34,10 @@ const Blogs = React.memo(() => {
   ];
 
   const images = [
-    "/blog/april/blogsimg.svg",
+    "/blog/april/blogsimg.png",
     "/blog/may/blog_may.svg",
     "/blog/june/blog-june.svg",
-    "/blog/march/blog_march.svg",
+    "/blog/march/blog_march.png",
     "/blog/honours.svg",
   ];
 

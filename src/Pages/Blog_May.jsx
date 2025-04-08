@@ -21,17 +21,17 @@ const Blog_May = React.memo(() => {
       <div className="relative w-full">
         <div className=" inset-0 bg-gradient-to-tr from-rose-600 to-amber-400 h-[19rem] md:h-[70vh] flex justify-evenly items-center">
           <figure className="hidden md:block h-[10rem] md:h-[40vh] flex-shrink-0">
-            <img className="h-full" src="/blogs/may/iPhone 15.svg" alt="" />
+            <img className="h-full" src="/blog/may/iPhone 15.svg" alt="" />
           </figure>
           <h1 className="text-white/25 text-center text-6xl md:text-9xl font-thin">
             V/S
           </h1>
           <figure className="hidden md:block h-[10rem] md:h-[40vh] flex-shrink-0">
-            <img className="h-full" src="/blogs/may/iPhone 13.svg" alt="" />
+            <img className="h-full" src="/blog/may/iPhone 13.svg" alt="" />
           </figure>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent flex flex-col items-start ps-5">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col items-start ps-5">
           <Link to={"/"} className="mt-2 md:mt-8 md:ms-[40px]">
             <img
               className="w-[7rem] h-[4rem] md:w-[10rem] md:h-[4rem] ps-[1rem] md:ps-[1rem] transition-all"
@@ -146,7 +146,7 @@ const Blog_May = React.memo(() => {
           <div className="flex items-center justify-center md:justify-end mx-auto  ">
             <figure className="h-[15rem] md:h-[20rem] w-full lg:w-auto lg:h-auto max-w-full">
               <img
-                src="/blogs/may/Pie Chart.svg"
+                src="/blog/may/Pie Chart.svg"
                 alt=""
                 className=" object-cover h-full w-full"
               />
