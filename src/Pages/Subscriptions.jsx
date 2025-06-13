@@ -221,21 +221,21 @@ const Subscriptions = React.memo(() => {
                   </div>
                 </div>
                 <ul className="list-disc ps-[1rem] md:ps-[20px] font-medium text-[14px] space-y-2">
-                  <li>
+                  {/* <li>
                     3650 <span className="text-black/50">Orders</span>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     10% Refund,{" "}
                     <span className="text-black/50">
                       {" "}
                       If orders are below 1800
                     </span>
-                  </li>
+                  </li> */}
                   <li>Web Application</li>
                   <li>Delivery Support</li>
                   <li>Online Promotion</li>
                   <li>Ad Banners</li>
-                  <li>Monthly Reports</li>
+                  {/* <li>Monthly Reports</li> */}
                   <li>Zero Commissions</li>
                   <li>
                     Order Tracking{" "}
@@ -244,12 +244,12 @@ const Subscriptions = React.memo(() => {
                   <li>Integration Assistance</li>
                   <li>
                     Early Payouts,{" "}
-                    <span className="text-black/50"> Before t+1 days</span>
+                    <span className="text-black/50"> Before t+2 days</span>
                   </li>
-                  <li>
+                  {/* <li>
                     Seasonal Discount{" "}
                     <span className="text-black/50">Vouchers</span>
-                  </li>
+                  </li> */}
                   <li>
                     Free Sponsorship{" "}
                     <span className="text-black/50">for First Month</span>
@@ -283,21 +283,21 @@ const Subscriptions = React.memo(() => {
                   </div>
                 </div>
                 <ul className="list-disc ps-[1rem] md:ps-[20px] font-medium text-[14px] space-y-2">
-                  <li>
+                  {/* <li>
                     1800 <span className="text-black/50">Orders</span>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     5% Refund,
                     <span className="text-black/50">
                       {" "}
                       If orders are below 900
                     </span>
-                  </li>
+                  </li> */}
                   <li>Web Application</li>
                   <li>Delivery Support</li>
                   <li>Online Promotion</li>
                   <li>Ad Banners</li>
-                  <li>Monthly Reports</li>
+                  {/* <li>Monthly Reports</li> */}
                   <li>Zero Commissions</li>
                   <li>
                     Order Tracking{" "}
@@ -306,12 +306,12 @@ const Subscriptions = React.memo(() => {
                   <li>Integration Assistance</li>
                   <li>
                     Early Payouts,{" "}
-                    <span className="text-black/50"> Before t+1 days</span>
+                    <span className="text-black/50"> Before t+2 days</span>
                   </li>
-                  <li>
+                  {/* <li>
                     Seasonal Discount{" "}
                     <span className="text-black/50">Vouchers</span>
-                  </li>
+                  </li> */}
                   <li>
                     Free Sponsorship{" "}
                     <span className="text-black/50">for First Month</span>
@@ -341,9 +341,6 @@ const Subscriptions = React.memo(() => {
                   </div>
                 </div>
                 <ul className="list-disc ps-[1rem] md:ps-[20px] font-medium text-[14px] space-y-2 ">
-                  <li>
-                    300 <span className="text-black/50">Orders</span>
-                  </li>
                   <li>Web Application</li>
                   <li>Delivery Support</li>
                   <li>Zero Commissions</li>
@@ -352,9 +349,10 @@ const Subscriptions = React.memo(() => {
                     <span className="text-black/50">Interface</span>
                   </li>
                   <li>Integration Assistance</li>
+                  <li>Ad Banner in app - 15 days</li>
                   <li>
                     Payouts,{" "}
-                    <span className="text-black/50"> Before t+2 days</span>
+                    <span className="text-black/50">t+3 days</span>
                   </li>
                 </ul>
               </div>
@@ -364,7 +362,7 @@ const Subscriptions = React.memo(() => {
         <h1 className="flex justify-end items-end my-[1rem] text-black/50 text-[14px]">
           *T&C applied{" "}
         </h1>
-        <div>
+        {/* <div>
           <p className="text-black/50 mb-[1rem] text-[14px]">
             Additionally we charge excess order compensations respective to the
             plans chosen.{" "}
@@ -374,7 +372,7 @@ const Subscriptions = React.memo(() => {
             <li>₹ 5 per order above 1800 orders for six months plan</li>
             <li>₹ 5 per order above 300 orders for monthly plan</li>
           </ul>
-        </div>
+        </div> */}
         <div className=" space-y-4 md:flex justify-between mt-10  ">
           <div className="md:w-2/3 font-medium">
             <h1 className="text-[16px]">For further assistance</h1>
