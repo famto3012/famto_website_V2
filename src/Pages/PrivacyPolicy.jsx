@@ -436,11 +436,11 @@ const PrivacyPolicy = React.memo(() => {
             My Famto Private Limited
           </span>
           <br />
-          Revathi, A-18, Lekshmi Nagar, 
+          Thiruvatira, ORA-8 
           <br />
-          Kesavadasapuram, Pattom P.O.
+          near TG Mini Hall
           <br />
-          Thiruvananthapuram, Kerala, India 695004
+          Thiruvananthapuram, Kerala, India 695573
         </p>
         <h3 className="termHeading">16.Contact information</h3>
         <p>

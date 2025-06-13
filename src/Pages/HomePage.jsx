@@ -175,7 +175,7 @@ const HomePage = React.memo(() => {
   return (
     <>
       <div className="relative flex w-full">
-        <div className="relative flex overflow-hidden h-[50vh] md:h-[70vh]">
+        <div className="relative w-full flex overflow-hidden h-[50vh] md:h-[70vh]">
           {images.map((src, index) => {
             return (
               <motion.img
