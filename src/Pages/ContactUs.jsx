@@ -154,11 +154,11 @@ const ContactUs = React.memo(() => {
               <div>
                 <h1 className="text-black/50">You can visit us at</h1>
                 <p className="sm:w-2/3 font-medium mb-4">
-                  A-18, Lekshmi Nagar, Kesavadasapuram, Thiruvananthapuram,
-                  Kerala 695004
+                  Thiruvatira, ORA-8 Near TG Mini Hall, Perukavu P.O 
+                  Trivandrum - 695573
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/4YowwEyn3SUxdTSK9"
+                  href="https://maps.app.goo.gl/wodNc9Jqw6Q59AUc9"
                   className="md:text-[18px] text-[#00Ced1] underline underline-offset-2 flex items-center gap-2"
                 >
                   View on Map <BiLinkExternal className="text-[24px]" />

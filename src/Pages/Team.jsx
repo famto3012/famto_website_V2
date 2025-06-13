@@ -79,7 +79,6 @@ const Team = React.memo(() => {
             name="Sarath S B"
             role="Software Developer"
           />
-      
         </div>
       </section>
 
